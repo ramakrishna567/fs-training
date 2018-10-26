@@ -1,0 +1,56 @@
+use neno_bakery
+
+db.createCollection("prodcts");
+
+db.createCollection("recepies");
+
+db.createCollection("customerDetails");
+
+var user = {
+	user : "Admin",
+	pwd : "adminpassword",
+	roles : ["userAdmin"],
+	customData : {
+	"employeeId" : "456",
+	"employeeName" : "ram"
+	}
+}
+
+db.createUser(user);
+
+var user = {
+	user : "owner",
+	pwd : "ownerpassword",
+	roles : ["dbOwner"],
+	customData : {
+	"employeeId" : "456",
+	"employeeName" : "ram"
+	}
+}
+
+db.createUser(user);
+
+db.updateUser("owner", 
+{
+	customData : {
+	"employeeId" : "457",
+	"employeeName" : "sai"
+	}
+}
+);
+
+//create documents to collections of bakery db
+
+var data [sweets{
+	"name":"mysore",
+	"size": "small",
+	"price": 100
+	},
+	hot{
+	"name":"mysore",
+	"size": "small",
+	"price": 100
+	}
+
+]
+db.prodcts.insert(data);

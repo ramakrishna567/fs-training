@@ -1,0 +1,47 @@
+db.cutomers.insert({
+	name : "Rohn",
+	lastName : "smith",
+	email : "john@gmail.com",
+	phone : "96999999",
+	address : {
+		street : "venila",
+		colony : "venila colony",
+		pincode : 101010,
+		city : "london"
+	}
+
+});
+
+db.customers. updateOne({name : "John"},
+
+{
+	$set : {medicines : [medicine_1, medicine_2]}
+
+}		
+
+ );
+
+//for appending 
+
+db.customers. updateOne({name : "John"},
+
+{
+	$push : {medicines : {medicine_3, medicine_4}}
+
+}		
+ );
+
+//for projecting data 
+
+
+
+
+//REFERENCE BASED DOCUMENT
+
+db.customers. updateOne({name : "Rohn"},
+
+{
+	$push : {medicines : [{"_id"}] }
+
+}		
+ );

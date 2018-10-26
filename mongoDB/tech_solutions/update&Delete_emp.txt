@@ -1,0 +1,64 @@
+db.collectionName.update({filterQuery}, {updateQuery});
+
+{
+        "_id" : ObjectId("5bbe50bd6887146bdea282ad"),
+        "Id" : "PQR126",
+        "Department" : "Dev",
+        "Gender" : "Male",
+        "Name" : "Singh",
+        "Active" : "true",
+        "PrimaryPhone" : {
+                "Mobile" : "950000555",
+                "Landline" : "040_565656"
+        },
+        "emailId" : "teja234@gmail.com",
+        "EmployeeType" : "Contract",
+        "MetaData" : {
+                "CreateTime" : "2017-10-10T19:45:03Z",
+                "LastUpdatedTime" : "2018-10-10T21:48:23Z"
+        },
+        "Address" : {
+                "Line1" : "786 Old city",
+                "City" : "Hyderabad",
+                "Country_Code" : "IND",
+                "PostalCode" : "500004"
+        },
+        "salary" : 50000
+
+// there is no field salary then updatOne adds field
+db.emp_data.updateOne(
+	{
+	"salary" : 50000
+	},
+	{
+	$set : {"salary" : 60000}	
+	}
+);
+
+//unset field by using updateOne method
+
+db.emp_data.updateOne(
+	{
+	"Id" : "PQR124",
+	"Id" : "PQR123",
+	},
+	{
+	$unset: {"salary": ""}	
+	}
+);
+
+//udateMany
+db.emp_data.updateMany(
+	{////
+	"Department" : "Dev"
+	},
+	{
+	$set: {"salary": 50000}	
+	}
+);
+
+//Highest salary person 
+db.emp_data.find({}, {"salary": true, "_id":0}).sort({"salary": -1}).limit(1);
+
+//Loweat salary person
+db.emp_data.find({}, {"salary": true, "_id":0}).sort({"salary": 1}).limit(1);

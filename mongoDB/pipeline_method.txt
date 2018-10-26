@@ -1,0 +1,49 @@
+//PIPELINE METHOD
+
+//GROUP STAGE
+db.webrank.aggregate(
+{
+	$group : {_id: "$category", totalNumber:{$sum:1}}
+}
+);
+
+// SORT STAGE (group --> sort --> )
+db.webrank.aggregate(
+{
+	$group : {_id: "$category", totalNumber:{$sum:1}}
+}, {$sort: {totalNumber: -1} }
+);
+
+// LIMIT STAGE (group --> sort --> limit)
+db.webrank.aggregate(
+{
+	$group : {_id: "$category", totalNumber:{$sum:1}}
+},
+{$sort: {totalNumber: -1} },
+{$limit: 2}
+);
+
+//SKIP STAGE(group --> sort --> skip -->)
+db.webrank.aggregate(
+{
+	$group : {_id: "$category", totalNumber:{$sum:1}}
+},
+{$sort: {totalNumber: -1} },
+{$skip: 2}
+);
+
+//MATCH STAGE
+db.webrank.aggregate(
+{$match:{category : "search"}},
+{$sort: {"visits":-1}}
+);
+
+
+
+
+
+
+
+
+
+);

@@ -1,0 +1,21 @@
+// It is for database backup
+mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank
+
+//It is for collection backup
+mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection accounts
+
+mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection mero_bank.accounts --gzip
+
+//RESTORE entire db
+mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --gzip dump/mero_bank/
+
+//JSON IS ONLY FOR COLLECTIONS NOT TO DBS
+// login and print entire collection data on terminal
+mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection accounts
+
+//taking data out in file form
+mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection accounts --jsonArray --pretty --out mongoexp/accounts.json
+
+// IMPORT 
+mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection baccounts --jsonArray mongoexp/accounts.json
+

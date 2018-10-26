@@ -1,0 +1,52 @@
+#header{
+    /* background-color: dodgerblue; */
+    border: 2px solid red;
+    width: 25%;
+    height: 10em;
+    position: relative;
+    /* float: left; */
+    margin-right: 5em;
+}
+#header .block1{
+    border: 2px solid black;
+    width: 25%;
+    height: 10em;
+    position: relative;
+    /* float: left; */
+    margin-right: 5em;
+
+}
+#header h1{
+    color: black;
+    margin: 0px;
+}
+
+#main{
+    /* background-color: green; */
+    border: 2px solid black;
+    width: 25%;
+    height: 10em;
+    position: relative;
+    /* float: left; */
+    margin-right: 5em;
+}
+
+#main h1{
+    color: black;
+    position: absolute;
+}
+
+#footer{
+    border: 2px solid blue;
+    width: 25%;
+    height: 10em;
+    position: relative;
+    /* float: left; */
+    margin-right: 5em;
+
+}
+
+#footer h1{
+    color: blue;
+    position: absolute;
+}

@@ -1,0 +1,99 @@
+use mero_bank
+
+db.createCollection("accounts");
+db.createCollection("transactions");
+
+var user = {
+	user : "Admin",
+	pwd : "adminpassword",
+	roles : ["userAdmin"],
+	customData : {
+	"employeeId" : "123",
+	"employeeName" : "ram"
+	}
+}
+
+db.createUser(user);
+
+var user = {
+	user : "Owner",
+	pwd : "ownerpassword",
+	roles : ["dbOwner"],
+	customData : {
+	"employeeId" : "124",
+	"employeeName" : "krishna"
+	}
+}
+
+db.createUser(user);
+
+db.updateUser("Owner",{
+	roles :[{"db":"mero_bank", "role":"dbOwner"}
+]}
+);
+
+//documents to collections
+var data = {
+	"name": "sai",
+	"type":"savings",
+	"open_balance": 10000,
+	"phone" : 9640487079
+};
+
+db.accounts.insert(data);
+
+var data = {
+	"name": "kiran",
+	"type":"current",
+	"open_balance": 100000,
+	"phone" : 9640487078
+};
+
+db.accounts.insert(data);
+
+//creating data to transactions document
+var data = {
+	"username" : "sai",
+	"transaction_amount": 2000,
+	"t_type" : "credit",
+	"t_mode" : "online"
+};
+
+db.transactions.insert(data);
+
+var data = {
+	"username" : "kiran",
+	"transaction_amount": 5000,
+	"t_type" : "debit",
+	"t_mode" : "offline"
+};
+
+db.transactions.insert(data);
+
+db.transactions.insert().find();
+db.transactions.find().pretty();
+
+
+db.transactions.insert( {
+	"username" : "wahid",
+	"transaction_amount": 10000,
+	"t_type" : "debit",
+	"t_mode" : "online",
+	"show_bal" : 50000      // iam adding a field (row) is possible with any type of datatype
+}
+);
+
+//counting documents in collections
+db.transactions.find().count();
+
+
+
+db.transactions.find({}) //this is select all query
+
+db.transactions.find({}) //this is select all query 
+
+db.transactions.find({"username" : "wahid"})
+
+db.transactions.find({"transaction_amount": 10000}).pretty();
+
+db.transactions.find({"_id" : ObjectId("5bbd7bfe9f9d59e6a240bd85")}).pretty();

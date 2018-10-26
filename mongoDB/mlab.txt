@@ -1,0 +1,46 @@
+﻿db.accounnts.insert(
+{
+    "name" : "ram",
+    "age" : 25,
+    "gender" : "male",
+    "ac_type" : "savings",
+    "emai_Id" : "ram@gmail.com",
+    "status" : "true",
+    "balance" : 50000,
+    "phone" : [{"primary" : "9640487079"}, {"secondary" : "9550229076"}],
+    "address" : [{
+        "present" : {
+            "street" : "venila",
+            "colony" : "venila colony",
+            "city" : "Hyderabad",
+            "pincode" : 500003
+        }
+    },{
+        "perminent" : {
+            "street" : "10",
+            "colony" : "MR apparao colony",
+            "city" : "nuzvid",
+            "pincode" : 521201
+        }
+    }]
+}
+);
+
+
+@media (min-width: 400px) {
+    .element {
+        background: #cccccc;
+    }
+}
+
+@media (min-width: 500px) {
+    .element {
+        background: #888888;
+    }
+}
+
+@media (min-width: 600px) {
+    .element {
+        background: #222222;
+    }
+}

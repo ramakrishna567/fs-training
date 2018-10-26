@@ -1,0 +1,35 @@
+//nested document
+db.collectionName.find("primary_record.nested_record" : "nested_vale");
+
+//AND \ OR operators
+db.collectionName.find({filter1, filter}, {projection});
+
+db.collectionName.find({
+	"creater.doctor_name" : "John",
+	"price": 1000	
+	}
+);
+
+db.collectionName.find(
+	{
+	$and:[
+	{"creater.doctor_name" : "John"},
+	{"price": 1000}	
+	]	
+	}
+);
+
+db.collectionName.find(
+	{
+	$or:[
+	{"creater.doctor_name" : "John"},
+	{"price": 1000}	
+	]	
+	}
+);
+
+{"creater.doctor_name" : "John"},
+	{"price": 1000}	
+
+
+

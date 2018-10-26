@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Onchange</title>
+</head>
+<body>
+    Enter First Name :
+    <input type="text" id="fname"> <br>
+
+    Enter Last Name :
+    <input type="text" id="lname"> <br>
+
+    Your Full Name is :
+    <input type="text" id="fullname" disabled>
+
+    <script>
+    var firstName = document.getElementById('fname');
+    var lastName = document.getElementById('lname');
+    var fullName = document.getElementById('fullname');
+    firstName.addEventListener("change", onchangeFun); //change event means onchage attribute
+    lastName.addEventListener("change", onchangeFun); //change event means onchage attribute
+
+    function onchangeFun(){
+        firstName.value = firstName.value.toUpperCase();
+        lastName.value = lastName.value.toUpperCase();
+        fullName.value = firstName.value+" "+lastName.value;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+var user = {
+"user":"ram",
+"pwd":"ram",
+"roles":[{"db":"local","role":"read"},"dbOwner"]
+}
+
+db.createUser(user);
+
+
+var user = {
+"user":"ramakrishna567",
+"pwd":"ramki567",
+"roles":["root"]
+}
+db.createUser(user);

@@ -1,0 +1,25 @@
+[{
+    "name" : "John",
+    "age" : 20,
+    "email" : "john#gmail.com",
+    "password" : "@john@",
+    "address" : {
+        "flate_no" : 102,
+        "street" : "Vijaya street",
+        "area" : "ameerpet",
+        "pincode" : 500038
+    }, 
+    "family" : ["mike", "David", "Sam"]
+},{
+    "name" : "sam",
+    "age" : 20,
+    "email" : "sam#gmail.com",
+    "password" : "@sam@",
+    "address" : {
+        "flate_no" : 102,
+        "street" : "Ram street",
+        "area" : "ameerpet",
+        "pincode" : 500038
+    }, 
+    "family" : ["mike", "David", "Sam"]
+}] 

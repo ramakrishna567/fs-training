@@ -1,0 +1,41 @@
+//creating database
+use krishna_medical;
+
+//create collections
+db.createCollection("krishna_medical.medcine");
+(or)
+db.createCollection("medcine");
+
+//create user to krishna medical db
+var user = {
+	user: "krishna",
+	pwd: "krish@123",
+	customData:{
+	employeeId: 1001,
+	employeeName: "krishna",
+	},
+	roles:[
+	"dbOwner"
+	]
+}
+
+db.createUser(user);
+
+//medicines document(row)
+db.krishna_medical.medicine.insert( {
+	"drug_name" : "Mabridope",
+	"stick" : 100,
+	"drug_tier" : "GENERIC",
+	"doctor":{
+		"doctor_id" : 1101,
+		"doctor_name" : "rama",
+		"doctor_type" : "General",
+		"doctor_repo" : 10
+	}
+});
+
+db.krishna_medical.medicine.insert(data); //Insert Data(document) to collecton of database
+
+db.krishna_medical.medicine.find(); //shows documents in collcetions of database
+
+db.krishna_medical.medicine.find().pretty(); //shows documents in collcetions of database in the form pretty

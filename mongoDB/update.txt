@@ -1,0 +1,51 @@
+db.collectionName.update({filterQuery}, {updateQuery});
+
+db.collection.update(
+	{
+	"price" : 200	
+	},
+	{
+	$set:{"price" : 205}
+	}
+
+);
+
+db.collection.find({"price" : 205});
+
+db.collection.update(
+	{
+	"name" : cake	
+	},
+	{
+	$set:{"price" : 2005}
+	}
+
+);
+
+db.collection.find({"name" : cake});
+
+db.collection.updateOne(
+	{
+	"name" : cake	
+	},
+	{
+	$set:{"price" : 2005}
+	}
+
+);
+
+// it does update many fieldsof records
+db.accounts.updateMany(
+	{
+	name : "sai"	
+	},
+	{
+	$unset: {
+	mode : "",
+        tr_amount : "",
+        tr_name : "",
+        tr_time : ""
+}
+	}
+);
+

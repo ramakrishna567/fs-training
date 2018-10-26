@@ -1,0 +1,61 @@
+db.emp_data.find(
+	{
+	"salary":50000  
+	}
+);
+
+(or)
+
+db.collection.find(
+	{
+	"price":{ $eq:200}    //It is also Equel (==) Operator
+	}
+);
+
+db.collection.find(
+	{
+	"price":{ $gt:200}    //It is also Greaterthan (<) Operator
+	}
+);
+
+db.collection.find(
+	{
+	"price":{ $gte:200}    //It is also Greaterthan or Equal (<=) Operator
+	}
+);
+
+db.collection.find(
+	{
+	"price":{ $lt:200}    //It is also Lessthan (<) Operator
+	}
+);
+
+db.collection.find(
+	{
+	"price":{ $lte:200}    //It is also Lessthan or Equal (<=) Operator
+	}
+);
+
+ //It is also Equel (==) Operator
+db.collection.find(
+	{
+	"price":{ $ne:200} 
+	}
+);
+
+
+//COMBINATIONS :
+
+db.collection.find(
+	{
+	$and:[{"price":{$gt:200}}, {"price":{$lt:2500}}]    //It is also Lessthan and greaterthan
+	}
+);
+
+db.collection.find().skip(5); // it shows five(5) records it skips first five records
+
+db.collection.find().skip(5).limit(2); // it skips 5 records and then shows 2 records
+
+
+
+

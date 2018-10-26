@@ -1,0 +1,15 @@
+db.webrank.count({"site" : "www.amazon.com"});
+
+db.webrank.count({"visits" : 755000});
+
+db.webrank.count({"visits" : {$lt : 755000}});
+
+db.webrank.find({"visits" : {$lt : 755000}});
+
+//DINSTICT METHOD
+db.webrank.distinct("site");
+
+db.webrank.distinct("category");
+
+db.webrank.distinct("site").length;
+

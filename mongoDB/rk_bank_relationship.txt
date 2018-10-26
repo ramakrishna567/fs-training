@@ -1,0 +1,26 @@
+db.accounts.updateOne(
+{name: "sai"},
+{
+$push : {transactions :{
+"_id" : ObjectId("5bc613820d3e479afc9302f2"),
+        "tr_amount" : 10000,
+        "name" : "sai",
+        "ac_type" : "savings",
+        "tr_name" : "credit",
+        "mode" : "online",
+        "balance" : 70000,
+        "tr_time" : "10-6-18 7:15",
+        "status" : true
+	}
+	},
+});
+
+
+
+{
+$position : 0
+}
+db.accounts.find({name: "Begum"}).pretty();
+
+//accessing or projecting nested document or relation documents
+db.accounts.find({name: "Begum"}, {transactions : true}).pretty();

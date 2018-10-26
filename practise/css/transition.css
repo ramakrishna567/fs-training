@@ -1,0 +1,16 @@
+.trans{
+  width: 500px;
+  height: 100px;
+  background-color: lightgray;
+  padding-top: 50px;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 0em;
+  transition-property: border-bottom-width;
+  transition: border linear 2s;
+}
+.trans:hover{
+border-bottom-style: solid;
+/* border-bottom-width: 10em; */
+border-bottom-color: black;
+}

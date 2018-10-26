@@ -1,0 +1,39 @@
+{
+    "name" : "Angel",
+    "age" : 18,
+    "gender" : "female",
+    "ac_type" : "savings",
+    "emai_Id" : "angel@gmail.com",
+    "status" : true,
+    "balance" : 35500,
+    "phone" : [{"primary" : 8866000077}, {"secondary" : 8866009977}],
+    "address" : [{
+        "present" : {
+            "street" : "st.anns",
+            "colony" : "st.anns colony",
+            "city" : "Chennai",
+            "pincode" : 700055
+        }
+    },{
+        "perminent" : {
+            "street" : "st.anns",
+            "colony" : "st.anns colony",
+            "city" : "Chennai",
+            "pincode" : 700055
+        }
+    }]
+}
+
+
+// transactions //
+
+{
+    "tr_amount" : 5000,
+    "name": "Begum",   
+    "ac_type": "savings",
+    "tr_name" : "debit",
+    "mode" : "online",
+    "balance" : 55000,
+    "tr_time" : "4-10-18 20:15",
+    "status" : true 
+}

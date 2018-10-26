@@ -1,0 +1,45 @@
+// It is for database backup
+mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions
+
+//It is for collection backup
+$ mongodump -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions --collection emp_data
+
+//with .gzip file as .gz
+$ mongodump --gzip -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions --collection emp_data
+
+//RESTORE entire db
+$ mongorestore -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db hero_bank dump/tech_solutions
+
+//RESTORE a collection of db
+$ mongorestore -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db hero_bank --collection records dump/tech_solutions/emp_data.bson
+
+
+
+//JSON IS ONLY FOR COLLECTIONS NOT TO DBS
+// login and print entire collection data on terminal
+mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions --collection emp_data
+
+//taking data out in file form
+mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions --collection emp_data --jsonArray --pretty --out mongoexp/accounts.json
+
+// IMPORT a collection to the same db
+mongoimport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db tech_solutions --collection emp_data_backup --jsonArray mongoexp/accounts.json
+
+
+
+
+//sandeep db MONGODUMP TO REMOTE DATABASE
+$ mongodump --host ds131313.mlab.com --port 31313 --username sandbond --password sandbond6 --db appdata
+
+//RESTORE a collection TO REMOTE DATABASE 
+$ mongorestore --host ds131313.mlab.com --port 31313 --username sandbond --password sandbond6 --db appdata --collection emp_data dump/tech_solutions/emp_data.bson
+
+//RESTORE entire DB to remote db
+$ mongorestore --host ds131313.mlab.com --port 31313 --username sandbond --password sandbond6 --db rk_db dump/tech_solutions
+
+//there is mlab TOOLS 
+
+
+ds131237.mlab.com:31237/tech_solutions
+RESTORE MY DATABACKUP
+mongorestore --host ds131237.mlab.com --port 31237 --username tech_admin --password ramki567 --db tech_solutions --collection emp_data dump/tech_solutions/emp_data.bson

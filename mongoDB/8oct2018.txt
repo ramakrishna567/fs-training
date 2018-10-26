@@ -1,0 +1,39 @@
+use admin;
+db.changeUserPassword(username, password);
+db.changeUserPassword("ramakrishna", "ramakrishna");
+
+show users; // show all users of selected db
+db.getUsers(); // shows only one user related data
+db.getUser("username");
+db.getUser("ramakrishna567");
+
+db.grantRolesToUser(username, roles); //adding roles to existed user
+db.grantRolesToUser("user2", ["dbAdmin"]);
+
+
+db.revokeRolesFromUser(username, roles); //remove roles form user
+db.revokeRolesFromUser("user2", [{db:"admin", role:"readWrite"}]);
+db.revokeRolesFromUser("user1", [{db:"admin", role:"read"}]);
+
+db.updateUser(username, data);
+db.updateUser("user1", {
+	customData:{
+	employeeId:10001,
+	employeeName:"ram"
+}
+});
+
+//update roles to user
+db.updateUser("user1", {
+	roles:[
+	{"db": "test", "role":"readWrite"}
+]
+});
+
+//delete user
+db.dropUser(username); //DONT DELETE ROOT USER
+db.removeUser(username);
+db.removeUser("user1");
+
+//remove all Users
+db.dropAllUsers();

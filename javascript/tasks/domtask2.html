@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table-=Dom</title>
+    <style>
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td{
+        padding: 10px; 
+    }
+    tr:nth-child(even){
+        background-color: lightgrey;
+    }
+    </style>
+</head> 
+
+<button type="button" onclick="createHead()">create Head</button>
+<button type="button" onclick="createRow()">create row</button>
+<button type="button" onclick="replaceItems()">Place HeadName</button>
+<button type="button" onclick="replaceCellName()">Place Cellname</button>
+
+<script src="./domtask2.js" type="text/javascript"></script>
+
+</body>
+</html>

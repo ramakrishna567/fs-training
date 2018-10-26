@@ -1,0 +1,9 @@
+use mywebsite;
+
+db.webrank.insert(
+[{
+    "site" : "www.whatsapp.com",
+    "visits" : 7555000,
+    "category" : "chat"
+}]
+);

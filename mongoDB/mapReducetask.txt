@@ -1,0 +1,13 @@
+// mapReduce AGGREGATE METHOD
+//to find all transactions(credit and debit) of sai
+
+db.transactions.mapReduce(
+function(){
+emit(this.tr_name, this.tr_amount);
+},
+function(key, values){return Array.sum(values)},
+{
+query : {name : "sai", status: true},
+out : "total_transactions_sai"
+}
+);

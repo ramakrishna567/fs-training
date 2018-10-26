@@ -1,0 +1,189 @@
+[{
+	"_id": {
+		"$oid": "5bbe31866887146bdea282a7"
+	},
+	"Id": "ABC123",
+	"Department": "Dev",
+	"Gender": "Male",
+	"Name": "Ramakrishna",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "9640487079",
+		"Landline": "040_232425"
+	},
+	"emailId": "m.ramkrishna567@gmail.com",
+	"EmployeeType": "Regular",
+	"MetaData": {
+		"CreateTime": "2015-04-26T19:45:03Z",
+		"LastUpdatedTime": "2015-04-27T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "123 Rethibowli Street",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "01234"
+	},
+	"salary": 50000.0
+},
+{
+	"_id": {
+		"$oid": "5bbe3a7d6887146bdea282a8"
+	},
+	"Id": "XYZ123",
+	"Department": "Test",
+	"Gender": "Female",
+	"Name": "Komali",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "966666666",
+		"Landline": "040_212121"
+	},
+	"emailId": "komali123@gmail.com",
+	"EmployeeType": "Regular",
+	"MetaData": {
+		"CreateTime": "2016-04-25T19:45:03Z",
+		"LastUpdatedTime": "2018-04-25T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "567 Old city",
+		"City": "Bengaluru",
+		"Country_Code": "IND",
+		"PostalCode": "002255"
+	},
+	"salary": 25000.0
+},
+{
+	"_id": {
+		"$oid": "5bbe3bd26887146bdea282a9"
+	},
+	"Id": "PQR123",
+	"Department": "Devops",
+	"Gender": "Male",
+	"Name": "Saikiran",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "99555555",
+		"Landline": "040_212121"
+	},
+	"emailId": "saikiran23@gmail.com",
+	"EmployeeType": "Regular",
+	"MetaData": {
+		"CreateTime": "2015-03-03T19:45:03Z",
+		"LastUpdatedTime": "2018-10-10T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "123 Hitech city",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "500034"
+	},
+	"salary": 50000.0
+},
+{
+	"_id": {
+		"$oid": "5bbe3bd26887146bdea282aa"
+	},
+	"Id": "ABC124",
+	"Department": "Dev",
+	"Gender": "Female",
+	"Name": "Meera",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "956666666",
+		"Landline": "040_212121"
+	},
+	"emailId": "meera123@gmail.com",
+	"EmployeeType": "Regular",
+	"MetaData": {
+		"CreateTime": "2018-02-14T19:45:03Z",
+		"LastUpdatedTime": "2018-10-9T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "123 Hitech city",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "500034"
+	},
+	"salary": 50000.0
+},
+{
+	"_id": {
+		"$oid": "5bbe3d186887146bdea282ab"
+	},
+	"Id": "PQR124",
+	"Department": "Devops",
+	"Gender": "Male",
+	"Name": "Teja",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "950000555",
+		"Landline": "040_565656"
+	},
+	"emailId": "teja234@gmail.com",
+	"EmployeeType": "Contract",
+	"MetaData": {
+		"CreateTime": "2017-10-10T19:45:03Z",
+		"LastUpdatedTime": "2018-10-10T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "786 Old city",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "500004"
+	}
+},
+{
+	"_id": {
+		"$oid": "5bbe50816887146bdea282ac"
+	},
+	"Id": "PQR125",
+	"Department": "Devops",
+	"Gender": "Male",
+	"Name": "MSDhoni",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "950000555",
+		"Landline": "040_565656"
+	},
+	"emailId": "teja234@gmail.com",
+	"EmployeeType": "Contract",
+	"MetaData": {
+		"CreateTime": "2017-10-10T19:45:03Z",
+		"LastUpdatedTime": "2018-10-10T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "786 Old city",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "500004"
+	},
+	"salary": 30000.0
+},
+{
+	"_id": {
+		"$oid": "5bbe50bd6887146bdea282ad"
+	},
+	"Id": "PQR126",
+	"Department": "Dev",
+	"Gender": "Male",
+	"Name": "Singh",
+	"Active": "true",
+	"PrimaryPhone": {
+		"Mobile": "950000555",
+		"Landline": "040_565656"
+	},
+	"emailId": "teja234@gmail.com",
+	"EmployeeType": "Contract",
+	"MetaData": {
+		"CreateTime": "2017-10-10T19:45:03Z",
+		"LastUpdatedTime": "2018-10-10T21:48:23Z"
+	},
+	"Address": {
+		"Line1": "786 Old city",
+		"City": "Hyderabad",
+		"Country_Code": "IND",
+		"PostalCode": "500004"
+	},
+	"salary": 50000.0
+}]
+

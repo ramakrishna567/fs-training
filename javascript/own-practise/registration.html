@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
+        crossorigin="anonymous"></script>
+    <style>
+        .error_msg {
+            display: inline;
+        }
+        #fname-icon,
+        #lname-icon,
+        #pwd-icon,
+        #email-icon {
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+            <form method="POST" action="form.php">
+
+                <!-- Creating First Name Field -->
+                <label for="fname"> Enter First Name :</label>
+                <input type="text" id="fname">
+                <i class="fas fa-exclamation-triangle" id="fname-icon"></i>
+                <div id="error" class="error_msg"></div>
+                <br>
+
+                <!-- creating Last Name field -->
+                <label for="fname"> Enter Last Name :</label>
+                <input type="text" id="lname">
+                <i class="fas fa-exclamation-triangle" id="lname-icon"></i>
+                <div id="error-lname" class="error_msg"></div>
+                <br>
+
+                <!-- creating email field -->
+                <label for="fname"> Enter Email :</label>
+                <input type="email" id="emailId">
+                <i class="fas fa-exclamation-triangle" id="email-icon"></i>
+                <div id="error-email" class="error_msg"></div>
+                <br>
+
+                <!-- creating password field -->
+                <label for="fname"> Enter Password :</label>
+                <input type="password" id="pwd">
+                <i class="fas fa-exclamation-triangle" id="pwd-icon"></i>
+                <div id="error-pwd" class="error_msg"></div>
+                <br>
+
+                <button type="button" onclick="sendData()">Submit</button>
+            </form>
+
+    <script src="./registration.js"></script>
+</body>
+
+</html>

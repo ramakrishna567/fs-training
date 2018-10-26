@@ -1,0 +1,29 @@
+1. install virtual Box
+
+2. Install Vagrant
+
+3. create a folder vagrant init, vagrant up, vagrant ssh
+
+4. Install mongoDB
+
+//1st replica
+mongod --replSet rama --logpath "rsLog1/r1.log" --dbpath rs1 --port 27018
+mongod --replSet rama --logpath "rsLog2/r2.log" --dbpath rs2 --port 27019
+mongod --replSet rama --logpath "rsLog3/r3.log" --dbpath rs3 --port 27020
+mongod --replSet rama --logpath "rsLog4/r4.log" --dbpath rs4 --port 27021
+
+//set config file
+config = {
+	_id : "rama", members:[
+	{_id:0, host : "localhost:27018"},
+	{_id:1, host : "localhost:27019"},
+	{_id:2, host : "localhost:27020"},
+	{_id:3, host : "localhost:27021"}
+]
+}
+
+rs.initiate(config);
+
+rs.status();
+
+

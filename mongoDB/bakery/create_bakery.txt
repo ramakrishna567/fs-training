@@ -1,0 +1,10 @@
+use rk_bakery
+
+//create collections
+db.createCollection("bakery_sweets");
+
+db.createCollection("bakery_others");
+
+db.createCollection("bakery_hot");
+
+//create users to bakery database

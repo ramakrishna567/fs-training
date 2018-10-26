@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>showPassword</title>
+    <style>
+    input{
+        position: relative;
+        width: 15em;
+        height: 2em;
+    } 
+    #pwd-input{
+        position: relative;
+    }
+    #icon-eye{
+        position: absolute;
+        top: 0;
+        left: 5.2em;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .fa.active{
+        content: "\f06e";
+        color: slateblue;
+    }
+    </style>
+</head>
+<body>
+    <form>
+
+        <label for="pwd">Enter your Password</label>
+        <div id="pwd-input">
+                <input type="password" id="pwd">
+                <i class="far fa-eye-slash" id="icon-eye"></i>
+
+        </div> <br><br>
+
+        0<input type="range" min="0" max="100" step="1" value="50" onchange="showRange(this.value)">100
+        <br>
+        range-Value = <span id="rangeStatus"> 50 </span>
+    </form>
+
+    <script src="./showpwd.js"></script>
+</body>
+</html> 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            input[type=text] {
+                margin-left: 250px;
+            }
+
+            input[type=text] {
+                width: 250px;
+                padding: 0px;
+                border-width: 5px;
+                border: 0px solid gray;
+                /* border-bottom: 1px solid grey; */
+                -webkit-transition: all .35s ease-in-out;
+                transition: all .35s ease;
+                /* transform: scale(1); */
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            input[type=text]:focus {
+                border-width: 0px;
+                outline: none;
+                width: 250px;
+                border-bottom-width: 2px;
+                /* border-bottom: 2px solid black; */
+            }
+
+            input[type=text]::placeholder {
+                font-weight: bold;
+                width: 250px;
+                background-color: white;
+                border-bottom: 2px solid lightgrey;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>The width Property</h1>
+
+        <p>Set the width of the input field to 100 pixels. However, when the input field gets focus, make it 250 pixels wide:</p>
+
+        Search: <input type="text" name="search" placeholder="firstname">
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>
