@@ -1,0 +1,19 @@
+{
+  "name": "third-party",
+  "version": "1.0.0",
+  "description": "this is first npm project",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "this",
+    "is",
+    "RamakrishnaPro"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.1.8"
+  }
+}
