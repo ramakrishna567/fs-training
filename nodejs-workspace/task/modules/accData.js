@@ -4,17 +4,7 @@ var user1 = {
     balance : 10000
 }
 
-var user2 = {
-    ac_no : 4455,
-    ac_name : "Komali",
-    balance : 50000
-}
-
-var accounts = [user1, user2];
-var records = {
-    accounts:accounts
-}
 
 // console.log(accounts);
 
-module.exports = records;
+module.exports = {user:user1}; 
