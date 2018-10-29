@@ -4,9 +4,12 @@
   "description": "this is hotel server",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "test": "mocha"
   },
   "author": "ram",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
