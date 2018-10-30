@@ -1,23 +1,27 @@
 var records = require('./accData.js');
 // user verification
 // console.log(records[1].ac_no);
-var userVerify = (accountNo, account)=>{
-// var account = 0;
-    if (account <= records.accounts.length) {        
-        for (; account < records.accounts.length;) {
-            if (accountNo == records.accounts[account].ac_no) {
-                    console.log("login successfull");
-                }            
+var userVerify = (accountNo) => {
+    var account = 0;
+    if (account <= records.users.length) {
+        for (; account < records.users.length;) {
+            if (accountNo == records.users[account].ac_no) {
+                console.log("login successfull");
+                return records.users[account];
+            }
+            else{
+                return false;
+            }
             ++account;
-            // console.log(account);
-        }        
-        // if (account > records.length) {
-        //     console.log("login Failed");
-        // }
-
+        }
     }
-} 
+    else{
+        return false;
+    }
+    console.log(records.users.length);
+    console.log(account);
+}
 
 module.exports = {
-    userVerify : userVerify
+    userVerify: userVerify,
 };

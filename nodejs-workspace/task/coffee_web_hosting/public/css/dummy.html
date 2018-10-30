@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+  background: #4e4e4e;
+}
+
+#music {
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 50px);
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: #000;
+  opacity: 1;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+#music:hover {
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+#music img {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+}
+
+#music:hover .music-container {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  height: 23px;
+  width: 210px;
+  margin-top: 8px;
+  opacity: 1;
+  background-color: #000;
+  color: #000;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  transform: scale(1);
+}
+
+.music-container {
+  height: 23px;
+  width: 210px;
+  transform: scale(0);
+  position: absolute;
+  background-color: #000;
+  padding-left: 10px;
+  border: 1px solid white;
+  margin-left: -85px;
+  margin-top: 8px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+    </style>
+</head>
+
+<body>
+    <div id="music">
+        <center>
+            <img src="https://i.imgur.com/cgIfJId.gif" />
+        </center>
+        <div class="music-container">
+            <center>
+                <font color="white" size="1">
+                    jsfiddle can't load my music lol
+                </font>
+            </center>
+        </div>
+    </div>
+</body>
+
+</html>

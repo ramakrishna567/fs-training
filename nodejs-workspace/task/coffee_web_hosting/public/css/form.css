@@ -1,0 +1,84 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    margin: 0%;
+    position: relative;
+}
+#div-23{
+width: 50%;
+height: 26em;;
+box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.5);
+border-radius: 20px;
+text-align: right;
+margin: 8em 25%;
+position: absolute;
+}
+
+form{
+    /* margin:25%; */
+    width: 100%;
+    margin-top: 3em;
+    position: relative;
+}
+input{
+margin: 0em, 10em;
+    width: 20em;
+    height: 2em;
+    margin-right: 9em;
+    margin-top: 1em;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+label{
+    font-size: 1.1em;
+    color: grey;
+    margin-right: 1em;
+/* margin-bottom: 5em; */
+    margin-top: 10px;
+    display: inline-block;
+}
+
+p{
+    color: dodgerblue;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.submit{
+    background-color: dodgerblue;
+color: white;
+    width: 7em;
+    height: 2em;
+    font-size: 1.3em;
+    /* left: 50%; */
+margin-top: 2em;
+margin-right: 38%;  
+font-weight: bold;
+
+}
+.submit:hover{
+    color: grey;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5)
+    
+}
+form div{
+    position: relative;
+}
+form div label{
+    position: absolute;
+    top: 0px;
+    color: lightgray;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input:focus ~ label{
+    overflow: none;
+    top: -40px;
+    left: 0px;
+    font-size: 10px;
+    /* box-shadow: 0px 0px 10px dodgerblue; */
+}

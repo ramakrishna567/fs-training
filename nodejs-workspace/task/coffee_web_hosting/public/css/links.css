@@ -1,0 +1,20 @@
+a{
+    text-decoration: none;
+}
+/* 
+#button_link{
+ background-color: brown;
+ color: white;   
+} */
+a:link, a:visited{
+    display: inline-block;
+    background-color: brown;
+     color: white;
+}
+a:link:hover, a:visited:hover{
+    background-color: black;
+}
+
+/* #button_link:hover{
+    background-color: black;
+} */

@@ -1,13 +1,7 @@
-
-var verify = require('./accounts.js');
-var accData = require('./accData.js');
 var bankOp = require('./bankOp');
 
-// verify.userVerify(1122, 1);
-// console.log(verify.account);
+// foundUser.userVerify(104);
 
-
-bankOp.showBalance(1122);
-// bankOp.withdrawTrans(1122, 5000);
-// bankOp.depositTrans(1122, 5000);
-// console.log(accData); 
+// bankOp.showBalance(101);
+// bankOp.withdrawTrans(101, 5000);
+bankOp.depositTrans(101, 5000);

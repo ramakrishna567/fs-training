@@ -1,45 +1,50 @@
-var records = require('./accData.js');
+var find = require('./accounts');
 var fs = require('fs');
-// var data = require('./accounts.js');
-// var access = userVerify();
 
 // Balance Enquiry 
-function showBalance(accountNo) { 
-
-    if (accountNo == records.user.ac_no) {
+function showBalance(accountNo) {
+    var accessUser = find.userVerify(accountNo);
+    if (accessUser) {
+        console.log("Your Current balance is ", accessUser.balance);
         var transactionDetails = {
             id: 123,
             type: "showbalance",
             date: "25-10-2018",
             time: "10:43AM",
-            current_bal: records.user.balance
+            ac_no: accessUser.ac_no,
+            ac_name:accessUser.ac_name,
+            current_bal: accessUser.balance,
+            status:true
         };
-        console.log("Your Balance is :", records.user.balance);
-        fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
-    }
-    else {
-        console.log("you account does not exist");
+        fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails)+",\n");
+
+    } else {
+        console.log("Your account does not exist");
     }
 }
 
 // Withdraw Amount
 function withdrawTrans(accountNo, amountWithdraw) {
-    if (accountNo == records.user.ac_no) {
-        if (amountWithdraw != '' && records.user.balance > amountWithdraw) {
-            current_bal = records.user.balance - Number(amountWithdraw);
+    var accessUser = find.userVerify(accountNo);
+    if (accessUser) {
+        if (amountWithdraw != '' && accessUser.balance > amountWithdraw) {
+            current_bal = accessUser.balance - Number(amountWithdraw);
             var transactionDetails = {
-                id: 456,
+                id: 789,
                 type: "withdraw",
                 date: "25-10-2018",
-                time: "11:53AM",
-                prev_bal: records.user.balance,
-                depositAmount: amountWithdraw,
-                current_bal: current_bal
+                time: "10:43AM",
+                ac_no: accessUser.ac_no,
+                ac_name:accessUser.ac_name,
+                prev_bal: accessUser.balance,
+                amountWithdraw: amountWithdraw,
+                current_bal: current_bal,
+                status:true
             };
             console.log(`Transaction Success!! Amount Withdrawn!
             withdraw amount is : ${amountWithdraw}
             Balance is : ${current_bal}`);
-            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
+            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails)+",\n");
             return true;
         }
         else {
@@ -55,22 +60,26 @@ function withdrawTrans(accountNo, amountWithdraw) {
 
 // Deposite Amount
 function depositTrans(accountNo, amountDeposit) {
-    if (accountNo == records.user.ac_no) {
+    var accessUser = find.userVerify(accountNo);
+    if (accessUser) {
         if (amountDeposit != '') {
-            current_bal = records.user.balance + Number(amountDeposit);
+            current_bal = accessUser.balance + Number(amountDeposit);
             var transactionDetails = {
-                id: 123,
-                type: "deposite",
+                id: 456,
+                type: "withdraw",
                 date: "25-10-2018",
-                time: "10:53AM",
-                prev_bal: records.user.balance,
-                depositAmount: amountDeposit,
-                current_bal: current_bal
+                time: "10:43AM",
+                ac_no: accessUser.ac_no,
+                ac_name:accessUser.ac_name,
+                prev_bal: accessUser.balance,
+                amountWithdraw: amountDeposit,
+                current_bal: current_bal,
+                status:true
             };
             console.log(`Transaction Success!! Amount Deposited!
             Deposit amount is : ${amountDeposit}
             Balance is : ${current_bal}`);
-            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
+            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails)+",\n");
         }
         else {
             console.log("Sorry Transaction Failed! Try Again!!")
