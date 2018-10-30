@@ -1,1 +1,1 @@
-{"id":123,"type":"deposite","date":"25-10-2018","time":"10:53AM","prev_bal":10000,"depositAmount":5000,"current_bal":15000}{"id":456,"type":"withdraw","date":"25-10-2018","time":"11:53AM","prev_bal":10000,"depositAmount":5000,"current_bal":5000}{"id":456,"type":"withdraw","date":"25-10-2018","time":"11:53AM","prev_bal":10000,"depositAmount":5000,"current_bal":5000}{"id":123,"type":"showbalance","date":"25-10-2018","time":"10:43AM","current_bal":10000}
+{"id":123,"type":"deposite","date":"25-10-2018","time":"10:53AM","prev_bal":10000,"depositAmount":2000,"current_bal":12000}

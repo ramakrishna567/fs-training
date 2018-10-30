@@ -4,7 +4,7 @@ var fs = require('fs');
 // var access = userVerify();
 
 // Balance Enquiry 
-function showBalance(accountNo) {
+function showBalance(accountNo) { 
 
     if (accountNo == records.user.ac_no) {
         var transactionDetails = {
@@ -24,47 +24,59 @@ function showBalance(accountNo) {
 
 // Withdraw Amount
 function withdrawTrans(accountNo, amountWithdraw) {
-    if (amountWithdraw != '' && records.user.balance > amountWithdraw) {
-        current_bal = records.user.balance - Number(amountWithdraw);
-        var transactionDetails = {
-            id: 456,
-            type: "withdraw",
-            date: "25-10-2018",
-            time: "11:53AM",
-            prev_bal: records.user.balance,
-            depositAmount: amountWithdraw,
-            current_bal: current_bal
-        };
-        console.log(`Transaction Success!! Amount Withdrawn!
-        withdraw amount is : ${amountWithdraw}
-        Balance is : ${current_bal}`);
-        fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
+    if (accountNo == records.user.ac_no) {
+        if (amountWithdraw != '' && records.user.balance > amountWithdraw) {
+            current_bal = records.user.balance - Number(amountWithdraw);
+            var transactionDetails = {
+                id: 456,
+                type: "withdraw",
+                date: "25-10-2018",
+                time: "11:53AM",
+                prev_bal: records.user.balance,
+                depositAmount: amountWithdraw,
+                current_bal: current_bal
+            };
+            console.log(`Transaction Success!! Amount Withdrawn!
+            withdraw amount is : ${amountWithdraw}
+            Balance is : ${current_bal}`);
+            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
+            return true;
+        }
+        else {
+            console.log("Sorry Transaction Failed! Try Again!!");
+            return false;
+        }
     }
-    else {
-        console.log("Sorry Transaction Failed! Try Again!!")
+    else{
+        console.log("you account does not exist");
+        return false;
     }
 }
 
-// Withdraw Amount
+// Deposite Amount
 function depositTrans(accountNo, amountDeposit) {
-    if (amountDeposit != '' && records.user.balance > amountDeposit) {
-        current_bal = records.user.balance + Number(amountDeposit);
-        var transactionDetails = {
-            id: 123,
-            type: "deposite",
-            date: "25-10-2018",
-            time: "10:53AM",
-            prev_bal: records.user.balance,
-            depositAmount: amountDeposit,
-            current_bal: current_bal
-        };
-        console.log(`Transaction Success!! Amount Deposited!
-        Deposit amount is : ${amountDeposit}
-        Balance is : ${current_bal}`);
-        fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
-    }
-    else {
-        console.log("Sorry Transaction Failed! Try Again!!")
+    if (accountNo == records.user.ac_no) {
+        if (amountDeposit != '') {
+            current_bal = records.user.balance + Number(amountDeposit);
+            var transactionDetails = {
+                id: 123,
+                type: "deposite",
+                date: "25-10-2018",
+                time: "10:53AM",
+                prev_bal: records.user.balance,
+                depositAmount: amountDeposit,
+                current_bal: current_bal
+            };
+            console.log(`Transaction Success!! Amount Deposited!
+            Deposit amount is : ${amountDeposit}
+            Balance is : ${current_bal}`);
+            fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails));
+        }
+        else {
+            console.log("Sorry Transaction Failed! Try Again!!")
+        }    
+    } else{
+        console.log("you account does not exist");
     }
 }
 

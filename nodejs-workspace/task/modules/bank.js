@@ -10,4 +10,4 @@ var bankOp = require('./bankOp');
 bankOp.showBalance(1122);
 // bankOp.withdrawTrans(1122, 5000);
 // bankOp.depositTrans(1122, 5000);
-// console.log(accData);
+// console.log(accData); 

@@ -1,0 +1,22 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "this is new project",
+  "main": "new.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "this",
+    "is",
+    "new",
+    "folder"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "mongodb": "^3.1.8"
+  },
+  "devDependencies": {}
+}

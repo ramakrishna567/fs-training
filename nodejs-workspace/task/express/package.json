@@ -1,0 +1,21 @@
+{
+  "name": "express_tasks",
+  "version": "1.0.0",
+  "description": "express tasks",
+  "main": "expBank.js",
+  "scripts": {
+    "start": "node expBank.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "this",
+    "is",
+    "for",
+    "tasks"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
