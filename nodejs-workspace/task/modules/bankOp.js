@@ -45,7 +45,7 @@ function withdrawTrans(accountNo, amountWithdraw) {
             withdraw amount is : ${amountWithdraw}
             Balance is : ${current_bal}`);
             fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails)+",\n");
-            return true;
+            return transactionDetails;
         }
         else {
             console.log("Sorry Transaction Failed! Try Again!!");
@@ -80,12 +80,15 @@ function depositTrans(accountNo, amountDeposit) {
             Deposit amount is : ${amountDeposit}
             Balance is : ${current_bal}`);
             fs.appendFileSync('../fs-module/transactions.json', JSON.stringify(transactionDetails)+",\n");
+            return transactionDetails;
         }
         else {
             console.log("Sorry Transaction Failed! Try Again!!")
+            return false;
         }    
     } else{
         console.log("you account does not exist");
+        return false;
     }
 }
 

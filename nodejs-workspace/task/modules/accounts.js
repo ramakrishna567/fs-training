@@ -9,9 +9,6 @@ var userVerify = (accountNo) => {
                 console.log("login successfull");
                 return records.users[account];
             }
-            else{
-                return false;
-            }
             ++account;
         }
     }

@@ -1,50 +1,76 @@
 const fs = require('fs');
 const express = require('express');
 const users = require('../modules/accData');
+const find = require('../modules/accounts');
 const bank = require('../modules/bankOp');
 const app = express();
 
 const host = '127.0.0.1';
 const port = '1010';
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
     console.log("GET request on /");
     console.log(req.url + " " + req.method);
     res.status(200).send("Welcome to Rk Bank");
 });
 
 // Show user Details
-app.get('/users', function(req, res){
-    console.log("GET request on /");
+app.get('/showbalance', function (req, res) {
+    console.log("GET request on /showbalance");
     console.log(req.url + " " + req.method);
-    // res.status(200).send(users.user);
-    res.status(200).send(`Account Number : ${users.user.ac_no} \n
-    Name : ${users.user.ac_name} \n
-    Current Balance : ${users.user.balance}
-    \n Your Data is Appended`);
-    fs.appendFile('./data.log', JSON.stringify(users), function(err,fd){
-        if(err) throw err;
-        console.log("data appended");
-    });
+
+    var accessUser = bank.showBalance(accountNo);
+    if (accessUser) {
+        res
+            .status(200)
+            .send(`Current Balance : ${accessUser.balance}`);
+    }
+    else {
+        res
+            .status(200)
+            .send('enter correct details for accountNo');
+    }
+
 });
 
 // Deposit
-app.post('/deposit', function(req, res){
+app.post('/deposit', function (req, res) {
     console.log("GET request on /");
     console.log(req.url + " " + req.method);
-    // res.status(200).send(users.user);
-    res.status(200).send(`Deposit done \n Transaction Details add to Histories`);
-    bank.depositTrans(1122, 2000);
+    var accessUser = bank.depositTrans(req.query.accountNo, req.query.amount);
+    if (accessUser) {
+        res
+            .status(200)
+            .send(`Deposit done \n Transaction Details add to Histories \n,`+JSON.stringify(accessUser));
+        fs.appendFile('data.log', JSON.stringify(accessUser) + ",\n", function (err, data) {
+            if (err) throw err;
+            console.log("transaction detailed are stored");
+        });
+    }
+    else {
+        res
+            .status(200)
+            .send(`Transaction Failed! Try agaun`);
+    }
 });
 
 // withdraw
-app.post('/withdraw', function(req, res){
-    console.log("GET request on /");
+app.post('/withdraw', function (req, res) {
+    console.log("GET request on /withdraw");
     console.log(req.url + " " + req.method);
-    if(bank.withdrawTrans(1122,500)){
-    res.status(200).send(`withdraw done \n Transaction Details add to Histories`);
+    var accessUser = bank.withdrawTrans(req.query.accountNo, req.query.amount);
+    if (accessUser) {
+        res
+            .status(200)
+            .send(`withdraw done \n Transaction Details add to Histories\n`+JSON.stringify(accessUser));
+        fs.appendFile('data.log', JSON.stringify(accessUser) + ",\n", function (err, data) {
+            if (err) throw err;
+            console.log("transaction detailed are stored");
+        });
     }
-    else{
-    res.status(404).send(`withdraw failed \n Transaction Details did not add to Histories`);
+    else {
+        res
+            .status(200)
+            .send(`Transaction Failed! Try agaun`);
     }
 });
 
