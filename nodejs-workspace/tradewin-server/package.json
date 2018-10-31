@@ -1,0 +1,18 @@
+{
+  "name": "tradewin-server",
+  "version": "1.0.0",
+  "description": "this is by and sell propert project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "THISISTRADEWIN"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
