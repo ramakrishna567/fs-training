@@ -1,14 +1,14 @@
 const express = require('express');
-const path = require('path');
+const app = express();
 const router = express.Router();
-const homeCtrl = require('../controller/home.controller');
+const homeCtrl = require('../controllers/home.controller');
 
 router
 .route('/')
-.get();
+.get(homeCtrl.rootReq);
 
 router
 .route('/home')
-.get();
+.get(homeCtrl.homeReq);
 
 module.exports = router;

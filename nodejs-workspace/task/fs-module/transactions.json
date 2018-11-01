@@ -6,3 +6,4 @@
 {"id":789,"type":"withdraw","date":"25-10-2018","time":"10:43AM","ac_no":101,"ac_name":"ramakrishna","prev_bal":10000,"amountWithdraw":"200","current_bal":9800,"status":true},
 {"id":789,"type":"withdraw","date":"25-10-2018","time":"10:43AM","ac_no":101,"ac_name":"ramakrishna","prev_bal":10000,"amountWithdraw":"200","current_bal":9800,"status":true},
 {"id":456,"type":"withdraw","date":"25-10-2018","time":"10:43AM","ac_no":101,"ac_name":"ramakrishna","prev_bal":10000,"amountWithdraw":"200","current_bal":10200,"status":true},
+{"id":456,"type":"withdraw","date":"25-10-2018","time":"10:43AM","ac_no":101,"ac_name":"ramakrishna","prev_bal":10000,"amountWithdraw":5000,"current_bal":15000,"status":true},
