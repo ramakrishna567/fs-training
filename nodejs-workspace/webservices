@@ -1,0 +1,8 @@
+Webservices :	Services which are serve over the internet
+When two devices of Applications are communicating with each other over the web(www) they share web services
+Ex : Hotel serve hotel services
+	bank serve bank services
+
+Types
+	1. SOAP Based Webservices
+	2. REST Based Webservices
