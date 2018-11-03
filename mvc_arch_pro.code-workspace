@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "nodejs-workspace\\tradewin-server"
+		},
+		{
+			"path": "tradewin-wahid"
 		}
 	]
 }

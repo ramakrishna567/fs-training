@@ -1,0 +1,39 @@
+[{
+    "event_name" : "Marriage",
+    "event_cost" : 1000000,
+    "start_date" : "5-11-2018",
+    "end_date" : "15-11-2018",
+    "adress" : {
+    "flat_no" : "7G",
+    "street" : "holy street",
+    "city" : "Hyderabad",
+    "pin" : 500024
+    },
+    "material" : ["chairs", "decoration_items", "food_items"]
+},
+{
+    "event_name" : "Birthday",
+    "event_cost" : 250000,
+    "start_date" : "10-11-2018",
+    "end_date" : "11-11-2018",
+    "adress" : {
+    "flat_no" : "12A",
+    "street" : "old street",
+    "city" : "Secunderabad",
+    "pin" : 500035
+    },
+    "material" : ["chairs", "decoration_items"]
+},
+{
+    "event_name" : "Retirement",
+    "event_cost" : 500000,
+    "start_date" : "6-11-2018",
+    "end_date" : "7-11-2018",
+    "adress" : {
+    "flat_no" : "12-33A",
+    "street" : "Banjarahills",
+    "city" : "Hyderabad",
+    "pin" : 50004
+    },
+    "material" : ["chairs", "decoration_items", "food_items"]
+}]

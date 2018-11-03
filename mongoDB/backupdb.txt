@@ -17,5 +17,5 @@ mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db me
 mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection accounts --jsonArray --pretty --out mongoexp/accounts.json
 
 // IMPORT 
-mongoexport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection baccounts --jsonArray mongoexp/accounts.json
+mongoimport -u ramakrishna567 -p ramki567 --authenticationDatabase admin --db mero_bank --collection baccounts --jsonArray mongoexp/accounts.json
 

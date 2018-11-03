@@ -4,4 +4,4 @@ var bankOp = require('./bankOp');
 
 // bankOp.showBalance(101);
 // bankOp.withdrawTrans(101, 5000);
-bankOp.depositTrans(101, 5000);
+bankOp.depositTrans(101, 5000); 

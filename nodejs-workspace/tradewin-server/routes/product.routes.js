@@ -14,6 +14,6 @@ router
 // params maps always at end
 router
 .route('/api/products/:productId')
-.get(prodCtrl.getAllProducts);
+.get(prodCtrl.getoneProduct);
 
 module.exports = router;
