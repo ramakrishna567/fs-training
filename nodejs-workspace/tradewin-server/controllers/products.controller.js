@@ -65,7 +65,7 @@ module.exports.addOneProduct = function (req, res, next) {
     console.log("Add one product");
     console.log(req.body);
     if (req.body) {
-        fs.appendFile(path.join(__dirname, '../models/data/addedNewProduct.json'), JSON.stringify(req.body), function (err, data) {
+        fs.appendFile(path.join(__dirname, '../models/data/addedNewProduct.json'), JSON.stringify(req.body)+", \n", function (err, data) {
             if (err) throw err;
             console.log("product is added to Database");
         });
