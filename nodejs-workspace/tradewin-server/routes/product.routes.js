@@ -11,9 +11,14 @@ router
 .route('/api/products/new')
 .post(prodCtrl.addOneProduct);
 
+// update 
+router
+.route('/api/products/update:productId')
+.put(prodCtrl.updateOneProdutct);
+
 // params maps always at end
 router
 .route('/api/products/:productId')
-.get(prodCtrl.getoneProduct);
+.post(prodCtrl.getoneProduct);
 
 module.exports = router;

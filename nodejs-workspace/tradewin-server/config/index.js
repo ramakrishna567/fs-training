@@ -8,4 +8,4 @@ module.exports = {
     HOST : host,
     DBURL : dbUrl,
     AUTHSRC : authSource
-}
+} 

@@ -1,5 +1,5 @@
 // "use strict";
-require('./models/db.connection')
+require('./models/db.connection').open()
 const CONFIG = require('./config');
 
 const express = require('express');
