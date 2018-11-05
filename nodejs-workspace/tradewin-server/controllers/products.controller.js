@@ -1,4 +1,4 @@
-const productData = require('../models/data/productdetails.json');
+// const productData = require('../models/data/productdetails.json');
 // const fs = require('fs');
 const conn = require('../models/db.connection')
 const ObjectId = require('mongodb').ObjectId;  //for _id is object type so we need this variable
@@ -21,7 +21,6 @@ module.exports.getAllProducts = function (req, res, next) {
 
     var db = conn.get().db('tradewin');
     let collect = db.collection('productdetails')
-    // collect.find().skip(offset).limit(count);
     // collect.find().skip(offset).limit(count);
 
     collect.find().skip(offset).limit(count).toArray(function (err, products) {

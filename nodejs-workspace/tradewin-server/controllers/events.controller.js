@@ -1,17 +1,24 @@
 const eventsData = require('../models/data/eventdetails.json');
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
+const connection = require('../models/db.connection');
+const ObjectId = require('mongodb').ObjectId;
 
-module.exports.getAllevents = function (req, res, next) {
+
+
+module.exports.getAllEvents = function (req, res, next) {
+    let collect = connection.get().db('tradewin').collection('eventdetails');
+
     console.log(req.url + " " + req.method);
     console.log("req query", req.query);
-    console.log("req ip address :", req.ip);
-    console.log("req hostname :", req.hostname);
-    console.log("req protocol :", req.protocol);
-    console.log("req parameters :", req.params);
-    console.log("req route :", req.route);
-    console.log("req path :", req.path);
-    console.log("req app :", req.app);
+    // console.log("req ip address :", req.ip);
+    // console.log("req hostname :", req.hostname);
+    // console.log("req protocol :", req.protocol);
+    // console.log("req parameters :", req.params);
+    // console.log("req route :", req.route);
+    // console.log("req path :", req.path);
+    // console.log("req app :", req.app);
+
     let offset = 0;
     let count = 3;
     if (req.query && req.query.offset) {
@@ -21,84 +28,154 @@ module.exports.getAllevents = function (req, res, next) {
         count = parseInt(count = req.query.count, 10);
     }
     console.log(offset);
-    let events = eventsData.slice(offset, offset + count);
-    console.log(events.length);
 
-    res
-        .status(200)
-        .set('Contet-Type', 'application/json')
-        .json(events);
-}
-
-//for one event
-module.exports.getOneEvent = (req, res, next) => {
-    console.log(req.params);
-    let eventId = req.params.eventId;
-    if (req.params.eventId) {
-        if (eventsData.length > eventId) {
-            event = eventsData[parseInt(req.params.eventId, 10)];
+    // let events = eventsData.slice(offset, offset + count);
+    collect.find().skip(offset).limit(count).toArray(function (err, events) {
+        if (err) {
+            console.log("data not found" + err);
+            res
+                .status(404)
+                .set('Content-Type', 'application/json')
+                .json({
+                    message: "data not found!"
+                })
+        } else {
             res
                 .status(200)
                 .set('Content-Type', 'application/json')
-                .json(event);
-        } else {
-            res
-                .status(400)
-                .set('Content-Type', 'application/json')
-                .json({
-                    message: "bad request"
-                });
+                .json(events)
         }
+    })
+    console.log(db);
+}
+
+//for one event
+module.exports.getOneEvent = function (req, res, next) {
+    let collect = connection.get().db('tradewin').collection('eventdetails');
+
+    var eventId = req.params.eventId;
+    if (req.params.eventId) {
+        collect.findOne({
+            _id: ObjectId(eventId)
+        }, function (err, result) {
+            if (err) {
+                res
+                    .status(404)
+                    .json({
+                        message: "document not found"
+                    });
+            } else {
+                console.log(result);
+
+                res
+                    .status(200)
+                    .set('Content-Type', 'application/json')
+                    .json(result)
+            }
+        });
     } else {
         res
-            .status(400)
-            .set('Content-Type', 'application/json')
+            .status(404)
             .json({
-                message: "Invalid product ID"
+                message: "Bad request"
             });
     }
 }
 
-//for new event
+// if (req.params.eventId) {
+//     if (eventsData.length > eventId) {
+//         event = eventsData[parseInt(req.params.eventId, 10)];
+//         res
+//             .status(200)
+//             .set('Content-Type', 'application/json')
+//             .json(event);
+//     } else {
+//         res
+//             .status(400)
+//             .set('Content-Type', 'application/json')
+//             .json({
+//                 message: "bad request"
+//             });
+//     }
+// } else {
+//     res
+//         .status(400)
+//         .set('Content-Type', 'application/json')
+//         .json({
+//             message: "Invalid product ID"
+//         });
+// }
+
+
+//for Schedule Event
 module.exports.addNewEvent = function (req, res, next) {
-    console.log(req.body);
+    let collect = connection.get().db('tradewin').collection('eventdetails');
+
     if (req.body) {
-        fs.appendFile(path.join(__dirname, '../models/data/addedNewEvents.json'), JSON.stringify(req.body)+",\n", function (err, data) {
-            if (err) throw err;
-            console.log("product is added to Database");
+        collect.insertOne(req.body, function (err, isInsert) {
+            if (err) {
+                console.log(error);
+                res
+                    .status(404)
+                    .json({
+                        error: "Server Internal Problem Data",
+                        message: "Document is not Inserted"
+                    })
+            } else {
+                res
+                    .status(200)
+                    .set('Content-Type', 'application/json')
+                    .json(isInsert);
+            }
         });
-        res
-            .status(200)
-            .set('Content-Type', 'application/json')
-            .json(req.body);
     } else {
         res
             .status(400)
-            .set('Content-Type', 'application/json')
-            .json({
-                message: "Event is not added"
-            });
+        json({
+            error: "bad request",
+            message: "Data not inserted"
+        })
     }
 }
 
-//for new event
-module.exports.updateEvents = function (req, res, next) {
-    console.log(req.body);
-    if (req.body) {
-        fs.writeFile(path.join(__dirname, '../models/data/addedNewEvents.json'), JSON.stringify(req.body), function (err, data) {
-            if (err) throw err;
-            console.log("product is updated to Database");
-        });
-        res
-            .status(200)
-            .set('Content-Type', 'application/json')
-            .json(req.body);
-    } else {
-        res
-            .status(400)
-            .set('Content-Type', 'application/json')
-            .json({
-                message: "Event is not updated"
-            });
+// for Update Event
+module.exports.updateEvent = function (req, res, next) {
+    let collect = connection.get().db('tradewin').collection('eventdetails');
+    let eventId = req.params.eventId
+ 
+    let filterQuery = {
+        _id: ObjectId(eventId)
     }
+    let updateQuery = {
+        $unset : {
+            event_cost: 0
+        }
+    }
+ 
+    collect.updateOne(filterQuery, updateQuery, function(err, isupdate){
+        if(err) throw err;
+        res
+        .status(200)
+        .set('Content-Type', 'application/json')
+        .json(isupdate)
+    });
+}
+
+// drop document
+module.exports.deleteEvent = function(req, res, next){
+    let collect = connection.get().db('tradewin').collection('eventdetails');
+    let eventId = req.params.eventId
+    let filterQuery = {
+        _id : ObjectId(eventId)
+    }
+    let updateQuery = {
+        event_cost : 0
+    }
+    collect.deleteOne(filterQuery, updateQuery, function(err, isDelete){
+        if(err) throw err;
+        res
+        .status(200)
+        .set('Content-Type', 'application/json')
+        .json(isDelete);
+    });
 }

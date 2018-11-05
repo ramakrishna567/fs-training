@@ -4,7 +4,7 @@ const CONFIG = require('../config');
 var connection;
 
 function open() {
-    MongoClient.connect(CONFIG.DBURL, { authSource: CONFIG.AUTHSRC},
+    MongoClient.connect(CONFIG.DBURL, { authSource: CONFIG.AUTHSRC, useNewUrlParser: true},
         function (err, client) {
             if (err) {
                 console.log("mongodb connection failed !", err);
