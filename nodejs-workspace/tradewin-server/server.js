@@ -1,5 +1,6 @@
-// "use strict";
-require('./models/db.connection').open();
+"use strict";
+// require('./models/db.connection').open(); // FOR MONGODB DRIVER
+require('./models/db.connect');
 const CONFIG = require('./config');
 
 const express = require('express');
