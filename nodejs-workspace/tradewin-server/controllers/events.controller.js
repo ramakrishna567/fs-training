@@ -1,6 +1,7 @@
 const eventsData = require('../models/data/eventdetails.json');
 const fs = require('fs');
 const path = require('path');
+
 module.exports.getAllevents = function (req, res, next) {
     console.log(req.url + " " + req.method);
     console.log("req query", req.query);

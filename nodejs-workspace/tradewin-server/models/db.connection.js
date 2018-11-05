@@ -18,7 +18,7 @@ function open() {
 function getConnection(){
     return connection;
 }
-module.exports = {
+module.exports = { 
     open : open,
     get : getConnection
 }

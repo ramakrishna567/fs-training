@@ -1,10 +1,10 @@
 // "use strict";
-require('./models/db.connection').open()
+require('./models/db.connection').open();
 const CONFIG = require('./config');
 
 const express = require('express');
 const routes = require('./routes/index');
-const userRoutes = require('./routes//user.routes');
+const userRoutes = require('./routes/user.routes');
 const productRoutes = require('./routes/product.routes');
 const eventRoutes = require('./routes/event.routes');
 const bodyParser = require('body-parser');

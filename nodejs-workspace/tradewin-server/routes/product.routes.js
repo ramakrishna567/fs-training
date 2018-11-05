@@ -13,12 +13,12 @@ router
 
 // update 
 router
-.route('/api/products/update:productId')
-.put(prodCtrl.updateOneProdutct);
+.route('/api/products/update/:productId')
+.put(prodCtrl.updateOneProduct);
 
 // params maps always at end
-router
-.route('/api/products/:productId')
-.post(prodCtrl.getoneProduct);
+// router
+// .route('/api/products/:productId')
+// .get(prodCtrl.getOneProduct);
 
 module.exports = router;
