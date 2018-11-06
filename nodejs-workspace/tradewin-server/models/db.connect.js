@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const CONFIG = require('../config');
 
+//require mongoose model => Register Model
+require('./products.model');
+
 const options = {
     user: CONFIG.DBUSR,
     pass: CONFIG.DBPWD,
