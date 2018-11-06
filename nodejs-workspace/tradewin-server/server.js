@@ -1,6 +1,6 @@
 "use strict";
-require('./models/db.connection').open(); // FOR MONGODB DRIVER
-// require('./models/db.connect'); // for mongoose third party framework
+// require('./models/db.connection').open(); // FOR MONGODB DRIVER
+require('./models/db.connect'); // for mongoose third party framework
 const CONFIG = require('./config');
 
 const express = require('express');
