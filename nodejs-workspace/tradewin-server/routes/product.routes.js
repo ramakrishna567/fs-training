@@ -1,24 +1,27 @@
 const express = require('express');
-const path = require('path');
 const prodCtrl = require('../controllers/products.controller');
 const router = express.Router();
 
 router
-.route('/api/products')
+.route('/products')
 .get(prodCtrl.getAllProducts);
 
 router
 .route('/api/products/new')
 .post(prodCtrl.addOneProduct);
 
+router
+.route('/products/:productId')
+.get(prodCtrl.getOneProduct);
+
 // update 
 router
 .route('/api/products/update/:productId')
 .put(prodCtrl.updateOneProduct);
 
-// params maps always at end
-// router
-// .route('/api/products/:productId')
-// .get(prodCtrl.getOneProduct);
+//delete a document
+router
+.route('/api/products/delete/:productId')
+.delete(prodCtrl.deleteOne);
 
 module.exports = router;

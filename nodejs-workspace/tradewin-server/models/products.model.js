@@ -6,7 +6,7 @@ let subSchema = mongoose.Schema({
     date : String,
     model : String,
     price : String,
-    location : String,
+    location : String, 
     details : String
 })
 
@@ -15,15 +15,14 @@ let subcategorySchema = mongoose.Schema({
     name : String,
     image : String,
     sub : [subSchema]
-})
+}) 
 
 const productSchema = mongoose.Schema ({
     name : {
         type : String,
-        require : true
+        required: true        
     },
     image : String,
     subcategory : [subcategorySchema]
-})
-
+});
 mongoose.model('Product', productSchema, 'productdetails');
