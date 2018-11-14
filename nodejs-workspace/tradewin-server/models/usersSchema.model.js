@@ -1,15 +1,14 @@
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema // it is a constructor function
+// const Schema = mongoose.Schema // it is a constructor function
 
 // const Schema = require('mongoose').Schema // this is same as above recommended this
 
-let usersSchema = new Schema({
+const usersSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
     },
-    type: String,
     email: {
         type: String,
         unique: true

@@ -6,7 +6,7 @@ require('./products.model');
 require('./usersSchema.model');
 require('./accounts.model');
 require('./employees.model');
-require('./transactions.model');
+require('./transactions.model'); 
 
 const options = {
     user: CONFIG.DBUSR,

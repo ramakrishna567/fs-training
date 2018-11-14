@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-
+// var ObjectId = mongoose.Schema.Types.ObjectId;
 
 let transactionSchema = mongoose.Schema({
-    // _id : String,
+    ac_id : String,
     tr_amount : Number,
     name : String,
     ac_type : String,
@@ -16,7 +16,6 @@ let transactionSchema = mongoose.Schema({
     phone : {
         primary : {
             type : Number,
-            required : true
         },
         secondary : Number
     }
