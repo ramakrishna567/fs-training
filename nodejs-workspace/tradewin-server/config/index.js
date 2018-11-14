@@ -5,6 +5,7 @@ const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
 const authSource = 'admin';
 const dbUser = 'ramakrishna567';
 const dbPwd = 'ramki567';
+const secretKay = 'Thisismysecretkeyforjwt'
 
 // //Remote db(mLab) - rk_bank-
 // const port = 5090;
@@ -29,5 +30,6 @@ module.exports = {
     DBURL : dbUrl,
     AUTHSRC : authSource,
     DBUSR : dbUser,
-    DBPWD : dbPwd
+    DBPWD : dbPwd,
+    SECRETKEY : secretKay
 }

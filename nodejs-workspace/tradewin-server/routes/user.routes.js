@@ -12,4 +12,8 @@ router
     .route('/login')
     .post(userCtrl.loginUser);
 
+    router
+    .route('/auth')
+    .get(userCtrl.tokenValidator);
+
 module.exports = router;

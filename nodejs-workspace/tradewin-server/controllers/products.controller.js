@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// var Product = mongoose.model('Product');
+var Product = mongoose.model('Product');
 
 module.exports.getAllProducts = function (req, res, next) {
     console.log(req.url);

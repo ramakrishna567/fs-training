@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Users = mongoose.model('Users')
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const CONFIG = require('../config');
 
 module.exports.userRegistration = function (req, res, next) {
 
@@ -33,12 +35,15 @@ module.exports.userRegistration = function (req, res, next) {
         newuser
             .save(newuser)
             .then(user => {
+                var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                 res
                     .status(200)
                     .set('application/json')
                     .json({
                         user: user,
-                        auth: true
+                        auth: true,
+                        msg: "Registration Successful",
+                        token: token // FOR AUTO LOGIN AFTER REGISTRATION
                     });
             })
             .catch(err => {
@@ -72,13 +77,17 @@ module.exports.loginUser = function (req, res, next) {
             .then(user => {
                 var isPwd = bcrypt.compareSync(req.body.password, user.password)
                 console.log(isPwd);
-                
+
                 if (isPwd) {
+                    // jwt.sign(payload, secretkey, options);
+                    var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                     res
                         .status(200)
                         .set('application/json')
                         .json({
-                            msg: "Login Successful!!"
+                            msg: "Login Successful!!",
+                            // user : user,
+                            token: token
                         });
                 } else {
                     res
@@ -94,9 +103,77 @@ module.exports.loginUser = function (req, res, next) {
                     .status(400)
                     .set('application/json')
                     .json({
-                        err : err,
+                        err: err,
                         msg: "emial not found Please Signup!!",
                     });
             })
+    }
+}
+
+module.exports.tokenValidator = (req, res, next) => {
+    var token = req.headers['x-access-token'];
+    if (!token) {
+        res
+            .status(404)
+            .set('application/json')
+            .json({
+                auth: false,
+                message: "Failed to Authenticate token not found!",
+                token: null
+            });
+    } else {
+        jwt.verify(token, CONFIG.SECRETKEY, function (err, doc) {
+            if (err) {
+                res
+                    .status(401)
+                    .set('application/json')
+                    .json({
+                        auth: false,
+                        message: "Failed to Authenticate, Token Invalid !",
+                        token: null
+                    });
+            } else {
+                Users
+                    .findById({ _id: doc._id }, function (err, user) {
+                        if (err) {
+                            res
+                                .status(400)
+                                .set('application/json')
+                                .json({
+                                    err: err,
+                                    msg: "emial not found Please Signup!!",
+                                });
+                        } if (!user) {
+                            res
+                                .status(500)
+                                .set('application/json')
+                                .json({
+                                    err: "server error",
+                            msg: "emial not found Please Signup!!",
+                                });
+                        } else {
+                            // res
+                            //     .status(200)
+                            //     .set('application/json')
+                            //     .json({
+                            //         auth: true,
+                            //         message: "Valid token! Authorised",
+                            //         token: user
+
+                            //CALL FUNCTION AFTER EVALAUTION
+                            next();
+                                // });
+                        }
+                    });
+                // res
+                // .status(200)
+                // .set('application/json')
+                // .json({
+                //     auth : true,
+                //     message : "Valid token! Authorised",
+                //     token : doc
+                // });
+            }
+        })
     }
 }

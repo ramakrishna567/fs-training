@@ -1,10 +1,11 @@
 const express = require('express');
 const prodCtrl = require('../controllers/products.controller');
+const authCtrl = require('../controllers/users.controller');
 const router = express.Router();
 
 router
 .route('/products')
-.get(prodCtrl.getAllProducts);
+.get(authCtrl.tokenValidator,prodCtrl.getAllProducts);
 
 router
 .route('/api/products/new')
