@@ -1,0 +1,15 @@
+{
+    "appenders": {
+        "learn": {
+            "type": "file",
+            "filename": "learn.log"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "learn"
+            ],
+            "level": "ERROR"
+        }
+    }

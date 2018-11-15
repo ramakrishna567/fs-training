@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
+const log4js = require('log4js');
+
 const CONFIG = require('../config');
+log4js.configure('./app/config/log4js.json');
+let dbLogger = log4js.getLogger('db');
+
+
 
 //require mongoose model => Register Model
 require('./products.model');
@@ -19,17 +25,20 @@ mongoose.connect(CONFIG.DBURL, options);
 let db = mongoose.connection; //we are connect with connection is object
 
 db.on('error', function () {
-    console.log("Db Connection Failed via MONGOOSE");
+    dbLogger.info("Db Connection Failed via MONGOOSE");
+    // console.log("Db Connection Failed via MONGOOSE");
     // console.log(error);
 });
 
 db.once('open', function () {
-    console.log("db connection successfull via MONGOOOSE");
+    dbLogger.info("db connection successfull via MONGOOOSE");
+    // console.log("db connection successfull via MONGOOOSE");
 });
 
 function gfshutdown (signal, callback){
     mongoose.connection.close(function(){
-        console.log(`mongoose connection is DISCONNECTED BY APP Termination Signal : ${signal}`);
+   dbLogger.error(`mongoose connection is DISCONNECTED BY APP Termination Signal : ${signal}`)
+        // console.log(`mongoose connection is DISCONNECTED BY APP Termination Signal : ${signal}`);
     callback();
 
     }); //destroyed pool connection

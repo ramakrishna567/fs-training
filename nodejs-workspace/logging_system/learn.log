@@ -1,0 +1,11 @@
+[2018-11-15T10:23:02.646] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:23:02.651] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:23:02.651] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:23:02.651] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:23:02.651] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:24:53.085] [TRACE] learn - This is just TRACE log
+[2018-11-15T10:24:53.091] [DEBUG] learn - This is just DEBUG log
+[2018-11-15T10:24:53.091] [INFO] learn - This is just INFO log
+[2018-11-15T10:24:53.092] [WARN] learn - This is just WARN log
+[2018-11-15T10:24:53.092] [ERROR] learn - This is just ERROR log
+[2018-11-15T10:24:53.092] [FATAL] learn - This is just FATAL log

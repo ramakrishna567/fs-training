@@ -1,18 +1,25 @@
 "use strict";
 // require('./models/db.connection').open(); // FOR MONGODB DRIVER
-require('./models/db.connect'); // for mongoose third party framework
-const CONFIG = require('./config');
+require('./app/models/db.connect'); // for mongoose third party framework
+const CONFIG = require('./app/config');
+
 
 const express = require('express');
-const routes = require('./routes/index');
-const userRoutes = require('./routes/user.routes');
-const productRoutes = require('./routes/product.routes');
-const eventRoutes = require('./routes/event.routes');
-const accountsRoutes = require('./routes/accounts.routes');
-const empRoutes = require('./routes/employees.routes');
+const fs = require('fs');
+const routes = require('./app/routes/index');
+const userRoutes = require('./app/routes/user.routes');
+const productRoutes = require('./app/routes/product.routes');
+const eventRoutes = require('./app/routes/event.routes');
+const accountsRoutes = require('./app/routes/accounts.routes');
+const empRoutes = require('./app/routes/employees.routes');
 const bodyParser = require('body-parser');
+const log4js = require('log4js');
 
 const app = express();
+
+log4js.configure('./app/config/log4js.json');
+let startupLogger = log4js.getLogger('startup');
+let accessLogger = log4js.getLogger('http');
 
 // allows urlencoded data for parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,9 +27,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //allows json data
 app.use(bodyParser.json());
 
-app.use(bodyParser.raw({'type':"application/json"})) //this is not recommended
+app.use(bodyParser.raw({ 'type': "application/json" })) //this is not recommended
 
 // app.use(bodyParser.text({'type':"text/plain"})) // this is not recommended
+
+try {
+    fs.mkdirSync('./logs');
+} catch (error) {
+    if (error.code != 'EEXIST') {
+        console.log("Could not setup log Directory", error);
+        process.exit(1);
+    }
+}
+
+app.use(function (req, res, next) {
+    console.log(req.method + "==" + req.url);
+    accessLogger.info(req.method + "==" + req.url);
+    next();
+});
 
 app.use('/', routes);
 app.use('/', userRoutes);
@@ -32,6 +54,9 @@ app.use('/', accountsRoutes);
 app.use('/', empRoutes);
 
 app.listen(CONFIG.PORT, CONFIG.HOST, function () {
-    console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
-    console.log(`Magic Happened on Port: ${CONFIG.PORT}`);
+    startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)
+    startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
+
+    // console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
+    // console.log(`Magic Happened on Port: ${CONFIG.PORT}`);
 });

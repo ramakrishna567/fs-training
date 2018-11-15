@@ -1,0 +1,20 @@
+{
+  "name": "logging_system",
+  "version": "1.0.0",
+  "description": "learn logging system",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "this",
+    "is",
+    "logging",
+    "system"
+  ],
+  "author": "rk",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^3.0.6"
+  }
+}
