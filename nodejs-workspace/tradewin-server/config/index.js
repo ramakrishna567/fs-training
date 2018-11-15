@@ -1,5 +1,5 @@
 // Local db
-const port = 2020;
+const port = process.env.PORT || 2020;
 const host = '127.0.0.1';
 const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
 const authSource = 'admin';

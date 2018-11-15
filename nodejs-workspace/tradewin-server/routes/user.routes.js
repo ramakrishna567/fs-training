@@ -16,4 +16,8 @@ router
     .route('/auth')
     .get(userCtrl.tokenValidator);
 
+    router
+    .route('/role')
+    .post(userCtrl.roleValidator);
+
 module.exports = router;

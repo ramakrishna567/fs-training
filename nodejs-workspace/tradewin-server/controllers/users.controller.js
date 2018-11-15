@@ -5,11 +5,8 @@ const jwt = require('jsonwebtoken');
 const CONFIG = require('../config');
 
 module.exports.userRegistration = function (req, res, next) {
-
-
     // console.log(req.body);
-
-    if (!req.body || !req.body.name || !req.body.email || !req.body.password) {
+    if (!req.body || !req.body.name || !req.body.email || !req.body.password || !req.body.role) {
         res
             .status(400)
             .set('application/json')
@@ -29,13 +26,14 @@ module.exports.userRegistration = function (req, res, next) {
             password: hashPwd, // ASSIGN ENCRYPTED PASSWORD
             phoneNumber: req.body.phoneNumber,
             activeStatus: req.body.activeStatus,
-            gender: req.body.gender
-        })
+            gender: req.body.gender,
+            role: req.body.role
+        });
 
         newuser
             .save(newuser)
             .then(user => {
-                var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
+                // var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                 res
                     .status(200)
                     .set('application/json')
@@ -43,7 +41,7 @@ module.exports.userRegistration = function (req, res, next) {
                         user: user,
                         auth: true,
                         msg: "Registration Successful",
-                        token: token // FOR AUTO LOGIN AFTER REGISTRATION
+                        // token: token // FOR AUTO LOGIN AFTER REGISTRATION
                     });
             })
             .catch(err => {
@@ -149,7 +147,7 @@ module.exports.tokenValidator = (req, res, next) => {
                                 .set('application/json')
                                 .json({
                                     err: "server error",
-                            msg: "emial not found Please Signup!!",
+                                    msg: "emial not found Please Signup!!",
                                 });
                         } else {
                             // res
@@ -162,7 +160,7 @@ module.exports.tokenValidator = (req, res, next) => {
 
                             //CALL FUNCTION AFTER EVALAUTION
                             next();
-                                // });
+                            // });
                         }
                     });
                 // res
@@ -175,5 +173,68 @@ module.exports.tokenValidator = (req, res, next) => {
                 // });
             }
         })
+    }
+}
+
+//ROLE VALIDATOR
+module.exports.roleValidator = (req, res, next) => {
+    if (!req.body || !req.body.email || !req.body.password) {
+        res
+            .status(400)
+            .set('application/json')
+            .json({
+                err: "Server error",
+                msg: "Required fields are missing"
+            });
+    } else {
+        Users
+            .findOne({ email: req.body.email })
+            .then(user => {
+                
+                if (!user) {
+                    res
+                        .status(200)
+                        .set('application/json')
+                        .json({
+                            msg: "user not found"
+                        });
+                } else {
+                    var isPwd = bcrypt.compareSync(req.body.password, user.password);
+                    if (isPwd) {
+                        if (user.role === 'admin') {
+                            res
+                                .status(200)
+                                .set('application/json')
+                                .json({
+                                    msg: "You have ADMIN role"
+                                });
+                        } else if (user.role === 'user') {
+                            res
+                                .status(200)
+                                .set('application/json')
+                                .json({
+                                    msg: "You have USER role"
+                                });
+                        }
+                        else {
+                            res
+                                .status(200)
+                                .set('application/json')
+                                .json({
+                                    msg: "You DO NOT have role"
+                                });
+                        }
+                    }
+                }
+            })
+            .catch(err => {
+                res
+                    .status(400)
+                    .set('application/json')
+                    .json({
+                        err: err,
+                        msg: "user not found"
+                    });
+            })
     }
 }

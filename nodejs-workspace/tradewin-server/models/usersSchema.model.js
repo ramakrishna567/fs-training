@@ -14,6 +14,7 @@ const usersSchema = mongoose.Schema({
         unique: true
     },
     password: String,
+    role : String,
     address: [String],
     phoneNumber: {
         type: String,

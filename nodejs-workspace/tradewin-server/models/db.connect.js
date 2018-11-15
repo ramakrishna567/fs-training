@@ -27,30 +27,37 @@ db.once('open', function () {
     console.log("db connection successfull via MONGOOOSE");
 });
 
-function gracefullShutdown (signal, callback){
+function gfshutdown (signal, callback){
     mongoose.connection.close(function(){
         console.log(`mongoose connection is DISCONNECTED BY APP Termination Signal : ${signal}`);
-    
+    callback();
+
     }); //destroyed pool connection
-    callback()
 }
 
-process.on('SIGINT', ()=>{
-    gracefullShutdown('SIGINT', function(){
-        process.exit(0);
-    });
-    // console.log("sERVER shutdown due to SIGINT");
-    // process.exit(0);
-});
-
-// process.on('SIGTERM', ()=>{
-//     console.log("sERVER shutdown due to SIGTERM");
-//     process.exit(0);
+// process.on('SIGINT', ()=>{    
+//         mongoose.connection.close(function(){
+//             console.log(`mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINIT`);
+//             process.exit(0);
+        
+//         }); //destroyed pool connection
+//         // console.log("sERVER shutdown due to SIGINT");
+//     // process.exit(0);
 // });
 
+process.on('SIGINT', ()=>{
+    gfshutdown('SIGINT', function(){
+        // console.log("sERVER shutdown due to SIGINT");
+        process.exit(0);
+    })
+});
+
+process.on('SIGTERM', ()=>{
+    console.log("SERVER shutdown due to SIGTERM");
+    process.exit(0);
+});
+
 // process.once('SIGUSR2', ()=>{
-//     console.log("sERVER shutdown due to SIGUSR2");
+//     console.log("SERVER shutdown due to SIGUSR2");
 //     process.kill(process.pid, 'SIGUSR2');
-// })  
-
-
+// });  
