@@ -1,94 +1,26 @@
-[2018-11-15T20:32:01.941] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:32:01.943] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:32:21.323] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:32:21.327] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:32:49.526] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:32:49.529] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:39:33.225] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:39:33.227] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:40:15.010] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:40:15.012] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:41:41.705] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:41:41.707] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:43:10.682] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:43:10.685] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:43:20.810] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:43:20.814] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:43:26.971] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:43:26.975] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:43:29.036] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:43:29.037] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:44:16.794] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:44:16.799] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:48:32.575] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:48:32.577] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:49:21.796] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:49:21.799] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:49:37.361] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:49:37.363] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:52:24.069] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:52:24.073] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:56:13.640] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:56:13.643] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:56:38.563] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:56:38.567] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:58:13.881] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:58:13.886] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T20:58:39.732] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T20:58:39.736] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:02:24.054] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:02:24.056] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:06:41.903] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:06:41.906] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:06:58.242] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:06:58.247] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:07:36.861] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:07:36.864] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:07:46.878] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:07:46.880] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:08:50.084] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:08:50.087] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:08:55.809] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:08:55.812] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:10:24.460] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:10:24.464] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:10:29.235] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:10:29.242] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:10:39.093] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:10:39.095] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:11:09.838] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:11:09.839] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:11:25.236] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:11:25.238] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:11:29.303] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:11:29.304] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:11:32.269] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:11:32.271] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:14:52.583] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:14:52.586] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:25:37.112] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:25:37.114] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:26:02.271] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:26:02.275] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:26:21.562] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:26:21.563] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:30:59.908] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:30:59.910] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:31:41.938] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:31:41.941] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:32:36.742] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:32:36.744] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:33:01.886] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:33:01.887] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:33:11.668] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:33:11.671] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:36:40.598] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:36:40.600] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:37:18.926] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:37:18.928] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:38:45.229] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:38:45.231] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:42:35.485] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:42:35.488] [DEBUG] startup - Magic Happened on Port: 5090
-[2018-11-15T21:42:56.213] [DEBUG] startup - Server is Running at http://127.0.0.1:5090
-[2018-11-15T21:42:56.215] [DEBUG] startup - Magic Happened on Port: 5090
+[2018-11-16T20:12:21.039] [INFO] user - User Login Successful
+[2018-11-16T20:12:38.997] [ERROR] user - Required fields are missing For Login
+[2018-11-16T20:13:16.556] [INFO] user - User Password Mismatched
+[2018-11-16T20:14:44.012] [WARN] user - User Password Mismatched
+[2018-11-16T20:15:07.747] [WARN] user - Emial not found Please Signup!!
+[2018-11-16T20:15:24.594] [ERROR] user - Required fields are missing For Login
+[2018-11-16T20:17:38.464] [ERROR] user - Required fields are missing For Login
+[2018-11-16T20:22:20.346] [INFO] user - User Login Successful
+[2018-11-16T22:49:39.379] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-16T22:54:37.285] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-16T22:56:08.605] [INFO] user - User Login Successful
+[2018-11-16T22:56:35.573] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:04:54.348] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:07:46.662] [WARN] user - User Password Mismatched
+[2018-11-17T00:07:55.897] [WARN] user - User Password Mismatched
+[2018-11-17T00:08:04.937] [INFO] user - User Login Successful
+[2018-11-17T00:08:31.999] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:10:30.483] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:18:01.970] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:18:41.764] [INFO] user - User Login Successful
+[2018-11-17T00:19:08.127] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:19:48.013] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:20:46.479] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:21:41.697] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:22:42.987] [ERROR] user - Failed to Authenticate token not found!
+[2018-11-17T00:36:43.220] [ERROR] user - Failed to Authenticate token not found!

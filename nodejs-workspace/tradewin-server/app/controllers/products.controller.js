@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
-
+const log4js = require("log4js")
 var Product = mongoose.model('Product');
+
+log4js.configure('./app/config/log4js.json');
+let prodLogger = log4js.getLogger('product');
+let errorLogger = log4js.getLogger('logLevelFilter');
 
 module.exports.getAllProducts = function (req, res, next) {
     console.log(req.url);
@@ -30,6 +34,7 @@ module.exports.getAllProducts = function (req, res, next) {
                         message: "product not found",
                         error: err
                     });
+                    errorLogger.error("Products are not found", err);
             }
             else {
                 console.log(products.length);
@@ -37,6 +42,7 @@ module.exports.getAllProducts = function (req, res, next) {
                     .status(200)
                     .set('Content-Type', 'application/json')
                     .json(products);
+                    prodLogger.info("Get all Products");
             }
         });
 }
@@ -58,11 +64,13 @@ module.exports.getOneProduct = function (req, res, next) {
                             error: "Not Found",
                             message: "Invalid product Id"
                         });
+                        errorLogger.error("Server error Invalid product Id");
                 } else {
                     res
                         .status(200)
                         .set('Content-Type', 'application/json')
                         .json(product);
+                        prodLogger.info("Got Product");
                 }
             })
 
@@ -74,11 +82,11 @@ module.exports.getOneProduct = function (req, res, next) {
                 error: "Not Found",
                 message: "Invalid product Id"
             });
+            prodLogger.error("Invalid product Id");
     }
 }
 
 module.exports.addOneProduct = function (req, res, next) {
-    console.log("Add one product");
     Product
         .create(req.body, function (err, newProduct) {
             if (err) {
@@ -89,21 +97,20 @@ module.exports.addOneProduct = function (req, res, next) {
                         error: "Internal Server Error",
                         message: "Product not inserted"
                     });
+                    prodLogger.error("Product not inserted-Internal Server Error")
             } else {
                 res
                     .status(200)
                     .set('Content-Type', 'application/json')
                     .json(newProduct);
+                    prodLogger.info(" Product Inserted Successfully");
             }
         });
 }
 
 //Update
 module.exports.updateOneProduct = function (req, res, next) {
-    console.log("update one product");
     let productId = req.params.productId;
-
-    console.log(req.body);
 
     if (req.body) {
         Product
@@ -116,11 +123,13 @@ module.exports.updateOneProduct = function (req, res, next) {
                             error: "Internal Server Error",
                             message: "Product not Updated"
                         });
+                        prodLogger.error("Product not Updated - Internal Server Error ", err);
                 } else {
                     res
                         .status(200)
                         .set('Content-Type', 'application/json')
                         .json(isUpdate);
+                        prodLogger.info("Product updated Successfully")
                 }
             })
     } else {
@@ -130,6 +139,7 @@ module.exports.updateOneProduct = function (req, res, next) {
             .json({
                 message: "req not founmd"
             });
+            errorLogger.error("req not founmd-required fields missing")
     }
 }
 
@@ -144,12 +154,14 @@ module.exports.deleteOne = (req, res, next)=>{
                 res
                 .status(404)
                 .send("deletion fialed!!");
+                prodLogger.error("deletion fialed!!", err)
             }
             else{
                 res
                 .status(200)
                 .set('Content-Type', 'application/json')
-                .json(isdelete)
+                .json(isdelete);
+                prodLogger("Product is deleted Successfully")
             }
         });
 }

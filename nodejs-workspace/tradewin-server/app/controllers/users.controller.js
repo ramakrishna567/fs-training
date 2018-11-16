@@ -3,6 +3,11 @@ const Users = mongoose.model('Users')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const CONFIG = require('../config');
+const log4js = require('log4js');
+
+log4js.configure('./app/config/log4js.json');
+let userLogger = log4js.getLogger('user');
+let errorLogger = log4js.getLogger('logLevelFilter');
 
 module.exports.userRegistration = function (req, res, next) {
     // console.log(req.body);
@@ -14,7 +19,8 @@ module.exports.userRegistration = function (req, res, next) {
                 err: "Server error",
                 msg: "Required fields are missing"
             });
-    } else { 
+        userLogger.warn("Required fields are missing For Registration");
+    } else {
         //PASSWORD ENCRYPTION
         const saltRounds = 10;
         var salt = bcrypt.genSaltSync(saltRounds)
@@ -33,7 +39,7 @@ module.exports.userRegistration = function (req, res, next) {
         newuser
             .save(newuser)
             .then(user => {
-                // var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
+                var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                 res
                     .status(200)
                     .set('application/json')
@@ -43,6 +49,7 @@ module.exports.userRegistration = function (req, res, next) {
                         msg: "Registration Successful",
                         // token: token // FOR AUTO LOGIN AFTER REGISTRATION
                     });
+                errorLogger.error("User Registration Successful")
             })
             .catch(err => {
                 res
@@ -53,6 +60,7 @@ module.exports.userRegistration = function (req, res, next) {
                         msg: "Registration Failed",
                         errr: err
                     });
+                errorLogger.error("Registration Failed", err);
             });
     }
 }
@@ -69,6 +77,7 @@ module.exports.loginUser = function (req, res, next) {
                 err: "Server error",
                 msg: "Required fields missing",
             });
+        userLogger.error("Required fields are missing For Login");
     } else {
         Users
             .findOne({ email: req.body.email })
@@ -76,7 +85,7 @@ module.exports.loginUser = function (req, res, next) {
                 var isPwd = bcrypt.compareSync(req.body.password, user.password)
                 console.log(isPwd);
                 if (isPwd) {
-//TOKEN GENERATION ALONG WITH ID
+                    //TOKEN GENERATION ALONG WITH ID
                     // jwt.sign(payload, secretkey, options);
                     var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                     res
@@ -87,6 +96,7 @@ module.exports.loginUser = function (req, res, next) {
                             // user : user,
                             token: token
                         });
+                        userLogger.info("User Login Successful");
                 } else {
                     res
                         .status(400)
@@ -94,6 +104,7 @@ module.exports.loginUser = function (req, res, next) {
                         .json({
                             msg: "Password not matched",
                         });
+                        userLogger.warn("User Password Mismatched");
                 }
             })
             .catch(err => {
@@ -102,23 +113,28 @@ module.exports.loginUser = function (req, res, next) {
                     .set('application/json')
                     .json({
                         err: err,
-                        msg: "emial not found Please Signup!!",
+                        msg: "Email not found Please Signup!!",
                     });
+                    userLogger.warn("Emial not found Please Signup!!");
             })
     }
 }
 
 module.exports.tokenValidator = (req, res, next) => {
     var token = req.headers['x-access-token'];
+    console.log(token);
+    
     if (!token) {
         res
             .status(404)
             .set('application/json')
             .json({
                 auth: false,
-                message: "Failed to Authenticate token not found!",
+                message: "Failed to Authenticate  not found!",
                 token: null
             });
+            console.log("token",token);            
+            userLogger.error("Failed to Authenticate token not found!")
     } else {
         //TOKEN VERIFICATION
         jwt.verify(token, CONFIG.SECRETKEY, function (err, doc) {
@@ -131,6 +147,7 @@ module.exports.tokenValidator = (req, res, next) => {
                         message: "Failed to Authenticate, Token Invalid !",
                         token: null
                     });
+                    userLogger.error("Failed to Authenticate, Token Invalid !")
             } else {
                 Users
                     .findById({ _id: doc._id }, function (err, user) {
@@ -140,8 +157,9 @@ module.exports.tokenValidator = (req, res, next) => {
                                 .set('application/json')
                                 .json({
                                     err: err,
-                                    msg: "emial not found Please Signup!!",
+                                    msg: "Email not found Please Signup!!",
                                 });
+                                userLogger.info("Email not found Please Signup!!");
                         } if (!user) {
                             res
                                 .status(500)
@@ -150,6 +168,8 @@ module.exports.tokenValidator = (req, res, next) => {
                                     err: "server error",
                                     msg: "emial not found Please Signup!!",
                                 });
+                                userLogger.info("Email not found Please Signup!!");
+
                         } else {
                             // res
                             //     .status(200)
@@ -191,7 +211,7 @@ module.exports.roleValidator = (req, res, next) => {
         Users
             .findOne({ email: req.body.email })
             .then(user => {
-                
+
                 if (!user) {
                     res
                         .status(200)

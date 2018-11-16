@@ -22,5 +22,8 @@
     "mongoose": "^5.3.10",
     "npm": "^6.4.1",
     "promise": "^8.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
   }
 }

@@ -26,13 +26,13 @@ let db = mongoose.connection; //we are connect with connection is object
 
 db.on('error', function () {
     dbLogger.info("Db Connection Failed via MONGOOSE");
-    // console.log("Db Connection Failed via MONGOOSE");
+    console.log("Db Connection Failed via MONGOOSE");
     // console.log(error);
 });
 
 db.once('open', function () {
     dbLogger.info("db connection successfull via MONGOOOSE");
-    // console.log("db connection successfull via MONGOOOSE");
+    console.log("db connection successfull via MONGOOOSE");
 });
 
 function gfshutdown (signal, callback){

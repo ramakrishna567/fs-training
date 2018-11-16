@@ -2,7 +2,8 @@
     "appenders": {
         "users": {
             "type": "file",
-            "filename": "logs/users.log"
+            "filename": "logs/users.log",
+            "category" : "user"
         },
         "access": {
             "type": "dateFile",
@@ -21,7 +22,11 @@
             "type" : "file",
             "filename" : "logs/db.log",
             "category" : "db"
-
+        },
+        "products" : {
+            "type" : "file",
+            "filename" : "logs/product.log",
+            "category" : "product"
         },
         "errorFile": {
             "type": "file",
@@ -36,7 +41,7 @@
 
     "categories": {
         "default": {
-            "appenders": ["users", "app", "error"],
+            "appenders": ["app", "error"],
             "level": "DEBUG"
         },
         "http": {
@@ -45,6 +50,14 @@
         },
         "db" : {
             "appenders" : ["database"],
+            "level" : "TRACE"
+        },
+        "user" : {
+            "appenders" : ["users"],
+            "level" : "DEBUG"
+        },
+        "product" : {
+            "appenders" : ["products"],
             "level" : "TRACE"
         }
     }
