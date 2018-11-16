@@ -14,7 +14,7 @@ module.exports.userRegistration = function (req, res, next) {
                 err: "Server error",
                 msg: "Required fields are missing"
             });
-    } else {
+    } else { 
         //PASSWORD ENCRYPTION
         const saltRounds = 10;
         var salt = bcrypt.genSaltSync(saltRounds)
@@ -75,8 +75,8 @@ module.exports.loginUser = function (req, res, next) {
             .then(user => {
                 var isPwd = bcrypt.compareSync(req.body.password, user.password)
                 console.log(isPwd);
-
                 if (isPwd) {
+//TOKEN GENERATION ALONG WITH ID
                     // jwt.sign(payload, secretkey, options);
                     var token = jwt.sign({ _id: user._id }, CONFIG.SECRETKEY, { expiresIn: '24h' });
                     res
@@ -120,6 +120,7 @@ module.exports.tokenValidator = (req, res, next) => {
                 token: null
             });
     } else {
+        //TOKEN VERIFICATION
         jwt.verify(token, CONFIG.SECRETKEY, function (err, doc) {
             if (err) {
                 res

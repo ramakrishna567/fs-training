@@ -12,6 +12,7 @@ const accountSchema = mongoose.Schema({
         type : String,
         unique : true
     },
+    password : String,
     status : Boolean,
     balance : {
         prev_balance : Number,

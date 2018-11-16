@@ -5,6 +5,8 @@ let Accounts = mongoose.model('Accounts');
 
 //SHOW BALANCE
 module.exports.showBalance = (req, res)=>{
+    // console.log(user);
+    
     accountNo = req.params.accountNo;
     Accounts
     .findById({_id:accountNo}, {"balance" : true, _id:0})
@@ -12,7 +14,6 @@ module.exports.showBalance = (req, res)=>{
         if(err){
             res
             .status(400)
-            
             .send("Your account does not find");
             console.log(err);
             
