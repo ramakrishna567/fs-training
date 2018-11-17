@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "keywords": [
     "THISISTRADEWIN"
@@ -15,6 +15,7 @@
   "dependencies": {
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
+    "commander": "^2.19.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "log4js": "^3.0.6",

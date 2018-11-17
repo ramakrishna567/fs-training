@@ -25,4 +25,4 @@ const productSchema = mongoose.Schema ({
     image : String,
     subcategory : [subcategorySchema]
 });
-mongoose.model('Product', productSchema, 'productdetails');
+module.exports =  mongoose.model('Product', productSchema, 'productdetails');
