@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Users = mongoose.model('Users')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const CONFIG = require('../config');
 const log4js = require('log4js');
