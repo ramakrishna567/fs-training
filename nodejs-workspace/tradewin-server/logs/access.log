@@ -24,3 +24,7 @@
 [2018-11-17T00:29:29.865] [INFO] http - GET==/auth
 [2018-11-17T00:36:43.170] [INFO] http - GET==/products
 [2018-11-17T00:36:43.648] [INFO] http - GET==/favicon.ico
+[2018-11-17T14:55:58.176] [INFO] http - GET==/
+[2018-11-17T14:55:58.241] [INFO] http - GET==/favicon.ico
+[2018-11-17T14:56:08.511] [INFO] http - GET==/products
+[2018-11-17T14:56:59.629] [INFO] http - GET==/products

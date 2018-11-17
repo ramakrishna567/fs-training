@@ -174,3 +174,8 @@
 [2018-11-17T14:43:47.104] [INFO] db - db connection successfull via MONGOOOSE
 [2018-11-17T14:47:11.081] [INFO] db - db connection successfull via MONGOOOSE
 [2018-11-17T14:47:32.813] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-17T14:54:32.545] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-17T14:55:04.180] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-17T14:58:26.991] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-17T14:59:28.486] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-17T14:59:30.881] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
