@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const log4js = require("log4js")
 var Product = mongoose.model('Product');
 const multer = require("multer");
-const upload = multer({dest : "/uploads/"})
+const upload = multer({dest : "uploads/"})
 
 log4js.configure('./app/config/log4js.json');
 let prodLogger = log4js.getLogger('product');
@@ -92,7 +92,8 @@ module.exports.addOneProduct = function (req, res, next) {
     console.log(req.file);
     var product = new Product({
         name : req.body.name,
-        image : req.file.path
+        // image : req.file.path
+        image : req.body.image
     })
     product
         .save(function (err, newProduct) {
@@ -107,8 +108,8 @@ module.exports.addOneProduct = function (req, res, next) {
                     prodLogger.error("Product not inserted-Internal Server Error")
             } else {
                 res
-                    .status(200)
-                    .set('Content-Type', 'application/json')
+                    .status(200)    
+                    .set('application/json')
                     .json(newProduct);
                     prodLogger.info(" Product Inserted Successfully");
             }
