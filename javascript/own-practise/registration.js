@@ -4,16 +4,28 @@ var lastName = document.getElementById('lname');
 var userEmail = document.getElementById('emailId');
 var pwd = document.getElementById('pwd');
 
+var errorPara = document.getElementById('error');
+let icon1 = document.getElementById('fname-icon');
     //first name checking to empty string
     if(firstName.value == ''){
         firstName.style.border = "2px solid red";
-        var errorPara = document.getElementById('error');
-        let icon1 = document.getElementById('fname-icon');
 
+ 
         errorPara.innerHTML="you must enter first name";
         errorPara.style.color = "red";
         icon1.style.visibility = "visible";        
+    }else{
+        let alphaExp = /^[a-zA-Z]+$/;
+        if(firstName.value.match(alphaExp)){
+            console.log("hiiiiiiiiiiiiiiiiiiiii");
+        }else{
+            errorPara.innerHTML="Don not Enter Numbers Please Enter Letters";
+        }
+        console.log(firstName.value.match(alphaExp));
     }
+
+    
+
 
     // last name checking input field
     if(lastName.value == ''){

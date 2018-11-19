@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const log4js = require("log4js")
 var Product = mongoose.model('Product');
+const multer = require("multer");
+const upload = multer({dest : "/uploads/"})
 
 log4js.configure('./app/config/log4js.json');
 let prodLogger = log4js.getLogger('product');
@@ -87,8 +89,13 @@ module.exports.getOneProduct = function (req, res, next) {
 }
 
 module.exports.addOneProduct = function (req, res, next) {
-    Product
-        .create(req.body, function (err, newProduct) {
+    console.log(req.file);
+    var product = new Product({
+        name : req.body.name,
+        image : req.file.path
+    })
+    product
+        .save(function (err, newProduct) {
             if (err) {
                 res
                     .status(404)

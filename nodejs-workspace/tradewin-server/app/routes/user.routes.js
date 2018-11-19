@@ -3,8 +3,10 @@ const router = express.Router();
 
 const userCtrl = require('../controllers/users.controller');
 
-
-router 
+router
+    .route('/users')
+    .get(userCtrl.getUsers);
+router
     .route('/registration')
     .post(userCtrl.userRegistration);
 
@@ -12,11 +14,11 @@ router
     .route('/login')
     .post(userCtrl.loginUser);
 
-    router
+router
     .route('/auth')
     .get(userCtrl.tokenValidator);
 
-    router
+router
     .route('/role')
     .post(userCtrl.roleValidator);
 

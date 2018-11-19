@@ -23,5 +23,4 @@ const usersSchema = mongoose.Schema({
     activeStatus: Boolean,
     gender: String
 });
-
-mongoose.model('Users', usersSchema, 'users');
+module.exports = mongoose.model('Users', usersSchema, 'users');

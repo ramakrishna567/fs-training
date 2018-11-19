@@ -259,3 +259,23 @@ module.exports.roleValidator = (req, res, next) => {
             })
     }
 }
+
+
+module.exports.getUsers = (req, res, next) => {
+    Users
+        .find()
+        .exec((err, users) => {
+            if (err) {
+                res
+                    .status(404)
+                    .json({
+                        err: err,
+                        message: "internal Server error"
+                    })
+            } else {
+                res
+                    .status(404)
+                    .json(users);
+            }
+        })
+}

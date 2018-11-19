@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
     accessLogger.info(req.method + "==" + req.url);
     next();
 });
-
+app.use(express.static('uploads'))
 app.use('/', routes);
 app.use('/', userRoutes);
 app.use('/', productRoutes);
@@ -59,6 +59,6 @@ app.listen(CONFIG.PORT, CONFIG.HOST, function () {
     startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)
     startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
 
-    // console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
+    console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
     // console.log(`Magic Happened on Port: ${CONFIG.PORT}`);
 });
