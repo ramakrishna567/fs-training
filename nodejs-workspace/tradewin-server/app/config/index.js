@@ -1,20 +1,20 @@
-// // Local db
-// const port = process.env.PORT || 2020;
-// const host = '127.0.0.1';
-// const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
-// const authSource = 'admin';
-// const dbUser = 'ramakrishna567';
-// const dbPwd = 'ramki567';
-// const secretKay = 'Thisismysecretkeyforjwt'
-
-// remote TRADEWIN db
+// Local db
 const port = process.env.PORT || 2020;
 const host = '127.0.0.1';
-const dbUrl = 'mongodb://ds249123.mlab.com:49123/tradewin';
-const authSource = 'tradewin';
+const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
+const authSource = 'admin';
 const dbUser = 'ramakrishna567';
 const dbPwd = 'ramki567';
 const secretKay = 'Thisismysecretkeyforjwt'
+
+// // remote TRADEWIN db
+// const port = process.env.PORT || 2020;
+// const host = '127.0.0.1';
+// const dbUrl = 'mongodb://ds249123.mlab.com:49123/tradewin';
+// const authSource = 'tradewin';
+// const dbUser = 'ramakrishna567';
+// const dbPwd = 'ramki567';
+// const secretKay = 'Thisismysecretkeyforjwt'
 
 
 // //Remote db(mLab) - rk_bank-

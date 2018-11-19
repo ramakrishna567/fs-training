@@ -42,12 +42,12 @@ router
 
 // update 
 router
-    .route('/api/products/update/:productId')
-    .put(prodCtrl.updateOneProduct);
+    .route('/products/update/:productId')
+    .put(authCtrl.tokenValidator, prodCtrl.updateOneProduct);
 
 //delete a document
 router
-    .route('/api/products/delete/:productId')
-    .delete(prodCtrl.deleteOne);
+    .route('/products/delete/:productId')
+    .delete(authCtrl.tokenValidator, prodCtrl.deleteOne);
 
 module.exports = router;

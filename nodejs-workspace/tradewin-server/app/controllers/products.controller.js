@@ -169,7 +169,7 @@ module.exports.deleteOne = (req, res, next)=>{
                 .status(200)
                 .set('Content-Type', 'application/json')
                 .json(isdelete);
-                prodLogger("Product is deleted Successfully")
+                prodLogger.info("Product is deleted Successfully");
             }
         });
 }

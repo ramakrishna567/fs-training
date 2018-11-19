@@ -36,3 +36,5 @@
 [2018-11-19T10:31:06.123] [ERROR] user - Failed to Authenticate token not found!
 [2018-11-19T10:31:07.343] [ERROR] user - Failed to Authenticate token not found!
 [2018-11-19T10:31:34.527] [ERROR] user - Failed to Authenticate, Token Invalid !
+[2018-11-19T22:24:21.951] [INFO] user - User Login Successful
+[2018-11-19T22:28:54.698] [ERROR] user - Failed to Authenticate token not found!
