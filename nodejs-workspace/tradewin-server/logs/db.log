@@ -233,3 +233,56 @@
 [2018-11-18T16:17:52.255] [INFO] db - db connection successfull via MONGOOOSE
 [2018-11-18T16:17:57.820] [INFO] db - db connection successfull via MONGOOOSE
 [2018-11-18T16:18:02.276] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T09:46:34.893] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T09:47:07.608] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T09:48:08.809] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T09:48:23.695] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T09:51:43.627] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T09:57:02.464] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T09:57:17.145] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T09:58:50.020] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:11:19.460] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:15:02.060] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:15:17.614] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:16:31.933] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:16:44.942] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:17:24.851] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:18:31.958] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:18:45.208] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:19:59.982] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:20:13.915] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:22:14.873] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:22:28.297] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:22:55.592] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:26:39.348] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:30:26.502] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:30:57.799] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:32:11.983] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:32:42.630] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:33:28.103] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:44:30.553] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:44:44.469] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:49:15.957] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:49:31.725] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:58:05.492] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T10:58:19.782] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T10:59:51.517] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:00:05.403] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:05:59.458] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:06:15.495] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:07:30.410] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:07:44.716] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:19:04.139] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:19:23.960] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:19:48.052] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:20:15.861] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:20:58.634] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:21:53.808] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:22:25.268] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:22:26.191] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:22:31.676] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:22:34.398] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:22:50.723] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:23:07.623] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT
+[2018-11-19T11:25:23.451] [INFO] db - db connection successfull via MONGOOOSE
+[2018-11-19T11:30:28.631] [ERROR] db - mongoose connection is DISCONNECTED BY APP Termination Signal : SIGINT

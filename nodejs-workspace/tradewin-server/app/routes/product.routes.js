@@ -30,10 +30,10 @@ const upload = multer({
 
 router
     .route('/products')
-    .get(authCtrl.tokenValidator, prodCtrl.getAllProducts);
+    .get(prodCtrl.getAllProducts);
 
 router
-    .route('/api/products/new')
+    .route('/products/new')
     .post(upload.single("productImage"), prodCtrl.addOneProduct);
 
 router
