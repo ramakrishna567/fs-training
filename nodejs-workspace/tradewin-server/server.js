@@ -32,6 +32,21 @@ app.use(bodyParser.raw({ 'type': "application/json" })) //this is not recommende
 
 // app.use(bodyParser.text({'type':"text/plain"})) // this is not recommended
 
+//print every request in server.
+app.use(function (req, res, next) {
+    console.log(req.method, req.url);
+
+    //allow cros origin request.
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With,Content-Type,Accept");
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Mrthods', 'POST, PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+    }
+    //call next methods in pipeline
+    next();
+});
+
 try {
     fs.mkdirSync('./logs');
 } catch (error) {
