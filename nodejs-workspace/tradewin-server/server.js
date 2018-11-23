@@ -6,21 +6,23 @@ const CONFIG = require('./app/config');
 
 const express = require('express');
 const fs = require('fs');
-const routes = require('./app/routes/index');
+// const routes = require('./app/routes/index');
 const userRoutes = require('./app/routes/user.routes');
 const productRoutes = require('./app/routes/product.routes');
-const eventRoutes = require('./app/routes/event.routes');
-const accountsRoutes = require('./app/routes/accounts.routes');
-const transRoutes = require('./app/routes/transactions.routes');
-const empRoutes = require('./app/routes/employees.routes');
+// const eventRoutes = require('./app/routes/event.routes');
+// const accountsRoutes = require('./app/routes/accounts.routes');
+// const transRoutes = require('./app/routes/transactions.routes');
+// const empRoutes = require('./app/routes/employees.routes');
 const bodyParser = require('body-parser');
 const log4js = require('log4js');
-
 const app = express();
-
+// process.setMaxListeners(200);
 log4js.configure('./app/config/log4js.json');
 let startupLogger = log4js.getLogger('startup');
 let accessLogger = log4js.getLogger('http');
+
+
+
 
 // allows urlencoded data for parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -61,18 +63,19 @@ app.use(function (req, res, next) {
     accessLogger.info(req.method + "==" + req.url);
     next();
 });
+
 app.use(express.static('uploads'))
-app.use('/', routes);
+// app.use('/', routes);
 app.use('/', userRoutes);
 app.use('/api', productRoutes);
-app.use('/', eventRoutes);
-app.use('/', accountsRoutes);
-app.use('/', transRoutes);
-app.use('/', empRoutes);
+// app.use('/', eventRoutes);
+// app.use('/', accountsRoutes);
+// app.use('/', transRoutes);
+// app.use('/', empRoutes);
 
 app.listen(CONFIG.PORT, CONFIG.HOST, function () {
     startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)
-    startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
+    // startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
 
     console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
     // console.log(`Magic Happened on Port: ${CONFIG.PORT}`);

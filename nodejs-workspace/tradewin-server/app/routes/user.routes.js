@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const userCtrl = require('../controllers/users.controller');
-
+const authCtrl = require('../middleware/auth.ctrl');
 router
     .route('/users')
     .get(userCtrl.getUsers);
@@ -16,10 +16,10 @@ router
 
 router
     .route('/auth')
-    .get(userCtrl.tokenValidator);
+    .get(authCtrl.tokenValidator);
 
 router
     .route('/role')
-    .post(userCtrl.roleValidator);
+    .post(authCtrl.roleValidator);
 
 module.exports = router;

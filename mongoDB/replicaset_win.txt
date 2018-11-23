@@ -1,0 +1,35 @@
+//Replica set creation in Windows
+
+mongod --port 27018 --dbpath "C:\Users\Ganesh\Desktop\clustering\rs1" --replSet ramReplica
+
+mongod --port 27019 --dbpath "C:\Users\Ganesh\Desktop\clustering\rs2" --replSet ramReplica
+mongod --port 27020 --dbpath "C:\Users\Ganesh\Desktop\clustering\rs3" --replSet ramReplica
+mongod --port 27021 --dbpath "C:\Users\Ganesh\Desktop\clustering\rs4" --replSet ramReplica
+
+config = {
+	_id : "ramReplica", members:[
+	{_id:0, host : "localhost:27019"},
+{_id:0, host : "localhost:27020"},
+{_id:0, host : "localhost:27021"}
+]
+}
+
+//old_dbs replica set
+config = {
+	_id : "ram", members:[
+	{_id:0, host : "localhost:27019"}
+]
+}
+
+rs.add("localhost:27019"); //add invidiually
+rs.add("localhost:27021");
+
+//for command to enable replication
+C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe --config C:\Program Files\MongoDB\Server\4.0\bin\mongod.conf --replSet ram
+
+mongod --replSet ramReplica --logpath "rsLog1/r1.log" --dbpath "C:\Users\Ganesh\Desktop\clustering\rs1" --port 27018
+mongod --replSet ramReplica --logpath "rsLog2/r2.log" --dbpath rs2 --port 27019
+mongod --replSet ramReplica --logpath "rsLog3/r3.log" --dbpath rs3 --port 27020
+mongod --replSet ramReplica --logpath "rsLog4/r4.log" --dbpath rs4 --port 27021
+
+db.createUser({user:"root", pwd : "password", roles : ["dbOwner"]});

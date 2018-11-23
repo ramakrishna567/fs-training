@@ -1,0 +1,232 @@
+C:\kavitha madhuri\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\kavitha madhuri\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\kavitha madhuri\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.frmContactManger.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBook.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBookDialog.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\kavitha madhuri\AddressBook\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBookDialog.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBook.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.frmContactManger.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\Sandy\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBookDialog.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.AddressBook.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\Renuka\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.MDIParentForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.MDIParentForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.AddressForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\New folder (2)\AddressBook\AddressBook\obj\Debug\AddressBook.AddressDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.AddressDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.AddressForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.MDIParentForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\AddressBook\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.AddressDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.AddressForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.MDIParentForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\bindu.NAMAN.001\Desktop\vijay\AddressBookproject\ContactsManagerWinFormsSP\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\SURESH\Desktop\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\SURESH\Desktop\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\SURESH\Desktop\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.LoginForm.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.StateForm.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.UserForm.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.MDIParentForm.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.CountryForm.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.CountryDialog.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.StateDialog.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.UserDialog.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.AddressBookDialog.resources
+C:\Users\SURESH\Desktop\AddressBook\obj\Debug\AddressBook.AddressBookForm.resources
+D:\AddressBook\bin\Debug\ContactsManager.exe.config
+D:\AddressBook\bin\Debug\ContactsManager.exe
+D:\AddressBook\bin\Debug\ContactsManager.pdb
+D:\AddressBook\obj\Debug\ContactsManager.AddressbookDialog.resources
+D:\AddressBook\obj\Debug\ContactsManager.AddressbookForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.LoginForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.StateForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.UserForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.MDIParentForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.CountryForm.resources
+D:\AddressBook\obj\Debug\ContactsManager.CountryDialog.resources
+D:\AddressBook\obj\Debug\ContactsManager.Properties.Resources.resources
+D:\AddressBook\obj\Debug\ContactsManager.StateDialog.resources
+D:\AddressBook\obj\Debug\ContactsManager.UserDialog.resources
+D:\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+D:\AddressBook\obj\Debug\ContactsManager.exe
+D:\AddressBook\obj\Debug\ContactsManager.pdb
+D:\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\DSSDEV01\Desktop\AddressBook\bin\Debug\ContactsManager.exe.config
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.exe
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.pdb
+C:\Users\DSSDEV01\Desktop\AddressBook\bin\Debug\ContactsManager.exe
+C:\Users\DSSDEV01\Desktop\AddressBook\bin\Debug\ContactsManager.pdb
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.AddressbookDialog.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.AddressbookForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.LoginForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.StateForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.UserForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.MDIParentForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.CountryForm.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.CountryDialog.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.Properties.Resources.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.StateDialog.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactsManager.UserDialog.resources
+C:\Users\DSSDEV01\Desktop\AddressBook\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe.config
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.exe
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.pdb
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.pdb
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookDialog.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.LoginForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.MDIParentForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryForm.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryDialog.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.Properties.Resources.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateDialog.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserDialog.resources
+E:\Student Projects\Final rars\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe.config
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.exe
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.pdb
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.pdb
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookDialog.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.LoginForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.MDIParentForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryForm.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryDialog.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.Properties.Resources.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateDialog.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserDialog.resources
+Z:\Sandeep\Student Projects\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe.config
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.exe
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.pdb
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.pdb
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookDialog.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.LoginForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.MDIParentForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryForm.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryDialog.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.Properties.Resources.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateDialog.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserDialog.resources
+C:\Users\dss4\Desktop\Project Lists\ContactsManagerProjects\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+E:\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe.config
+E:\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.exe
+E:\Contacts Manager Project WinAppSP\Contacts Manager\bin\Debug\ContactsManager.pdb
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csprojResolveAssemblyReference.cache
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookDialog.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.AddressbookForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.LoginForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.MDIParentForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryForm.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.CountryDialog.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.Properties.Resources.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.StateDialog.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.UserDialog.resources
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactManger.csproj.GenerateResource.Cache
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.exe
+E:\Contacts Manager Project WinAppSP\Contacts Manager\obj\Debug\ContactsManager.pdb

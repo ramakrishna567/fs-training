@@ -4,9 +4,9 @@ var Product = mongoose.model('Product');
 const multer = require("multer");
 const upload = multer({dest : "uploads/"})
 
-log4js.configure('./app/config/log4js.json');
-let prodLogger = log4js.getLogger('product');
-let errorLogger = log4js.getLogger('logLevelFilter');
+// log4js.configure('./app/config/log4js.json');
+// let prodLogger = log4js.getLogger('product');
+// let errorLogger = log4js.getLogger('logLevelFilter');
 
 module.exports.getAllProducts = function (req, res, next) {
     console.log(req.url);
@@ -36,7 +36,7 @@ module.exports.getAllProducts = function (req, res, next) {
                         message: "product not found",
                         error: err
                     });
-                    errorLogger.error("Products are not found", err);
+                    // errorLogger.error("Products are not found", err);
             }
             else {
                 console.log(products.length);
@@ -44,7 +44,7 @@ module.exports.getAllProducts = function (req, res, next) {
                     .status(200)
                     .set('Content-Type', 'application/json')
                     .json(products);
-                    prodLogger.info("Get all Products");
+                    // prodLogger.info("Get all Products");
             }
         });
 }
@@ -66,13 +66,13 @@ module.exports.getOneProduct = function (req, res, next) {
                             error: "Not Found",
                             message: "Invalid product Id"
                         });
-                        errorLogger.error("Server error Invalid product Id");
+                        // errorLogger.error("Server error Invalid product Id");
                 } else {
                     res
                         .status(200)
                         .set('Content-Type', 'application/json')
                         .json(product);
-                        prodLogger.info("Got Product");
+                        // prodLogger.info("Got Product");
                 }
             })
 
@@ -84,7 +84,7 @@ module.exports.getOneProduct = function (req, res, next) {
                 error: "Not Found",
                 message: "Invalid product Id"
             });
-            prodLogger.error("Invalid product Id");
+            // prodLogger.error("Invalid product Id");
     }
 }
 
@@ -105,13 +105,13 @@ module.exports.addOneProduct = function (req, res, next) {
                         error: "Internal Server Error",
                         message: "Product not inserted"
                     });
-                    prodLogger.error("Product not inserted-Internal Server Error")
+                    // prodLogger.error("Product not inserted-Internal Server Error")
             } else {
                 res
                     .status(200)    
                     .set('application/json')
                     .json(newProduct);
-                    prodLogger.info(" Product Inserted Successfully");
+                    // prodLogger.info(" Product Inserted Successfully");
             }
         });
 }
@@ -131,13 +131,13 @@ module.exports.updateOneProduct = function (req, res, next) {
                             error: "Internal Server Error",
                             message: "Product not Updated"
                         });
-                        prodLogger.error("Product not Updated - Internal Server Error ", err);
+                        // prodLogger.error("Product not Updated - Internal Server Error ", err);
                 } else {
                     res
                         .status(200)
                         .set('Content-Type', 'application/json')
                         .json(isUpdate);
-                        prodLogger.info("Product updated Successfully")
+                        // prodLogger.info("Product updated Successfully")
                 }
             })
     } else {
@@ -147,7 +147,7 @@ module.exports.updateOneProduct = function (req, res, next) {
             .json({
                 message: "req not founmd"
             });
-            errorLogger.error("req not founmd-required fields missing")
+            // errorLogger.error("req not founmd-required fields missing")
     }
 }
 
@@ -162,14 +162,14 @@ module.exports.deleteOne = (req, res, next)=>{
                 res
                 .status(404)
                 .send("deletion fialed!!");
-                prodLogger.error("deletion fialed!!", err)
+                // prodLogger.error("deletion fialed!!", err)
             }
             else{
                 res
                 .status(200)
                 .set('Content-Type', 'application/json')
                 .json(isdelete);
-                prodLogger.info("Product is deleted Successfully");
+                // prodLogger.info("Product is deleted Successfully");
             }
         });
 }
