@@ -11,14 +11,20 @@ function blueLabel():number{
 }
 
 //Void return type
-function greenLabel():void{ //void not neccessary mention for no return value 
+//void not neccessary mention for no return value means that 
+// It returns undefined
+function greenLabel():void{  
     console.log("Blue is Not Good");
-    // return 0;
+    // return undefined;
 }
 
-function parameterTypes(name : string){ //void not neccessary mention for no return value 
+//we are not mention return type it automatically any returntype
+function parameterTypes(name):any{  
     console.log("Blue is Not Good");
-    name : 122;    
+    console.log("hiiiii",!name);
+    console.log(name);
+    return name;
+    
 }
 
  let red = redLable();
@@ -28,4 +34,6 @@ function parameterTypes(name : string){ //void not neccessary mention for no ret
  console.log(typeof red);
  console.log(blue);
  console.log(typeof blue);
+ console.log("returntype of "+typeof parameterTypes("rk"));
+ console.log(typeof greenLabel());
  

@@ -42,4 +42,3 @@ let msg3:null = null;
 let message = undefined; // when we give undefined it is anytype
 let message2:undefined; // undefined is undefined type
 let message3:undefined = undefined; //only undefined value is possible
-

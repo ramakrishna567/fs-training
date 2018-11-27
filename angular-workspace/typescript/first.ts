@@ -1,3 +1,6 @@
+//Every Typescript programs converts to Javascript code - Transpilation
+// Means Every Typescript code is valid code for Javascript
+
 console.log("Hello welocme to Typescript");
 var user = {
     name : "john",
