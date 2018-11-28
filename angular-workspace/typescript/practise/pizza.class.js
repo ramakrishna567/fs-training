@@ -45,5 +45,5 @@ customer1.details = {
 };
 customer1.greet(customer1.name);
 customer1.giveOrder(customer1.details);
-customer1.takeOrder(customer1.details.isOrder);
 customer1.billGeneration();
+customer1.takeOrder(customer1.details.isOrder);
