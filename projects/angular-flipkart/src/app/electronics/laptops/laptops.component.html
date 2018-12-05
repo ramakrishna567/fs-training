@@ -1,0 +1,300 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- filter column -->
+    <div class="col-2">
+      <div class="filter-div">
+        <ul class="list-group">
+          <li class="list-group-item justify-content-between align-items-center">
+            FILTER
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            <form id="range-form">
+              <label for="customRange1">PRICE</label>
+              <label for="customRange1" id="clear-range">Clear</label>
+              <input type="range" class="custom-range" min="100" max="100000" value="100000" step="1" id="customRange1">
+              <input type="text" value="100" class="rangeOutput" id="show-min-range">
+              <input type="text" value="100000" class="rangeOutput" id="show-max-range">
+            </form>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            BRAND
+            <span class="oi oi-chevron-bottom" id="span-brand"></span>
+            <div class="inner-check-list" id="div-brand">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Apple
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Dell
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      HP
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Lenovo
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="list-group-item justify-content-between align-items-center">
+            PROCESSOR
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+
+            <div class="processor-list" id="div-processor">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Core i7
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Core i5
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      i3
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkBox1">
+                    <label class="form-check-label" for="checkBox1">
+                      Dual Core
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            RAM
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            SCREEN SIZE
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            HARD DISK
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            OFFERS
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            FEATURES
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            GRAPHICS PROCESSOR SERIES
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            GRAPHICS MEMORY TYPE
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+          <li class="list-group-item justify-content-between align-items-center">
+            STORAGE TYPE
+            <span class="oi oi-chevron-bottom" id="span-processor"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- laptop-menu column -->
+    <div class="col-10">
+      <div class="laptops-div">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Laptops</li>
+          </ol>
+        </nav>
+
+        <!-- hp laptop -->
+        <a routerLink="/product" class="lap-item-link">
+          <div class="row">
+            <div class="col-3">
+              <div class="lap-img">
+                <div class="image-1">
+                  <img src="../../../assets/images/multi-carousel/1.jpg" class="img-fluid" alt="windows-lap">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="lap-features">
+                <h5>Dell Inspiron 15 3000 Core i3 6th Gen - (4 GB/1 TB HDD/Windows 10 Home) 3567 Laptop</h5>
+                <p class="star-rating">4.3 <i class="fas fa-star"></i></p>
+                <p>2,135 Ratings & 288 Reviews</p>
+                <ul>
+                  <li>Intel i3 processor (6th Gen)</li>
+                  <li>4GB DDR4 RAM</li>
+                  <li>64 bit Windows 10 Operating System</li>
+                  <li>1TB HDD</li>
+                  <li>39.62 cm (15.6 inch) Display</li>
+                  <li>1 Year Onsite Warranty</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="lap-price">
+                <h4> <i class="fas fa-rupee-sign"></i> 30, 490</h4>
+                <p id="old-price"><i class="fas fa-rupee-sign"></i> 39,096</p>
+                <p class="price-off">20% off</p>
+                <ul>
+                  <li>Up to <i class="fas fa-rupee-sign"></i> 7,500 off on Exchange </li>
+                  <li>EMI starting from 1013/month </li>
+                </ul>
+                <ul class="offers"> offers :
+                  <li>No Cost EMI </li>
+                  <li>Bank Offer </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+        <!-- dell laptop -->
+        <a href="../index.html" class="lap-item-link">
+          <div class="row">
+            <div class="col-3">
+              <div class="lap-img">
+                <div class="image-1">
+                  <img src="../../../assets/images/new-aarivals/3.jpeg" class="img-fluid" alt="windows-lap">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="lap-features">
+                <h5>HP 14q Core i3 7th Gen - (4 GB/1 TB HDD/DOS) 14q-cs0009TU Thin and Light Laptop</h5>
+                <p class="star-rating">4.3 <i class="fas fa-star"></i></p>
+                <p>636 Ratings & 86 Reviews</p>
+                <ul>
+                  <li>Intel i3 processor (7th Gen)</li>
+                  <li>4GB DDR4 RAM</li>
+                  <li>DOS Operating System</li>
+                  <li>1TB HDD</li>
+                  <li>35.56 cm (14 inch) Display</li>
+                  <li>1 Year Onsite Warranty</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="lap-price">
+                <h4> <i class="fas fa-rupee-sign"></i> 27, 990</h4>
+                <p id="old-price"><i class="fas fa-rupee-sign"></i> 31,572</p>
+                <p class="price-off">11% off</p>
+                <ul>
+                  <li>Up to <i class="fas fa-rupee-sign"></i> 7,500 off on Exchange </li>
+                  <li>EMI starting from <i class="fas fa-rupee-sign"></i> 930/month </li>
+                </ul>
+                <ul class="offers"> offers :
+                  <li>No Cost EMI </li>
+                  <li>Bank Offer </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+        <!-- hp laptop -->
+        <a href="./laptop-device1.html" class="lap-item-link">
+          <div class="row">
+            <div class="col-3">
+              <div class="lap-img">
+                <div class="image-1">
+                  <img src="../../../assets/images/multi-carousel/1.jpg" class="img-fluid" alt="windows-lap">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="lap-features">
+                <h5>Dell Inspiron 15 3000 Core i3 6th Gen - (4 GB/1 TB HDD/Windows 10 Home) 3567 Laptop</h5>
+                <p class="star-rating">4.3 <i class="fas fa-star"></i></p>
+                <p>2,135 Ratings & 288 Reviews</p>
+                <ul>
+                  <li>Intel i3 processor (6th Gen)</li>
+                  <li>4GB DDR4 RAM</li>
+                  <li>64 bit Windows 10 Operating System</li>
+                  <li>1TB HDD</li>
+                  <li>39.62 cm (15.6 inch) Display</li>
+                  <li>1 Year Onsite Warranty</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="lap-price">
+                <h4> <i class="fas fa-rupee-sign"></i> 30, 490</h4>
+                <p id="old-price"><i class="fas fa-rupee-sign"></i> 39,096</p>
+                <p class="price-off">20% off</p>
+                <ul>
+                  <li>Up to <i class="fas fa-rupee-sign"></i> 7,500 off on Exchange </li>
+                  <li>EMI starting from 1013/month </li>
+                </ul>
+                <ul class="offers"> offers :
+                  <li>No Cost EMI </li>
+                  <li>Bank Offer </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

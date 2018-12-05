@@ -1,0 +1,139 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/home">
+    <img src="../../assets/images/flipkart.png" alt="flipkart logo" width="100px" height="25px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search for products and more" aria-label="Search">
+      <button class="btn my-2 my-sm-0" type="submit">
+        <i class="oi oi-magnifying-glass"></i>
+      </button>
+    </form>
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" data-toggle="modal" data-target="#mymodal" routerLink="#">
+          <span class="oi oi-account-login"></span> Login & Signup</a>
+
+        <!-- Modal -->
+        <div class="modal" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="mymodalTitle">
+                  <b>Login</b>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="first-colmn" id="modal-div-left">
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <i class="fas fa-exclamation-triangle" id="email-icon"></i>
+                            <div id="error-email" class="error_msg"></div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <i class="fas fa-exclamation-triangle" id="pwd-icon"></i>
+                            <div id="error-pwd" class="error_msg"></div>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            <label class="form-check-label forget-pas" id="" for="exampleCheck1">
+                              <a href="#">Forget Password</a>
+                            </label>
+                          </div>
+                          <button type="" class="btn btn-primary" id="login-modal" onclick="sendData()">Login</button>
+                          <button type="submit" class="btn btn-primary" id="reg-modal">
+                            <a href="#">New to Flipkart? Sign Up</a>
+                          </button>
+
+                        </form>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="mymodal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="mymodalTitle">
+                  <b>Signup</b>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="first-colmn" id="modal-div-left">
+                        <form>
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Enter name">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <button type="submit" class="btn btn-primary" id="login-modal">Signup</button>
+                          <button type="submit" class="btn btn-primary" id="log-modal">
+                            <a href="#">Existing user? Login</a>
+                          </button>
+                        </form>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#"> More</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" routerLink="/sell">
+              <span class="oi oi-briefcase"></span> Sell on Flipkart</a>
+            <a class="dropdown-item" routerLink="/download_app">
+              <span class="oi oi-data-transfer-download"></span> Download App</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/cart">
+          <span class="oi oi-cart"></span> Cart</a>
+      </li>
+    </ul>
+  </div>
+</nav>

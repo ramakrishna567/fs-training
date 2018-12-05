@@ -1,0 +1,184 @@
+
+.filter-div{
+    margin-top: 10px;
+    background-color: white;
+    height: 20em;
+}
+
+.inner-check-list ul li, .processor-list ul li{
+    padding: 0.5em 0.5em 0 0;
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+}
+
+.inner-check-list, .processor-list{
+    display: none;
+}
+
+.inner-check-list ul, .processor-list ul{
+    padding: 0em 0em 0 0.5em;
+}
+
+/* icon */
+.filter-div .oi {
+    float: right;
+    font-size: 0.6em;
+    cursor: pointer;
+}
+
+/* range */
+.rangeOutput {
+    width: 4em;
+}
+#clear-range{
+    float: right;
+    color: slateblue;
+    cursor: pointer;
+}
+
+/* main content of laptops */
+.lap-item-link{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.lap-item-link, .lap-item-link:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+
+.laptops-div{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: white;
+    height: auto;
+  
+}
+
+.laptops-div .breadcrumb{
+background-color: transparent;
+margin-bottom: 0;
+padding-bottom: 0;
+}
+
+.lap-img{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+    height: 17em;
+    margin: 10px;
+}
+
+.lap-features{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+    height: 17em;
+    margin: 10px;   
+}
+
+.lap-features h5, .lap-features p{
+    padding-left: 20px;
+}
+.lap-features h5:hover{
+    color: dodgerblue
+}
+.lap-features p{
+    padding-left: 10px;
+    display: inline;
+}
+
+.lap-features .star-rating{
+    display: inline-block;
+    font-weight: 700;
+    color: white;
+    background-color: green;
+    padding: 3px 5px;
+    margin-left: 20px;
+}
+
+.lap-price{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+    height: 17em;
+    margin: 10px;
+}
+.lap-price h4, .lap-price p {
+    padding-left: 20px;
+}
+
+.lap-price #old-price{
+    display: inline;
+    margin-bottom: 0;
+    text-decoration-line: line-through;
+}
+
+.lap-price .price-off{
+    display: inline;
+}
+
+
+/* laptop full details page */
+.aside-images, .show-images{
+    background-color: white;
+    padding: 10px;
+    height: 30em;
+    margin: 5px
+}
+#img-1:hover, #img-2:hover, #img-3:hover, #img-4:hover, #img-5:hover, #img-6:hover{
+border: 2px solid dodgerblue;
+}
+#img-1, #img-2, #img-3, #img-4, #img-5, #img-6{
+    padding: 5px;
+}
+.show-images, #img-hovering{
+    margin: 5px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.laptop-container .col-1{
+    padding-right: 0px;
+    padding-left: 5px;
+}
+.laptop-container .col-4{
+    margin-top: 5px;
+}
+
+/* buy and addto cart buttons */
+.add-to-cart{
+    position: relative;
+    color: white;
+    background-color: rgb(24, 106, 189);
+    padding: 10px 0px;
+    margin: 0 5px;   
+    cursor: pointer;
+}
+.buy-now{
+    position: relative;
+    color: white;
+    background-color: orangered;
+    padding: 10px 0px;
+    margin: 0 5px;   
+    cursor: pointer;
+
+}
+.buy-now h5, .add-to-cart h5{
+    text-align: center;
+}
+
+/* content of laptops */
+.laptop-details{
+    background-color: white;
+    padding: 10px;
+    height: 30em;
+    margin: 5px 10px 5px 5px   
+}
+.laptop-details .lap-features{
+    display: inline-block;
+    height: auto;
+}
+.laptop-details .lap-price{
+    display: inline-block;
+}
+

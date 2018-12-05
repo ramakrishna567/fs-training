@@ -1,0 +1,181 @@
+ /* Sell on Flipkart page start here */
+
+ #InputEmail2, #inputPassword2{
+    width: auto;
+    margin: 0;
+    border-radius: 5px;
+
+}
+#sell-form .mb-2, #sell-form .my-2{
+    margin-left: 35em !important;
+    margin-top: 1em !important;
+}
+
+#sell-btn1{
+    width: auto;
+    background-color: yellow;
+    color: slateblue;
+    text-align: center;
+    padding: 7px 12px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px !important;
+
+}
+
+
+#sell-form{
+    margin-left: 10em;
+}
+
+
+@media (max-width: 760px) { 
+    #sell-form .mb-2, .my-2{
+        margin-left: 2em !important;
+    }   
+
+    #sell-btn1{
+        margin-left: 1em;
+    }
+}
+
+/* sub-nav bar */
+.nav-container-sell{
+    background-color: rgb(0, 153, 255);
+    margin-bottom: 0;
+}
+.anchor-sell{
+    margin-left: 1em;
+}
+
+.link-sell{
+    color: white;
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.link-sell:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+/* banner division */
+.banner-container{
+    width: 100%;
+    margin-bottom: 0;
+    background-image: url('../../assets/images/sell-flipkart/SLP-banner-04-05-18.gif');
+    background-size: cover;
+    padding: 6em 0;
+}
+
+/* sell - registration */
+.ban-div{
+    float: left;
+}
+.sell-regi{
+    width: 20em;
+    height: 15em;
+    background-color: rgba(0, 153, 255, 0.5);
+    float: right;
+    margin-right: 5em;
+    text-align: center;
+}
+
+.sell-regi h4{
+    padding: 10px;
+    background-color: lightcyan;
+    margin-bottom: 1em;
+}
+#sell-phone, #sell-email{
+    width: 18em;
+    display: flex;
+    margin: auto;
+}
+
+#sell-btn-regi{
+    background-color: yellow;
+    width: 18em;
+    color: rgb(11, 92, 146);
+    font-weight: 600;
+}
+
+.grow-business{
+    background-color: white;
+}
+.head-grow-row h2{
+    text-align: center;
+    margin: 1em auto;
+}
+.grow-row{
+    margin: auto;
+    margin-bottom: 2em;
+
+}
+.grow-div1{
+    margin: auto 3em;
+    text-align: center;
+}
+.grow-div1 h1{
+    margin-bottom: 0;
+}
+.grow-icon{
+    /* background-color: slateblue; */
+    height: 12em;
+    width: 12em;
+    margin: 3em auto 2em auto;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 2em;
+}
+
+/* content to start sell on flipkart */
+.content-start{
+    color: white;
+    margin-left: 2em;
+}
+
+.start-details{
+    margin: 2em auto;
+}
+.start-para-div1{
+    margin: 0.5em auto;
+}
+
+.start-details-para{
+    margin: 2em auto;
+    padding: 0.5em;
+    border: 1px solid white;
+    display: inline;
+    width: 0.5em;
+
+
+}
+.start-details-p2{
+    width: 1em;
+    padding: 0.5em;
+    font-size: 2em;
+    display: inline;
+}
+
+
+.steps-start-row{
+    background : url('../../assets/images/sell-flipkart/any-one-bg.jpg');
+    padding: 5em 1em;
+}
+.video-start{
+margin: 1em auto;
+}
+.video-start iframe{
+    margin: auto;
+    width: 420px;
+    height:240px;
+}
+.video-start, .video-start a{
+    text-align: center;
+    color: white;
+}
+/* sellon flipkart ends here */

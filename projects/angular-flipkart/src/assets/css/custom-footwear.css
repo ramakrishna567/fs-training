@@ -1,0 +1,59 @@
+body {
+  background-color: rgb(230, 230, 230) !important;
+}
+.grid-class1 {
+  border: 1px solid rgb(217, 217, 217);
+  background-color: white !important;
+  text-align: center;
+}
+.grid-class {
+  border: 1px solid rgb(217, 217, 217);
+  background-color: white !important;
+}
+.col-sm-3, .col-sm-9 {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.grid-container {
+  margin-left: 5px !important;
+  padding: 0;
+}
+.dropleft .m-footwear, .dropdown .m-footwear {
+  text-decoration: none;
+  color: black !important;
+}
+.cat, .price, .m-dropdown {
+  min-height: 75px;
+  padding-top: 10px;
+  border: 1px solid lightgrey !important;
+}
+.colsm9 {
+  min-width: 960px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.card-img {
+  text-decoration: none;
+}
+.col-sm-9 .grid-class {
+  width: 980px;
+}
+.product-container {
+  margin-top: 50px;
+}
+.product-image {
+  float: left;
+  margin-right: 10px;
+}
+.product-img-matter-ul {
+  list-style-type: none;
+}
+.product-img-matter-ul li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.search-border {
+  border: none;
+  border-bottom: 2px solid lightgrey !important;
+}

@@ -1,0 +1,503 @@
+body{
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* top-navbar */
+.bg-light {
+  background-color: rgb(0, 153, 255) !important;
+}
+.form-inline .btn {
+  width: 35px;
+  height: 38px;
+}
+.form-inline .form-control {
+  padding-right: 0;
+  margin-right: 0 !important;
+  border-radius: 0;
+  width: 350px;
+}
+
+.form-inline .btn {
+  padding: 0;
+  border-radius: 0;
+  color: grey !important;
+  border-color: grey !important;
+}
+.form-inline .btn:hover {
+  background-color: white !important;
+  color: rgb(0, 153, 255) !important;
+}
+.navbar .navbar-brand {
+  margin-right: 40px;
+}
+.nav-link {
+  color: white !important;
+}
+.nav-link a{
+  font-size: 0.8em;
+}
+.nav-item {
+  margin-right: 15px;
+}
+.oi-data-transfer-download, .oi-briefcase {
+  color: blue;
+}
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+/* second-navbar */
+.navbar-second {
+  background-color: white !important;
+  margin-bottom: 0;
+}
+.navbar-second .navbar-second-ul {
+  list-style-type: none;
+  margin-bottom: 0%;
+}
+.navbar-second .navbar-second-li {
+  display: inline-block;
+}
+.navbar-second .nav-link {
+  color: black !important;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-width: 150px;
+}
+.dropdown-menu {
+	min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+	min-width: 300px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: #333;
+	white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	/* background-color: #999; */
+}
+
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+/* modal */
+#login-modal-btn{
+    position: absolute;
+    top: 0.5rem;
+    right: 4rem;
+    float: right;
+    z-index: 1024;
+}
+.modal-content{
+    /* background-color: lightpink; */
+    height: 30rem;
+}
+
+.modal-content .col-4{
+    background-color: pink;
+}
+
+.modal-header{
+    background-color: rgb(15, 81, 148);
+    color: white;
+}
+#login-modal{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(245, 109, 18);
+}
+#reg-modal{
+    position: relative;
+    right: 0;
+    top: 0.7rem;
+    width: 100%;
+    background-color: white;
+    color: rgb(15, 81, 148);
+    border: 0;
+    box-shadow: 1px 2px 5px grey;
+}
+#reg-modal a {
+  text-decoration: none;
+}
+#log-modal{
+    position: relative;
+    right: 0;
+    top: 0.7rem;
+    width: 100%;
+    background-color: white;
+    color: rgb(15, 81, 148);
+    border: 0;
+    box-shadow: 1px 2px 5px grey;
+}
+#log-modal a {
+  text-decoration: none;
+}
+.forget-pas a{
+    margin-left: 10rem;
+}
+.close, .close:hover{
+    color: white;
+}
+/* carosule responsive */
+
+#mycarousel-main{
+  height: auto;
+  widows: 100%;
+  margin-bottom: 1em;
+}
+#mycarousel-main .carousel .carousel-inner{
+  height: auto;
+}
+
+#mycarousel-main .carousel-item {
+  height: 18rem;
+  background-color: transparent;
+}
+#mycarousel-main .carousel-item > img {
+height: 18rem;
+width: 100%;
+}
+
+/* Deals of Day */
+
+.container{
+  margin: 0 0 1em 0;
+  padding: 0px 0px;
+  max-width: 100%;
+}
+.deals-of-day-row1{
+  background-color: white;
+  margin: 0;
+  box-shadow: 0px 1px 1px gray;
+}
+.deals-of-day-head1{
+  background-color: white;
+  color: white;
+  box-shadow: 0px 1px 1px gray;
+  margin-bottom: 1px;
+}
+
+.deals-of-day-head1 h4{
+  float: left;
+  position: relative;
+  color:rgb(48, 47, 47);
+  padding: 10px 15px;
+  font-weight: bold;
+  margin: 0px;
+}
+.deals-of-day-colmn1{
+  /* background-color: gray; */
+  color: white;
+  /* box-shadow: 0px 0px 2px gray; */
+  min-height: 15rem;
+  /* padding: 0 15px; */
+  margin: 15px 15px;
+}
+.deals-of-day-row2{
+  background-color: white;
+  margin: 0;
+}
+
+#container-all .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+margin: 0;
+padding: 0;
+}
+
+
+/* Feature Brands */
+.new-arrivals-row1, .new-arrivals-row2{
+  background-color: white;
+}
+/* multiple carousel */
+.row{
+  margin: 0;
+  padding: 0;
+}
+.multi-carosel{
+  margin: 15px;
+  max-width: 100%;
+  padding: 0;
+}
+.owl-item active{
+  margin: 0 15px;
+}
+
+/* sub-carousel */
+#mycarousel-sub{
+margin-bottom: 1em;
+  margin-top: 2px;
+position: relative;
+  background-color: white;
+}
+#mycarousel-sub .sub-carousel-item :active{
+position: relative;
+  height: 18rem;
+}
+#mycarousel-sub .carousel-item{
+height: 20rem;
+
+}
+#mycarousel-sub .carousel-item > img {
+height: 18rem;
+width: 100%;
+}
+
+/* image hover effect */
+#mycarousel-sub .carousel-item > img:hover {
+  height: 20rem;
+  width: 100%;
+  }
+
+#mycarousel-sub .carousel-inner{
+position: relative;
+  color: white;
+}
+#mycarousel-sub .sub-carousel-colmnn{
+  position: relative;
+  background-color: white;
+  color: white;
+  min-height: 15rem;
+  margin: 15px 15px;
+}
+
+#view-more{
+  float: right;
+  margin-top: 0.7em;
+  margin-right: 1rem;
+  font-size: 0.8em;
+
+}
+#mycarousel-sub .carousel-item.active, .carousel-item-next, .carousel-item-prev{
+  background-color: transparent;
+}
+
+#mycarousel-sub .img-fluid{
+  /* position: absolute; */
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mycarousel-sub .img-fluid:hover{
+  /* position: absolute; */
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1,1.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body a{
+  font-size: 0.8em;
+}
+.card-title, .card-text{
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: center;
+  line-height: 1.3em;
+}
+#mycarousel-sub .btn-primary{
+  border: 0;
+  padding: 4px 10px;
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+#carousel-control-next2, #carousel-control-prev2{
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: black;
+  margin: 7em 1em 0em 1em;
+  opacity: ;
+}
+
+/* New arrivals */
+.new-arrivals-row1{
+  background-color: white;
+  margin: 0;
+  box-shadow: 0px 1px 1px gray;
+
+}
+.new-arrivals-head1{
+  background-color: white;
+  color: white;
+  box-shadow: 0px 1px 1px gray;
+  margin-bottom: 1px;
+}
+.new-arrivals-head1 h4{
+  float: left;
+  position: relative;
+  color:rgb(48, 47, 47);
+  padding: 10px 15px;
+  font-weight: bold;
+  margin: 0px;
+}
+.new-arrivals-row2{
+  background-color: white;
+  margin: 0;
+}
+.new-arrivals-colmnn{
+  color: white;
+  min-height: 15rem;
+  margin: 15px 15px;
+
+}
+
+.new-arrivals-colmnn .img-fluid{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.5s linear 0s;
+
+}
+
+.img-back{
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  backface-visibility: hidden;
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform 0.5s linear 0s;
+}
+
+/* flip animation */
+.new-arrivals-colmnn:hover .img-fluid{
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.new-arrivals-colmnn:hover .img-back{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.new-arrivals-row2 .btn-primary{
+  border: 0;
+  padding: 4px 10px;
+  margin-top: 5px;
+}
+
+/* Feature Brands */
+#container-Feature{
+  background-color: white;
+  margin-top: 1em;
+}
+
+.deals-of-day-colmn1 .img-fluid:hover{
+  transform: scale(1.01, 1.02);
+  transition: transform 0.2s linear 0s;
+}
+
+/* footer */
+.footer{
+  background-color: rgb(27, 24, 41);
+
+}
+.footer-container{
+margin-right: auto;
+margin-left: auto;
+  /* min-height: 30rem; */
+  /* height: auto; */
+}
+.footer-row{
+  background-color: rgb(27, 24, 41);
+  margin-left: 5em;
+margin-right: 5em;
+}
+.fhead{
+  margin-top: 2em;
+
+}
+.fhead2{
+
+  margin-top: 2em;
+
+}
+.fhead2 pre{
+  font-size: 0.8em;
+  color: dodgerblue;
+  text-align: left;
+}
+
+.fooer-col{
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+
+}
+.fhead a{
+  margin-bottom: 3px;
+  display: block;
+  width: 5rem;
+  font-size: 0.8em;
+}
+.hl{
+  /* position: absolute; */
+  border-bottom: 1px solid rgb(21, 74, 128);
+  /* background-color: rgb(21, 82, 82); */
+  /* margin-top: 2em; */
+  width: 100%;
+}
+.vl {
+  margin-top: 2em;
+  display: inline-block;
+  width: 1em;
+  border-left: 1.5px solid rgb(13, 56, 99);
+  height: 11em;
+}
+
+.last-row{
+  margin-left: 5em;
+margin-bottom: 10px;
+margin-top: 10px;
+color: lightgray;
+}
+.last-row p{
+  color: slateblue;
+  font-size: 0.8rem;
+}
+
+/* css START for modal validation */
+
+.error_msg {
+  display: inline;
+}
+#pwd-icon,
+#email-icon {
+  display: none;
+  color: red;
+}
+/* css END for modal validation */

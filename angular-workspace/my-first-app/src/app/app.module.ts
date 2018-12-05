@@ -14,6 +14,12 @@ import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule2 } from './app-routes/app-routing.module';
 import { TopCategoriesComponent } from './home/top-categories/top-categories.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
+  MatFormFieldModule
+} from '@angular/material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import { TopCategoriesComponent } from './home/top-categories/top-categories.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRoutingModule2
+    AppRoutingModule2,
+    BrowserAnimationsModule,
+    MatButtonModule, MatToolbarModule, MatIconModule,
+    MatInputModule, MatFormFieldModule, MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

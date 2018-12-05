@@ -1,0 +1,55 @@
+/* download app page starts here */
+#playstore-icon, #appplestore-icon{
+    float: left;
+}
+
+.head-img-dowload{
+    width: 50%;
+    margin: auto;
+}
+
+.head-img-dowload h3{
+font-size: 2em;
+}
+.app-links{
+    width: 40%;
+    margin: auto;
+}
+#app-img1, #app-img2, #app-img3{
+    width: 30%;
+    margin: 20em auto auto auto;
+    /* float: left; */
+}
+
+
+/* break points to mobiles */
+@media (max-width: 576px){ 
+    .sell-regi{
+        width: 20em;
+        height: 15em;
+        background-color: rgba(0, 153, 255, 0.5);
+        margin: auto;
+        float: none;
+        text-align: center;
+    } 
+
+    .steps-start-row{
+        padding: 2em;
+    }
+
+    .content-start{
+        margin: auto;
+    }
+
+    #app-img1, #app-img2, #app-img3{
+        margin: 15em auto auto auto;
+        }
+
+}
+
+@media (min-width: 760px), (max-width: 998px)  { 
+
+    .head-img-dowload h3{
+        font-size: 1em;
+        }
+}

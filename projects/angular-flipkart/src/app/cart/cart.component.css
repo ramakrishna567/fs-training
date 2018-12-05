@@ -1,0 +1,52 @@
+/* cart page css start here */
+.cart-division{
+    position: relative;
+    height: 25em;
+    width: auto;
+    background-color: white;
+    margin: 1em 3em;
+    box-shadow: 0px 1px 1px rgb(211, 210, 210);;
+}
+.emptyCart-div{
+    text-align: center;
+    position: absolute;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 5%;
+}
+.cart-division h6{
+    padding: 0.7em 1em;
+    border-bottom: 1px solid rgb(211, 210, 210);
+}
+.emptyCart-div #empty-cart{
+    width: 15em;
+    height: auto;
+}
+.copywrite-div{
+    margin-right: 3em;
+    font-size: 0.8em;
+    text-align: center;
+}
+.policy-div{
+    margin-left: 2em;
+    font-size: 0.8em;
+    text-align: center;
+
+}
+.need-help-div{
+    font-size: 0.8em;
+    text-align: center;
+
+}
+
+@media (max-width: 760px) { 
+    .emptyCart-div{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .cart-division{
+    margin: 1em 0em;
+
+    }
+ }
+ /* cart page css end here */
