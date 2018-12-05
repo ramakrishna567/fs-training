@@ -17,7 +17,8 @@ const routes: Routes = [
 ]
 //This if group components
 @NgModule({
-    imports: [],
+    imports: [RouterModule.forRoot(routes)],
     declarations: [],
-    exports: []
+    exports: [RouterModule]
 })
+export class AppRoutingModule2 { }

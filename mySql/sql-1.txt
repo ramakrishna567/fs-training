@@ -1,0 +1,37 @@
+CREATE TABLE accounts(
+first_name VARCHAR(30) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+email VARCHAR(60) NULL,
+street VARCHAR(30) NOT NULL,
+city VARCHAR(40) NOT NULL,
+zip MEDIUMINT UNSIGNED NOT NULL,
+birth_date DATE NOT NULL,
+date_join TIMESTAMP,
+open_balance FLOAT NULL,
+student_id INT UNSIGNED NOT NULL KEY);
+
+//Insert values
+INSERT INTO accounts VALUE 
+(
+'rama', 'krishna', 'ram567@gmail.com',
+'gandhi',
+'hyderabad',
+50024,
+'1992-06-20',
+NOW(),
+5000.25,
+567);
+
+CREATE TABLE transactions(
+trans_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+type VARCHAR(30) NOT NULL,
+mode VARCHAR(30) NOT NULL,
+amount INT UNSIGNED NOT NULL);
+
+INSERT INTO transactions VALUE
+(NULL,
+'withdraw',
+'online',
+3500);
+
+SELECT phn_number, amount FROM transactions WHERE trans_id=2;

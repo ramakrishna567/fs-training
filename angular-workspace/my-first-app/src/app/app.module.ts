@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule2 } from './app-routes/app-routing.module';
+import { TopCategoriesComponent } from './home/top-categories/top-categories.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CategoriesComponent,
     HeaderComponent,
     FooterComponent,
+    TopCategoriesComponent,
     CarouselComponent,
     NavigationComponent,
     HomeComponent,
@@ -28,7 +31,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppRoutingModule2
   ],
   providers: [],
   bootstrap: [AppComponent]

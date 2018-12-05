@@ -1,0 +1,7 @@
+.bg-light {
+    background-color: darkorchid!important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(248, 240, 240, 0.9);
+}

@@ -1,0 +1,156 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+header{
+    background-image: url(./images/coffee-beans.jpg);
+    height: 100px;
+    margin-bottom: 70px;
+}
+
+header h1{
+    color: rgba(256, 256, 256);
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+nav li{
+    float: left;
+}
+
+nav ul li a:link, nav a:visited{
+    width: 160px;
+    background-color: brown;
+    color: white;
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+}
+nav ul li a:link{
+    font-weight: bold;
+    text-decoration: none;
+}
+nav ul li a:link:hover, nav ul li a:visited:hover{
+    background-color: black;
+}
+
+/* This is home page Cascading style sheet */
+section{
+   margin-bottom: 0px;
+   display: block;
+}
+
+section a{
+    text-decoration: none;
+    color: black;
+}
+
+section a:hover{
+    color: grey;
+}
+
+h1{
+    color: brown;
+}
+aside{
+    width: 280px;
+    float: right;
+    margin-left: 20px;
+    background-color: tan;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.photo-left{
+    float: left;
+    margin-right: 20px;
+}
+
+section img{
+    margin-right: 20px;
+    float: left;
+}
+
+/* this is footer css code */
+footer ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer ul li{
+    float: left;
+}
+
+footer ul li a{
+    display: block;
+    background-color: rgb(245, 245, 245);
+    color:rgb(50, 50, 50);
+    width: 160px;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer ul li a:hover{
+    background-color: white;
+    color: rgb(200, 200, 200);
+}
+
+/* this for Roasting page css code */
+section figure{
+    float: right;
+    margin-left: 20px;
+}
+
+aside figure img{
+    text-align: center;
+}
+aside figcaption{
+    clear: left;
+}
+
+/* This is for Brewing page css code */
+section ul{
+    list-style-image: url(../images/tiny-coffee-cup.gif);
+}
+
+/* For table of drinks.html page */
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin-bottom: 40px;
+}
+th, td{
+    padding: 20px;
+    text-align: center;
+}
+video{
+    margin-bottom: 20px;
+    margin-left: 160px;
+}
+
+/* for grinding.html page */
+.photo-right{
+    float: right;
+margin-left: 20px;
+}
+
+/* for coffee survey page */
+input[type=text], input[type=email]
+{
+    width: 25em;
+}
