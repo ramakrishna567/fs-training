@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+    
+      
+  <mat-toolbar-row>
+    <span>Company Name</span>
+    
+    <span class="example-spacer"></span>
+    
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="search" placeholder="Search for anything" aria-label="Number" matInput [formControl]="myControl" 
+          [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option" class="options">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <i class="material-icons" routerLink = "#" routerLinkActive = "active">
+          search
+          </i>
+      </form>
+
+    <mat-icon matTooltip="notifications" routerLink = "#" routerLinkActive = "active" 
+    matBadge="1" class="example-icon">notifications</mat-icon>
+    <mat-icon matTooltip="my account" routerLink = "/login" routerLinkActive = "active" 
+    class="example-icon">account_circle</mat-icon>
+    <mat-icon matTooltip="my cart" routerLink = "#" 
+    routerLinkActive = "active" class="example-icon">add_shopping_cart</mat-icon>
+    <mat-icon matTooltip="home" routerLink = "/home" routerLinkActive = "active" 
+    class="example-icon">home</mat-icon>
+
+
+  </mat-toolbar-row>
+</mat-toolbar>

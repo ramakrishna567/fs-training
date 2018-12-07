@@ -1,0 +1,17 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="offset-md-6">
+      <div class="login-div ">
+        <h3>Login</h3>
+
+        <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Enter your email" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.example-icon {
+    padding: 0 14px;
+    cursor: pointer;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+    cursor: pointer;
+  }
+  
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  
+  .example-full-width {
+    width: 50%;
+  }
+  
+  .mat-option{
+    font-size: 0.8rem;
+  }
+
+  .material-icons{
+    cursor: pointer;
+  }
