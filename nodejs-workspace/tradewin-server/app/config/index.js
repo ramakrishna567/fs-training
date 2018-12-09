@@ -1,11 +1,13 @@
-// Local db
-const port = process.env.PORT || 2020;
-const host = '127.0.0.1';
-const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
-const authSource = 'admin';
-const dbUser = 'ramakrishna567';
-const dbPwd = 'ramki567';
-const secretKay = 'Thisismysecretkeyforjwt'
+require('dotenv').config();
+
+// // Local db
+// const port = process.env.PORT || 2020;
+// const host = '127.0.0.1';
+// const dbUrl = 'mongodb://127.0.0.1:27017/tradewin';
+// const authSource = 'admin';
+// const dbUser = 'ramakrishna567';
+// const dbPwd = 'ramki567';
+// const secretKay = 'Thisismysecretkeyforjwt'
 
 // // remote TRADEWIN db
 // const port = process.env.PORT || 2020;
@@ -15,6 +17,15 @@ const secretKay = 'Thisismysecretkeyforjwt'
 // const dbUser = 'ramakrishna567';
 // const dbPwd = 'ramki567';
 // const secretKay = 'Thisismysecretkeyforjwt'
+
+// PROCESS ENV TRADEWIN db
+const port = process.env.PORT;
+const host = process.env.HOST;
+const dbUrl = process.env.DB_HOST;
+const authSource = process.env.DB_AUTH;
+const dbUser = process.env.DB_USER;
+const dbPwd = process.env.DB_PASS;
+const secretKay = process.env.SECRET_KEY;
 
 
 // //Remote db(mLab) - rk_bank-

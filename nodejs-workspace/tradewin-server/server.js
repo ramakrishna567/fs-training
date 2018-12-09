@@ -2,7 +2,8 @@
 // require('./models/db.connection').open(); // FOR MONGODB DRIVER
 require('./app/models/db.connect'); // for mongoose third party framework
 const CONFIG = require('./app/config');
-
+const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
 
 const express = require('express');
 const fs = require('fs');
@@ -73,10 +74,31 @@ app.use('/api', productRoutes);
 // app.use('/', transRoutes);
 // app.use('/', empRoutes);
 
-app.listen(CONFIG.PORT, CONFIG.HOST, function () {
-    startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)
-    // startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
+// The cluster module allows easy creation of child processes
+//  that all share server ports.
 
-    console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
-    // console.log(`Magic Happened on Port: ${CONFIG.PORT}`);
-});
+if (cluster.isMaster) {
+    console.log(`Master ${process.pid} is running.. now`);
+
+    // Fork workers.
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`worker ${worker.process.pid} died`);
+    });
+} else {
+
+    app.listen(CONFIG.PORT, CONFIG.HOST, function () {
+        
+        startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)
+        // startupLogger.debug(`Magic Happened on Port: ${CONFIG.PORT}`);
+
+        console.log(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`);
+        // console.log(`Magic Happened on Port: ${CONFIG.PORT}`);
+    });
+
+    console.log(`Worker ${process.pid} started`);
+
+}

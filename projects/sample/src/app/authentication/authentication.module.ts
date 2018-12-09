@@ -16,11 +16,8 @@ import {MatToolbarModule, MatIconModule,
   declarations: [AuthenticationComponent, LoginComponent, RegisterComponent, HelpComponent, ForgetpasswordComponent],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule,
-    MatToolbarModule, MatIconModule, MatAutocompleteModule,
-    MatFormFieldModule, MatInputModule,
-    FormsModule, ReactiveFormsModule,
-    MatBadgeModule, MatTooltipModule
+    AuthenticationRoutingModule, ReactiveFormsModule, FormsModule,
+    MatInputModule,MatAutocompleteModule
   ],
   exports : [AuthenticationComponent, LoginComponent, RegisterComponent, HelpComponent, ForgetpasswordComponent]
 })
