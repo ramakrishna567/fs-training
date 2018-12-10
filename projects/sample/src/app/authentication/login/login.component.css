@@ -1,6 +1,7 @@
 .login{
     text-align: center;
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 50%;
 }
 
 .login h4{
@@ -9,13 +10,21 @@
     padding: 15px 0;
 }
 
+.login .form-div{
+    width: 100%;
+    margin: 10px auto;
+    align-items: center;
+
+}
+
 .example-container {
     display: flex;
     flex-direction: column;
   }
   
   .example-container > * {
-    width: 50%;
+    width: 100%;
+
   }
 
   

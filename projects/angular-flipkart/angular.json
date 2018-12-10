@@ -25,7 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/assets/js/electronics.js"]
+            "scripts": ["src/assets/js/custom.js"]
           },
           "configurations": {
             "production": {

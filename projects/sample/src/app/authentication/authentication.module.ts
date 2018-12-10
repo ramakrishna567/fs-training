@@ -10,7 +10,8 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import {MatToolbarModule, MatIconModule,
   MatAutocompleteModule, MatInputModule,MatSlideToggleModule,
   MatFormFieldModule, MatGridListModule, MatButtonModule,
-  MatCheckboxModule, MatDatepickerModule } from '@angular/material';
+  MatCheckboxModule, MatDatepickerModule, MatSnackBarModule, MatStepperModule,
+  MatDialogModule, MatDialog } from '@angular/material';
   import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatToolbarModule, MatIconModule,
     AuthenticationRoutingModule, ReactiveFormsModule, FormsModule,
     MatInputModule,MatAutocompleteModule, MatSlideToggleModule,
     MatGridListModule, MatFormFieldModule, MatIconModule,
-    MatButtonModule, MatCheckboxModule, MatDatepickerModule
+    MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatSnackBarModule,
+    MatStepperModule, MatDialogModule
   ],
   exports : [AuthenticationComponent, LoginComponent, RegisterComponent, HelpComponent, ForgetpasswordComponent]
 })

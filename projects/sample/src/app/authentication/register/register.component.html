@@ -1,64 +1,117 @@
-<div class="login">
-    <h4>Registration</h4>
-    <div class="form-div">
+<div class="registration">
+  <h4>Registration</h4>
+  <mat-horizontal-stepper linear #stepper>
+
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable" label="Step 1">
+      <form [formGroup]="firstFormGroup" class="form-sterp">
+        <ng-template matStepLabel>Fill out Basic Details</ng-template>
         <div class="example-container">
 
-            <form class="example-form">
-              
-                <table class="example-full-width" cellspacing="0"><tr>
-                  <td><mat-form-field class="example-full-width">
-                    <input matInput placeholder="First name">
-                  </mat-form-field></td>
-                  <td><mat-form-field class="example-full-width">
-                    <input matInput placeholder="Last Name">
-                  </mat-form-field></td>
-                </tr></table>
-              
-                <p>
-                  <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Address 1">
-                  </mat-form-field>
-                  <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Address 2">
-                  </mat-form-field>
-                </p>
-              
-                <table class="example-full-width" cellspacing="0"><tr>
-                  <td><mat-form-field class="example-full-width">
-                    <input matInput placeholder="City">
-                  </mat-form-field></td>
-                  <td><mat-form-field class="example-full-width">
-                    <input matInput placeholder="State">
-                  </mat-form-field></td>
-                  <td><mat-form-field class="example-full-width">
-                    <input matInput #postalCode maxlength="6" placeholder="Postal Code" value="">
-                    <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
-                  </mat-form-field></td>
-                </tr></table>
+          <mat-form-field>
+            <input matInput placeholder="Enter your Username" formControlName="firstCtrl" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter your email" formControlName="firstCtrl" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type="password" matInput placeholder="Enter your password" formControlName="firstCtrl" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type="password" matInput placeholder="Enter your password" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button mat-raised-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step label="Step 2" [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+
+        <div class="example-container">
+
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
                 <mat-form-field class="example-full-width">
-                    <span matPrefix>+91 &nbsp;</span>
-                    <input type="tel" matInput  maxlength="10" placeholder="Phone Number">
-                    <mat-icon matSuffix>mode_edit</mat-icon>
-                  </mat-form-field>
-              </form>
-              
+                  <input matInput placeholder="First name" formControlName="secondCtrl">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Last Name" formControlName="secondCtrl">
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
 
-                
-                
-              <mat-form-field>
-                  <input matInput placeholder="Enter your email" [formControl]="email" required>
-                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-              </mat-form-field>
-  
-              <mat-form-field>
-                  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                  <mat-icon class="eye-icon" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' :
-                      'visibility'}}</mat-icon>
-              </mat-form-field>
+          <p>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Address 1" formControlName="secondCtrl">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Address 2" formControlName="secondCtrl">
+            </mat-form-field>
+          </p>
 
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="City" formControlName="secondCtrl">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="State" formControlName="secondCtrl">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput #postalCode maxlength="6" placeholder="Postal Code" value="" formControlName="secondCtrl">
+                  <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+          <mat-form-field class="example-full-width">
+            <span matPrefix>+91 &nbsp;</span>
+            <input type="tel" matInput maxlength="10" placeholder="Phone Number" formControlName="secondCtrl">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
 
         </div>
-        <a mat-raised-button routerLink=".">Sign Up</a>
+      </form>
 
-    </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+
+    <mat-step label="Step 3">
+      <h5>Congratulations!! </h5>
+      <p>You're welcome.</p>
+      <a mat-raised-button  mat-raised-button (click)="openDialog()" routerLink="#">See Details</a>
+
+    </mat-step>
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template>
+  </mat-horizontal-stepper>
 </div>

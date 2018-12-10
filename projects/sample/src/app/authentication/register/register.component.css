@@ -1,9 +1,10 @@
-.login{
+.registration{
     text-align: center;
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 50%;
 }
 
-.login h4{
+.registration h4{
     background-color: dodgerblue;
     color: white;
     padding: 15px 0;
@@ -15,7 +16,8 @@
   }
   
   .example-container > * {
-    width: 50%;
+    position: relative;
+    width: 70%;
   }
 
   

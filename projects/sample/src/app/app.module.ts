@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeModule } from './home/home.module';
 import {MatToolbarModule, MatIconModule,
    MatAutocompleteModule, MatInputModule,MatBadgeModule,
-   MatFormFieldModule, MatTooltipModule } from '@angular/material';
+   MatFormFieldModule, MatTooltipModule, MatDialogModule} from '@angular/material';
    import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -28,7 +28,7 @@ import {MatToolbarModule, MatIconModule,
     MatToolbarModule, MatIconModule, MatAutocompleteModule,
     MatFormFieldModule, MatInputModule,
     FormsModule, ReactiveFormsModule,
-    MatBadgeModule, MatTooltipModule
+    MatBadgeModule, MatTooltipModule, MatDialogModule
     
   ],
   providers: [],
