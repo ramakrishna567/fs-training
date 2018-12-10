@@ -8,8 +8,9 @@ import { RegisterComponent } from './register/register.component';
 import { HelpComponent } from './help/help.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import {MatToolbarModule, MatIconModule,
-  MatAutocompleteModule, MatInputModule,MatBadgeModule,
-  MatFormFieldModule, MatTooltipModule } from '@angular/material';
+  MatAutocompleteModule, MatInputModule,MatSlideToggleModule,
+  MatFormFieldModule, MatGridListModule, MatButtonModule,
+  MatCheckboxModule, MatDatepickerModule } from '@angular/material';
   import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -17,7 +18,9 @@ import {MatToolbarModule, MatIconModule,
   imports: [
     CommonModule,
     AuthenticationRoutingModule, ReactiveFormsModule, FormsModule,
-    MatInputModule,MatAutocompleteModule
+    MatInputModule,MatAutocompleteModule, MatSlideToggleModule,
+    MatGridListModule, MatFormFieldModule, MatIconModule,
+    MatButtonModule, MatCheckboxModule, MatDatepickerModule
   ],
   exports : [AuthenticationComponent, LoginComponent, RegisterComponent, HelpComponent, ForgetpasswordComponent]
 })
