@@ -55,7 +55,7 @@ try {
 } catch (error) {
     if (error.code != 'EEXIST') {
         console.log("Could not setup log Directory", error);
-        process.exit(1);
+        process.exit(0);
     }
 }
 
@@ -89,7 +89,6 @@ if (cluster.isMaster) {
         console.log(`worker ${worker.process.pid} died`);
     });
 } else {
-
     app.listen(CONFIG.PORT, CONFIG.HOST, function () {
         
         startupLogger.debug(`Server is Running at http://${CONFIG.HOST}:${CONFIG.PORT}`)

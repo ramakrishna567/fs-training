@@ -4,7 +4,7 @@
       "script"      : "./server.js",
       "watch"       : true,
       "max_memory_restart" : "1G",
-      "autorestart" : "true",
+      "autorestart" : true,
       "env": {
         "NODE_ENV": "development"
       },
@@ -14,7 +14,7 @@
     },{
       "name"       : "TRADE-API",
       "script"     : "./server.js",
-      "instances"  : 0,
+      "instances"  : "max",
       "exec_mode"  : "cluster"
     }]
   }

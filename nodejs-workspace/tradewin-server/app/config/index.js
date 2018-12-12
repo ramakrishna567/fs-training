@@ -18,6 +18,12 @@ require('dotenv').config();
 // const dbPwd = 'ramki567';
 // const secretKay = 'Thisismysecretkeyforjwt'
 
+// MySql db at ubuntu
+const sql_dbUrl = 'localhost';
+const sql_authSource = 'student';
+const sql_dbUser = 'root';
+const sql_dbPwd = 'ramki567';
+
 // PROCESS ENV TRADEWIN db
 const port = process.env.PORT;
 const host = process.env.HOST;
@@ -53,5 +59,9 @@ module.exports = {
     AUTHSRC : authSource,
     DBUSR : dbUser,
     DBPWD : dbPwd,
-    SECRETKEY : secretKay
+    SECRETKEY : secretKay,
+    SQL_DBURL : sql_dbUrl,
+    SQL_DBUSER : sql_dbUser,
+    SQL_DBPWD : sql_dbPwd,
+    SQL_DB : sql_authSource
 }
