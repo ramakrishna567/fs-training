@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
+import { DataBindingComponent } from '../data-binding/data-binding.component';
 
 const routes: Routes = [
     //For empty URL
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: "home", component: HomeComponent },
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
+    { path: "databind", component: DataBindingComponent },
     //not Found Url for any url
     { path: "**", component: NotFoundComponent }
 ]

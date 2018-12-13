@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Data Binding in Angular</h1>
+
+  <!-- 1.One way Data Binding -->
+  <h3>1.One way Data Binding</h3>
+  <p>Oneway Data Binding is nothing but sharing data between component to template and template to component at Once
+    see below Examples</p>
+
+  <!-- component to template -->
+  <h5>component to template</h5>
+  <h6>Using Interpolation Syntax : {{_interpolation}}</h6>
+  <h6 [innerHTML]="_properyBind"></h6>
+
+  <!-- template to component -->
+  <h5>template to component</h5>
+  <h6>Using with Template Varibale</h6>
+  <input type="email" #userm name="usermail" id="usermail" (click)="showEmail(userm)">
+  <!-- using with $event -->
+  <h6>using with $event</h6>
+  <input type="email" name="usermail" placeholder="usermail" id="usermail" (click)="showMail($event)">
+
+  <!-- 2.Two way Data Binding -->
+  <h3>2.Two way Data Binding</h3>
+  <p>One Data Binding is nothing but sharing data between component to template and template to component
+    in bothway at a time like cycleway see below Examples</p>
+
+
+  <!-- template to component -->
+  <h5>template to component & component to template</h5>
+  <h6>Using Property and Event Binding</h6>
+  <input type="text" name="username" id="username" (click)="showName($event)">
+  <p [innerText]="name"></p>
+
+  <!-- template to component -->
+  <h5>template to component & component to template</h5>
+  <h6>Using Property and Template Varibale</h6>
+  <p [innerText]="usrname"></p>
+  <p>Your User Name is : {{usrname}}</p>
+  <input type="text" #username name="username" id="username">
+  <button class="btn btn-info" (click)="showMsg_2(username)">SEND</button>
+
+
+  <!-- template to component -->
+  <h5>template to component & component to template</h5>
+  <h6>Using ngModel Directive</h6>
+  <input type="text" name="username" [(ngModel)]="user" id="username">
+  <p [innerText]="user"></p>
+</div>

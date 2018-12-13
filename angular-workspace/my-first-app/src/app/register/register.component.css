@@ -1,0 +1,10 @@
+.reg-page{
+    width: 50%;
+    margin: 20px auto;
+}
+.reg-page h5{
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

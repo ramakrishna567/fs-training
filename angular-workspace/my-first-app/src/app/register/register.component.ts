@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-notFoundText:string = "Search Page is not Available";
-notFoundErrCode : number = 404;
+user = {};
+
+registration(){
+  console.log(this.user);  
+}
   constructor() { }
 
   ngOnInit() {

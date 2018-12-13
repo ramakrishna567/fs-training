@@ -6,13 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent implements OnInit {
-  notFoundText: string = "Search Page is not Available";
-  notFoundErrCode: number = 404;
+  firstbind:string = "First Value";
 
-  changeName(username){
-    console.log(username);    
-    console.log(username.value);    
-  }
   constructor() { }
 
   ngOnInit() {
