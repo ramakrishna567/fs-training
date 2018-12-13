@@ -11,6 +11,16 @@ import {MatSnackBar} from '@angular/material';
 export class RegisterComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+
+  user = {
+    gender:'',
+    dob:''
+  };
+
+  showDetails(){
+    console.log(this.user);    
+  }
+
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
@@ -28,6 +38,10 @@ export class RegisterComponent implements OnInit {
     });
   }
  
+  date(picker){
+    console.log(picker);
+    this.user.dob=picker;
+  }
 
   ngOnInit() {
 
@@ -39,4 +53,9 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  gender(data){
+    console.log(data);
+    
+this.user.gender=data;
+  }
 }
