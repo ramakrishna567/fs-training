@@ -1,3 +1,18 @@
-<p>
-  not-found works!
-</p>
+<div>
+<!-- Interpolation Syntax -->
+  <h1 >Error : {{notFoundText}}</h1>
+
+  <!-- Property Bind Syntax -->
+  <h2 [innerText] = "notFoundErrCode"></h2>
+
+  <!-- Two Way Binding -->
+  <!-- using template varibale #username -->
+  <input type="text" #username name="username" id="username" (click) = "changeName(username)">
+<br><br>
+
+  <input type="text" #useremail name="useremail" id="username" 
+  (click) = "changeEmail(useremail)">
+
+  <h1>This is Two Way Data Binding</h1>
+  <input type="text" [value]="usern1" name="username" id="username">
+</div>
