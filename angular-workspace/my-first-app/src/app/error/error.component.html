@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor = "let product of products">Name : {{product.name}} --- Price {{product.price}}</li>
+</ul>
+
+<button class="btn btn-success" (click) = "getProducts()">GET PRODUCTS</button>
+
+<ul>
+  <li *ngFor = "let p of myProducts">{{p.name}}</li>
+</ul>

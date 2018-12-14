@@ -21,12 +21,7 @@ const options = {
     authSource: CONFIG.AUTHSRC,
     useNewUrlParser: true
 }
-const sql_options = {
-    host: CONFIG.SQL_DBURL,
-    user: CONFIG.SQL_DBUSER,
-    password: CONFIG.SQL_DBPWD,
-    database: CONFIG.SQL_DB
-}
+
 
 mongoose.connect(CONFIG.DBURL, options);
 let db = mongoose.connection; //we are connect with connection is object
@@ -42,15 +37,6 @@ db.once('open', function () {
     console.log("db connection successfull via MONGOOOSE");
 });
 
-
-var conn = mysql.createConnection(sql_options);
-conn.connect((err, con) => {
-    if (err) {
-        console.log("connection failed with MYSQL", err);
-    } else {
-        console.log("connection Success with MYSQL");
-    }
-})
 process.on('SIGINT', () => {
     gfshutdown('SIGINT', function () {
         process.exit(0);

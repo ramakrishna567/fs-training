@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsHttpService } from '../service/products-http.service';
 
 @Component({
   selector: 'app-not-found',
@@ -7,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
   firstbind:string = "First Value";
-
-  constructor() { }
+  constructor(private http_srv : ProductsHttpService) { }
 
   ngOnInit() {
   }
