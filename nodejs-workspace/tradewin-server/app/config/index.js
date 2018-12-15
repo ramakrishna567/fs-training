@@ -20,7 +20,7 @@ require('dotenv').config();
 
 // MySql db at ubuntu
 const sql_dbUrl = 'localhost';
-const sql_authSource = 'student';
+const sql_authSource = 'tradewin';
 const sql_dbUser = 'root';
 const sql_dbPwd = 'ramki567';
 

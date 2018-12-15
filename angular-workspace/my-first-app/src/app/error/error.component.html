@@ -7,3 +7,9 @@
 <ul>
   <li *ngFor = "let p of myProducts">{{p.name}}</li>
 </ul>
+
+<h4>My Sql Data Customers</h4>
+<button (click) = "getCustomers()" class="btn btn-success"> GET CUSTOMERS</button>
+<ul>
+  <li *ngFor = "let customer of myCustomers">{{customer.name}} ---- {{customer.address}}</li>
+</ul>

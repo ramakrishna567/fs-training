@@ -14,7 +14,7 @@ const productRoutes = require('./app/routes/product.routes');
 // const eventRoutes = require('./app/routes/event.routes');
 // const accountsRoutes = require('./app/routes/accounts.routes');
 // const transRoutes = require('./app/routes/transactions.routes');
-const personRoutes = require('./app/routes/persons.route');
+const custRoutes = require('./app/routes/customers.route');
 const bodyParser = require('body-parser');
 const log4js = require('log4js');
 const app = express();
@@ -73,7 +73,7 @@ app.use('/api', productRoutes);
 // app.use('/', eventRoutes);
 // app.use('/', accountsRoutes);
 // app.use('/', transRoutes);
-app.use('/sql', personRoutes);
+app.use('/sql', custRoutes);
 
 // The cluster module allows easy creation of child processes
 //  that all share server ports.
