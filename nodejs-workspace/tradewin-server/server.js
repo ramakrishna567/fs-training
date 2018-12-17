@@ -1,7 +1,7 @@
 "use strict";
 // require('./models/db.connection').open(); // FOR MONGODB DRIVER
 require('./app/models/db.connect'); // for mongoose third party framework
-require('./app/models/db.mysql.conn'); // for mysql
+// require('./app/models/db.mysql.conn'); // for mysql
 const CONFIG = require('./app/config');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
@@ -73,7 +73,7 @@ app.use('/api', productRoutes);
 // app.use('/', eventRoutes);
 // app.use('/', accountsRoutes);
 // app.use('/', transRoutes);
-app.use('/sql', custRoutes);
+// app.use('/sql', custRoutes);
 
 // The cluster module allows easy creation of child processes
 //  that all share server ports.

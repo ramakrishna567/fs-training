@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MysqlServicesService } from './mysql-services.service';
+import { ProductsSrvService } from './products-srv.service';
 
-describe('MysqlServicesService', () => {
+describe('ProductsSrvService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: MysqlServicesService = TestBed.get(MysqlServicesService);
+    const service: ProductsSrvService = TestBed.get(ProductsSrvService);
     expect(service).toBeTruthy();
   });
 });
