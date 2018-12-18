@@ -24,6 +24,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { AuthService } from './services/auth.service';
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
