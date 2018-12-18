@@ -93,3 +93,14 @@
 [2018-12-15T17:54:57.376] [INFO] http - POST==/sql/login
 [2018-12-15T17:55:03.005] [INFO] http - POST==/sql/login
 [2018-12-15T17:55:06.177] [INFO] http - POST==/sql/login
+[2018-12-17T18:48:43.360] [INFO] http - GET==/api/products
+[2018-12-17T18:49:39.498] [INFO] http - GET==/registration
+[2018-12-17T19:31:39.034] [INFO] http - POST==/registration
+[2018-12-17T19:35:12.709] [INFO] http - POST==/registration
+[2018-12-17T19:41:43.101] [INFO] http - POST==/registration
+[2018-12-17T20:00:44.113] [INFO] http - POST==/registration
+[2018-12-17T20:24:51.162] [INFO] http - POST==/login
+[2018-12-17T20:25:20.207] [INFO] http - POST==/login
+[2018-12-17T20:25:35.840] [INFO] http - POST==/login
+[2018-12-17T20:25:36.322] [INFO] http - POST==/login
+[2018-12-17T23:39:49.548] [INFO] http - GET==/api/products

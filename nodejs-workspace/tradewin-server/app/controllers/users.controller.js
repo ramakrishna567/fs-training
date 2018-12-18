@@ -10,8 +10,8 @@ const CONFIG = require('../config');
 // let errorLogger = log4js.getLogger('logLevelFilter');
 
 module.exports.userRegistration = function (req, res, next) {
-    // console.log(req.body);
-    if (!req.body || !req.body.name || !req.body.email || !req.body.password || !req.body.role) {
+    console.log(req.body);
+    if (!req.body || !req.body.name || !req.body.email || !req.body.password) {
         res
             .status(400)
             .set('application/json')
@@ -21,6 +21,7 @@ module.exports.userRegistration = function (req, res, next) {
             });
         // userLogger.warn("Required fields are missing For Registration");
     } else {
+        
         //PASSWORD ENCRYPTION
         const saltRounds = 10;
         var salt = bcrypt.genSaltSync(saltRounds)
@@ -33,7 +34,7 @@ module.exports.userRegistration = function (req, res, next) {
             phoneNumber: req.body.phoneNumber,
             activeStatus: req.body.activeStatus,
             gender: req.body.gender,
-            role: req.body.role
+            role: "user"
         });
 
         newuser

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../service/products.service';
-import { ProductsHttpService } from '../service/products-http.service';
-import { MysqlServicesService } from '../service/mysql-services.service';
 
 
 @Component({
@@ -15,13 +12,11 @@ export class ErrorComponent implements OnInit {
   myCustomers;
 
   // We done with Injector Dependencies via Service
-  constructor(public product_srv : ProductsService, 
-    private http_prd_srv : ProductsHttpService,
-    private sql_cust_srv : MysqlServicesService) {
+  constructor() {
     
-      //When use service in construct then that service activate when we called
-    this.products = this.product_srv.getProducts();
-    // this.myProducts = this.http_prd_srv.getAllProducts();    
+    //   //When use service in construct then that service activate when we called
+    // this.products = this.product_srv.getProducts();
+    // // this.myProducts = this.http_prd_srv.getAllProducts();    
   }
 
   ngOnInit() {
@@ -29,28 +24,28 @@ export class ErrorComponent implements OnInit {
     // this.products = this.product_srv.getProducts();
   }
 
-  getProducts(){
-    this.http_prd_srv.getAllProducts().subscribe(
-      (res)=>{
-        console.log(res);
-        this.myProducts = res;
-      },
-      (err)=>{
-        console.log(err);        
-      }
-    );
-  }
+  // getProducts(){
+  //   this.http_prd_srv.getAllProducts().subscribe(
+  //     (res)=>{
+  //       console.log(res);
+  //       this.myProducts = res;
+  //     },
+  //     (err)=>{
+  //       console.log(err);        
+  //     }
+  //   );
+  // }
 
-  getCustomers(){
-    this.sql_cust_srv.getCustomers().subscribe(
-      (response)=>{
-        console.log(response);
-        this.myCustomers = response;
-      },
-      (error)=>{
-        console.log(error);
-      }
-    )
-  }
+  // getCustomers(){
+  //   this.sql_cust_srv.getCustomers().subscribe(
+  //     (response)=>{
+  //       console.log(response);
+  //       this.myCustomers = response;
+  //     },
+  //     (error)=>{
+  //       console.log(error);
+  //     }
+  //   )
+  // }
 
 }

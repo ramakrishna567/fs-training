@@ -22,9 +22,8 @@ import {
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { ErrorComponent } from './error/error.component';
-import { ProductsService } from './service/products.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductsHttpService } from './service/products-http.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +50,7 @@ import { ProductsHttpService } from './service/products-http.service';
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule
   ],
-  providers: [ProductsService, ProductsHttpService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
