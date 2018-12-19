@@ -17,7 +17,8 @@ import { TopCategoriesComponent } from './home/top-categories/top-categories.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -59,7 +60,8 @@ import { TokeninterceptorService } from './services/tokeninterceptor.service';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
-    MatInputModule, MatFormFieldModule, MatAutocompleteModule
+    MatInputModule, MatFormFieldModule, MatAutocompleteModule,
+    MatProgressSpinnerModule
   ],
   providers: [AuthService, ProductsService, AuthGuard,
   {

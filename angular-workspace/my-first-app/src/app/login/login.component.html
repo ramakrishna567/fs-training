@@ -1,4 +1,4 @@
-<div class="login-page">
+<div class="login-page" *ngIf = "spiner_body">
     <h5>Login</h5>
 
   <form>
@@ -14,11 +14,15 @@
        placeholder="Password" [(ngModel)]="user.password"
         name="password">
     </div>
+    <p class="err_msg" >{{_error}}</p>
+
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
     <button type="submit" (click)="userlogin()" class="btn btn-primary">Login</button>
+
     <button type="submit" routerLink = "/register" class="btn btn-primary sign-up">Sign Up</button>
   </form>
 </div>
+<mat-spinner *ngIf = "spinner" ></mat-spinner>

@@ -14,3 +14,11 @@
     float: right;
     background-color: rgb(70, 66, 66);
 }
+
+mat-spinner{
+    margin: 200px auto;
+}
+
+.err_msg{
+    color: red;
+}
