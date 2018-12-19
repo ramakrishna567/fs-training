@@ -22,7 +22,7 @@ import {
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { ErrorComponent } from './error/error.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { ProductsService } from './services/products.service';
 import { CarsComponent } from './categories/cars/cars.component';
@@ -30,6 +30,7 @@ import { BikesComponent } from './categories/bikes/bikes.component';
 import { BooksComponent } from './categories/books/books.component';
 import { FurnitureComponent } from './categories/furniture/furniture.component';
 import { AuthGuard } from './auth.guard';
+import { TokeninterceptorService } from './services/tokeninterceptor.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,12 @@ import { AuthGuard } from './auth.guard';
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule
   ],
-  providers: [AuthService, ProductsService, AuthGuard],
+  providers: [AuthService, ProductsService, AuthGuard,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokeninterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

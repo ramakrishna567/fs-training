@@ -30,7 +30,7 @@ const upload = multer({
 
 router
     .route('/products')
-    .get(prodCtrl.getAllProducts);
+    .get(authCtrl.tokenValidator,prodCtrl.getAllProducts);
 
 router
     .route('/products/new')

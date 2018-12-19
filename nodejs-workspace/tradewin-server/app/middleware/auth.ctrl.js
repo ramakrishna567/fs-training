@@ -19,7 +19,7 @@ module.exports.tokenValidator = (req, res, next) => {
             .set('application/json')
             .json({
                 auth: false,
-                message: "Failed to Authenticate  not found!",
+                message: "Not Found Token !",
                 token: null
             });
         console.log("token", token);

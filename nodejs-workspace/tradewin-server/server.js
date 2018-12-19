@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
 
     //allow cros origin request.
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With,Content-Type,Accept");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With,Content-Type,x-access-token,Accept");
     if (req.method === 'OPTIONS') {
         res.header('Access-Control-Allow-Mrthods', 'POST, PUT, POST, PATCH, DELETE, GET');
         return res.status(200).json({});
