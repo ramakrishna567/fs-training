@@ -93,8 +93,9 @@ module.exports.loginUser = function (req, res, next) {
                         .status(200)
                         .set('application/json')
                         .json({
+                            auth : true,
                             msg: "Login Successful!!",
-                            // user : user,
+                            user : user,
                             token: token
                         });
                         // userLogger.info("User Login Successful");

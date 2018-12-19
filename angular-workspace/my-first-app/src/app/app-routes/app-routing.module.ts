@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CarouselComponent } from '../home/carousel/carousel.component';
 import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from '../login/login.component';
@@ -7,6 +7,10 @@ import { RegisterComponent } from '../register/register.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { DataBindingComponent } from '../data-binding/data-binding.component';
 import { ErrorComponent } from '../error/error.component';
+import { CategoriesComponent } from '../categories/categories.component';
+import { AuthGuard } from '../auth.guard';
+import { CarsComponent } from '../categories/cars/cars.component';
+import { BikesComponent } from '../categories/bikes/bikes.component';
 
 const routes: Routes = [
     //For empty URL
@@ -15,6 +19,13 @@ const routes: Routes = [
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
     { path: "error", component: ErrorComponent },
+    {
+        path: "categories", component: CategoriesComponent,canActivate: [AuthGuard],
+        children: [
+            {path : "cars", component : CarsComponent},
+            {path : "bikes", component : BikesComponent}
+        ]
+    },
     { path: "databind", component: DataBindingComponent },
     //not Found Url for any url
     { path: "**", component: NotFoundComponent }

@@ -25,6 +25,11 @@ import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { ProductsService } from './services/products.service';
+import { CarsComponent } from './categories/cars/cars.component';
+import { BikesComponent } from './categories/bikes/bikes.component';
+import { BooksComponent } from './categories/books/books.component';
+import { FurnitureComponent } from './categories/furniture/furniture.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,11 @@ import { ProductsService } from './services/products.service';
     RegisterComponent,
     NotFoundComponent,
     DataBindingComponent,
-    ErrorComponent
+    ErrorComponent,
+    CarsComponent,
+    BikesComponent,
+    BooksComponent,
+    FurnitureComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +60,7 @@ import { ProductsService } from './services/products.service';
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule
   ],
-  providers: [AuthService, ProductsService],
+  providers: [AuthService, ProductsService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

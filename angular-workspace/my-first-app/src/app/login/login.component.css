@@ -1,0 +1,16 @@
+.login-page{
+    width: 50%;
+    margin: 20px auto;
+}
+
+.login-page h5{
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.login-page .sign-up{
+    float: right;
+    background-color: rgb(70, 66, 66);
+}
