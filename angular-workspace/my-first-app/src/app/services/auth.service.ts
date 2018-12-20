@@ -31,10 +31,15 @@ export class AuthService {
   }
 
   userLogout() {
-    return localStorage.removeItem("token");
+    return localStorage.clear();
   }
 
   userRole(){
-    return sessionStorage.getItem("role");
+    return localStorage.getItem("role");
   }
+
+  userName(){
+    return localStorage.getItem("name");
+  }
+
 }

@@ -7,10 +7,15 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  // user = JSON.parse(localStorage.getItem('user'));
+  private name: string
+  constructor(private _auth: AuthService) {
 
-  constructor(private _auth : AuthService) { }
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.name = this._auth.userName();
+  }
+  
 }

@@ -34,9 +34,11 @@ export class LoginComponent implements OnInit {
           console.log(res.token);
           console.log(res.user);
           localStorage.setItem("token", res.token);
-          sessionStorage.setItem('user',res.user);
-          // sessionStorage.setItem('id',res.id);
-          sessionStorage.setItem('role',res.user.role);
+          localStorage.setItem('user', JSON.stringify(res.user));
+          localStorage.setItem('id',res.id);
+          localStorage.setItem('role',res.user.role);
+          localStorage.setItem('name',res.user.name);
+          localStorage.setItem('email',res.user.email);
 
 
         },
