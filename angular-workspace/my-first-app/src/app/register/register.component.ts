@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   registration() {
     this.auth_srv.userRegistration(this.user).subscribe(
       (res) => {
-        // console.log(res);
+        console.log(res);
         this._router.navigate(['home'])
       },
       (err) => {

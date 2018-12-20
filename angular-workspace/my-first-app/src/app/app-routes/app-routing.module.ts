@@ -8,11 +8,16 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 import { DataBindingComponent } from '../data-binding/data-binding.component';
 import { ErrorComponent } from '../error/error.component';
 import { CategoriesComponent } from '../categories/categories.component';
-import { AuthGuard } from '../auth.guard';
 import { CarsComponent } from '../categories/cars/cars.component';
 import { BikesComponent } from '../categories/bikes/bikes.component';
+import { AdminComponent } from '../admin/admin.component';
+import { ProductsComponent } from '../admin/products/products.component';
+import { UsersComponent } from '../admin/users/users.component';
+import { AuthGuard } from '../guards/auth.guard';
+import { AdminGuard } from '../guards/admin.guard';
 
 const routes: Routes = [
+
     //For empty URL
     { path: "", component: HomeComponent },
     { path: "home", component: HomeComponent },
@@ -20,20 +25,30 @@ const routes: Routes = [
     { path: "register", component: RegisterComponent },
     { path: "error", component: ErrorComponent },
     {
-        path: "categories", component: CategoriesComponent,canActivate: [AuthGuard],
+        path: "categories", component: CategoriesComponent, canActivate: [AuthGuard],
         children: [
-            {path : "cars", component : CarsComponent},
-            {path : "bikes", component : BikesComponent}
+            { path: "cars", component: CarsComponent },
+            { path: "bikes", component: BikesComponent }
         ]
     },
     { path: "databind", component: DataBindingComponent },
+    {
+        path: "admin", component: AdminComponent, canActivate : [AdminGuard],
+        children: [
+            { path: "products", component: ProductsComponent },
+            { path: "users", component: UsersComponent }
+        ]
+    },
+
     //not Found Url for any url
     { path: "**", component: NotFoundComponent }
 ]
+
 //This if group components
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     declarations: [],
     exports: [RouterModule]
 })
+
 export class AppRoutingModule2 { }

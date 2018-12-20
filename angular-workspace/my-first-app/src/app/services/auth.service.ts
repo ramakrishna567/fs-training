@@ -7,6 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
   private registrationUrl = "http://localhost:2020/registration";
   private loginUrl = "http://localhost:2020/login";
+  userdata;
+  user = {
+    role : ""
+  }
+
   constructor(private http: HttpClient) { }
 
   public userRegistration(user) {
@@ -14,15 +19,7 @@ export class AuthService {
   }
 
   public userLogin(userdata) {
-    return this.http.post<{
-      token: string,
-      auth: boolean,
-      message: string,
-      user : {
-        name : string,
-        email : string
-      }
-    }>(this.loginUrl, userdata);
+    return this.http.post<any>(this.loginUrl, userdata);
   }
 
   logedIn(): boolean {
@@ -35,5 +32,9 @@ export class AuthService {
 
   userLogout() {
     return localStorage.removeItem("token");
+  }
+
+  userRole(){
+    return sessionStorage.getItem("role");
   }
 }

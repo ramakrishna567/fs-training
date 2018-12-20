@@ -30,8 +30,10 @@ import { CarsComponent } from './categories/cars/cars.component';
 import { BikesComponent } from './categories/bikes/bikes.component';
 import { BooksComponent } from './categories/books/books.component';
 import { FurnitureComponent } from './categories/furniture/furniture.component';
-import { AuthGuard } from './auth.guard';
 import { TokeninterceptorService } from './services/tokeninterceptor.service';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminModule } from './admin/admin.module';
+import { AdminGuard } from './guards/admin.guard';
 
 @NgModule({
   declarations: [
@@ -61,14 +63,14 @@ import { TokeninterceptorService } from './services/tokeninterceptor.service';
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule, AdminModule
   ],
-  providers: [AuthService, ProductsService, AuthGuard,
-  {
-    provide:HTTP_INTERCEPTORS,
-    useClass:TokeninterceptorService,
-    multi:true
-  }],
+  providers: [AuthService, ProductsService, AuthGuard, AdminGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokeninterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

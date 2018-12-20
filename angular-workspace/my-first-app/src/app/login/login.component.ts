@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 
 export class LoginComponent implements OnInit {
-  user = {};
+  user = {  };
   spinner = false;
   spiner_body = true;
   _error = " ";
@@ -32,8 +32,11 @@ export class LoginComponent implements OnInit {
           console.log(res);
           this._router.navigate(["/categories"])
           console.log(res.token);
-          console.log(res.user.name);
+          console.log(res.user);
           localStorage.setItem("token", res.token);
+          sessionStorage.setItem('user',res.user);
+          // sessionStorage.setItem('id',res.id);
+          sessionStorage.setItem('role',res.user.role);
 
 
         },

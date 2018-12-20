@@ -12,9 +12,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink = "/categories">Categories</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf = "_auth.logedIn() && _auth.userRole() == 'admin'" routerLink = "/admin">Administration</a>
+      </li>
+      
       <li class="nav-item">
           <a class="nav-link" *ngIf = "!_auth.logedIn()" routerLink = "/login">Login</a>
         </li>
+
       <li class="nav-item dropdown" *ngIf = "_auth.logedIn()">
         <a class="nav-link dropdown-toggle" *ngIf = "_auth.logedIn()" routerLink = "/home" 
         id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,6 +36,7 @@
           <a class="dropdown-item" *ngIf = "_auth.logedIn()" href="#">Something else here</a>
         </div>
       </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
