@@ -28,7 +28,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" *ngIf = "_auth.logedIn()" 
-            (click)="_auth.userLogout()" routerLink="/login">Hi {{user.name}}</a>
+            (click)="_auth.userLogout()" routerLink="/login">Hi</a>
 
           <a class="dropdown-item" *ngIf = "_auth.logedIn()" 
           (click)="_auth.userLogout()" routerLink="/login">Logout</a>

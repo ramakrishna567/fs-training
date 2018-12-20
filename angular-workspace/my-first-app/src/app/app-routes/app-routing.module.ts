@@ -15,6 +15,7 @@ import { ProductsComponent } from '../admin/products/products.component';
 import { UsersComponent } from '../admin/users/users.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { AdminGuard } from '../guards/admin.guard';
+import { DirectivesComponent } from '../directives/directives.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
     { path: "home", component: HomeComponent },
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
+    { path : "directives", component : DirectivesComponent}
     { path: "error", component: ErrorComponent },
     {
         path: "categories", component: CategoriesComponent, canActivate: [AuthGuard],

@@ -34,6 +34,7 @@ import { TokeninterceptorService } from './services/tokeninterceptor.service';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminModule } from './admin/admin.module';
 import { AdminGuard } from './guards/admin.guard';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AdminGuard } from './guards/admin.guard';
     CarsComponent,
     BikesComponent,
     BooksComponent,
-    FurnitureComponent
+    FurnitureComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

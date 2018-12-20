@@ -1,0 +1,33 @@
+<!-- <table>
+  <tr>
+    <th> Emp Nane </th>
+    <th> Emp Age </th>
+  </tr>
+  <tr *ngFor="let emp of employee">
+    <td> {{emp.name}}</td>
+    <td> {{emp.age}}</td>
+  </tr>
+</table>
+
+ng If condition
+<ul>
+  <li *ngFor="let emp of employee">
+    <h1 *ngIf="emp.name == 'John'"> {{emp.age}} </h1>
+    <h1 *ngIf="emp.name != 'John'"> user not found </h1>
+  </li>
+</ul>
+
+ng If else 
+<div *ngIf="employee.length > 0; then listEmp else noEmp" >
+ <ng-tamplate>
+    List of employees
+  <h1 *ngIf = "employee[0].name == 'John'"  > </h1>
+ </ng-tamplate>
+
+  <ng-template #noEmp>
+    <h1> No Employees</h1>
+  </ng-template>
+  
+  <!-- <div *ngIf="employee.length < 0">
+  No Employees
+</div> --> -->
