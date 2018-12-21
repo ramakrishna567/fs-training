@@ -68,7 +68,7 @@ app.use(function (req, res, next) {
 
 app.use(express.static('uploads'))
 // app.use('/', routes);
-app.use('/', userRoutes);
+app.use('/users', userRoutes);
 app.use('/api', productRoutes);
 // app.use('/', eventRoutes);
 // app.use('/', accountsRoutes);

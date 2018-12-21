@@ -24,7 +24,7 @@
       <li class="nav-item dropdown" *ngIf = "_auth.logedIn()">
         <a class="nav-link dropdown-toggle" *ngIf = "_auth.logedIn()" routerLink = "/home" 
         id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          My Account
+          {{name}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" (click)="showName()">Hi {{name}}</a>

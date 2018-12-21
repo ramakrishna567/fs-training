@@ -35,6 +35,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminModule } from './admin/admin.module';
 import { AdminGuard } from './guards/admin.guard';
 import { DirectivesComponent } from './directives/directives.component';
+import { InteractionComponent } from './interaction/interaction.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { DirectivesComponent } from './directives/directives.component';
     BikesComponent,
     BooksComponent,
     FurnitureComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    InteractionComponent
   ],
   imports: [
     BrowserModule,

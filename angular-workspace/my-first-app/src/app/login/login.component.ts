@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
         res => {
           this.spinner = false;
 
-
           console.log(res);
-          this._router.navigate(["/categories"])
           console.log(res.token);
           console.log(res.user);
           localStorage.setItem("token", res.token);
@@ -39,7 +37,10 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('role',res.user.role);
           localStorage.setItem('name',res.user.name);
           localStorage.setItem('email',res.user.email);
-
+          this._router.navigate(["/categories"]);
+          // window.location.reload();
+ 
+          
 
         },
         err => {

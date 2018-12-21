@@ -1,33 +1,93 @@
-<!-- <table>
+<h1>ngFor Directive</h1>
+<table>
   <tr>
-    <th> Emp Nane </th>
-    <th> Emp Age </th>
+    <th> Emp Name</th>
+    <th> Emp Age</th>
   </tr>
-  <tr *ngFor="let emp of employee">
-    <td> {{emp.name}}</td>
-    <td> {{emp.age}}</td>
+  <tr *ngFor="let employee of employees">
+    <td>{{employee.name}}</td>
+    <td>{{employee.age}}</td>
   </tr>
 </table>
-
-ng If condition
+<br>
+<!-- ng If condition -->
+<h1>ngIf Directive</h1>
 <ul>
-  <li *ngFor="let emp of employee">
-    <h1 *ngIf="emp.name == 'John'"> {{emp.age}} </h1>
-    <h1 *ngIf="emp.name != 'John'"> user not found </h1>
+  <li *ngFor="let emp of employees">
+    <h6 *ngIf="emp.name == 'John'"> {{emp.age}} </h6>
+    <h6 *ngIf="emp.name != 'John'"> user not found </h6>
   </li>
 </ul>
+<br>
 
-ng If else 
-<div *ngIf="employee.length > 0; then listEmp else noEmp" >
- <ng-tamplate>
-    List of employees
-  <h1 *ngIf = "employee[0].name == 'John'"  > </h1>
- </ng-tamplate>
+<!-- ngIf-else directive -->
+<h1>ngIf-else</h1>
+<div *ngIf = "employees.length > 0; then listEmp else noEmp">
+    
+</div>
 
-  <ng-template #noEmp>
-    <h1> No Employees</h1>
+<!-- You must write then block in template tag -->
+<ng-template #noEmp>
+  <h6>No employees found</h6>
+</ng-template>
+
+<ng-template #listEmp>
+    <h6>list employees</h6>
   </ng-template>
-  
-  <!-- <div *ngIf="employee.length < 0">
-  No Employees
-</div> --> -->
+<br>
+
+  <!-- ngSwtich -->
+  <h1>ngSwitch Directive</h1>
+  <button class="btn btn-primary" (click) = "dataStatus = 'name'"> emp Names</button>
+  <button class="btn btn-primary" (click) = "dataStatus = 'age'"> emp Ages</button>
+  <button class="btn btn-primary" (click) = "dataStatus = 'sal'"> emp Salaries</button>
+
+  <div [ngSwitch] = "dataStatus">
+    <div *ngSwitchCase = "'name'" >
+      Here all Names
+      <ul>
+        <li *ngFor = "let emp of employees"> {{emp.name}} </li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase = "'age'" >
+        Here all Ages
+        <ul>
+          <li *ngFor = "let emp of employees"> {{emp.age}} </li>
+        </ul>
+      </div>
+
+      <div *ngSwitchCase = "'sal'" >
+          Here all Salaries
+          <ul>
+            <li *ngFor = "let emp of employees"> {{emp.sal}} </li>
+          </ul>
+        </div>
+  </div>
+
+  <br>
+  <h1>ngStyle Directive</h1>
+  <button [style.color] = "status ? 'white' : 'yellow'"
+  [style.backgroundColor] = "status ? 'green' : 'red'" (click) = "status = !status"> SEND 
+</button>
+<br>
+<button [ngStyle] = "isClick ? {
+'color' : 'white',
+'background-color' : 'blue',
+'width' : '100px'
+} : {
+  'color' : 'yellow',
+  'background-color' : 'red',
+  'width' : '200px'
+}" (click) = "isClick = !isClick">
+  SEND DATA
+</button>
+
+<br>
+<h1>ngClass Directive</h1>
+<div [ngClass] = "isClick ? 'light' : 'dark'">
+  <h4>This is ngclass Directive</h4>
+</div>
+
+<button (click) = "isClick = !isClick">change Room</button>
+

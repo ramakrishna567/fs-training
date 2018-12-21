@@ -4,10 +4,10 @@ const router = express.Router();
 const userCtrl = require('../controllers/users.controller');
 const authCtrl = require('../middleware/auth.ctrl');
 router
-    .route('/users')
+    .route('/')
     .get(userCtrl.getUsers);
 router
-    .route('/registration')
+    .route('/new')
     .post(userCtrl.userRegistration);
 
 router

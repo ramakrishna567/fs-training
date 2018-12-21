@@ -8,14 +8,14 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavigationComponent implements OnInit {
   // user = JSON.parse(localStorage.getItem('user'));
+  user=localStorage.getItem('name')
   private name: string
   constructor(private _auth: AuthService) {
-
-
+    this.name = this._auth.userName();
+    
   }
 
   ngOnInit() {
-    this.name = this._auth.userName();
   }
   
 }

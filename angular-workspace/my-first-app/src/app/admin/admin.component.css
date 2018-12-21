@@ -1,0 +1,14 @@
+.btn{
+    display:block;
+    width: 12rem;
+    text-align: center;
+    border-radius: 0;
+    margin-top: 20px;
+}
+.body-case{
+    display: block;
+    margin-top: 20px;
+    margin-left: 50px;
+
+
+}

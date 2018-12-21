@@ -4,7 +4,7 @@
 }
 
 .login-page h5{
-    background-color: dodgerblue;
+    background-color: rgb(100, 100, 75);
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -12,7 +12,7 @@
 
 .login-page .sign-up{
     float: right;
-    background-color: rgb(70, 66, 66);
+    background-color: rgb(180, 72, 10);
 }
 
 mat-spinner{

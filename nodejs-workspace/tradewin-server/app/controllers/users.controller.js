@@ -135,7 +135,7 @@ module.exports.getUsers = (req, res, next) => {
                     })
             } else {
                 res
-                    .status(404)
+                    .status(200)
                     .json(users);
             }
         })

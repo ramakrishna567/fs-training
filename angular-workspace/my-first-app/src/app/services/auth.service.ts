@@ -1,26 +1,37 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { EventEmitter } from 'events';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private registrationUrl = "http://localhost:2020/registration";
-  private loginUrl = "http://localhost:2020/login";
+
+  private usersUrl = "http://localhost:2020/users/";
+  
   userdata;
   user = {
     role : ""
   }
-
+  
   constructor(private http: HttpClient) { }
 
-  public userRegistration(user) {
-    return this.http.post<any>(this.registrationUrl, user);
+  public getAllUsers(){
+    return this.http.get<any>(this.usersUrl);
   }
 
-  public userLogin(userdata) {
-    return this.http.post<any>(this.loginUrl, userdata);
+  public userRegistration(user) {
+    return this.http.post<any>(this.usersUrl+"new", user);
   }
+
+  public userLogin(userdata){
+    return this.http.post<any>(this.usersUrl+"login", userdata);
+  }
+
+  // public userLogin(userdata):Observable<boolean>{ 
+  //   return this.http.post<any>(this.usersUrl+"login", userdata);
+  // }
 
   logedIn(): boolean {
     return !!localStorage.getItem('token');

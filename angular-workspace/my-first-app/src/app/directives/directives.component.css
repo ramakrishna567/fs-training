@@ -1,0 +1,18 @@
+.btn{
+    margin-right: 20px;
+}
+
+.light{
+    width: 100px;
+    height: 100px;
+    color: black;
+    background-color: white;
+    border : 1px solid black;
+}
+
+.dark{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: black;
+}

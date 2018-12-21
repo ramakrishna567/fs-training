@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
- employee = [
-  { name : "John", age : 25},
-  {name : "smith", age : 28 },
-  {name : "Rohn", age : 35}
+ employees = [
+  { name : "John", age : 25, sal : 50000}, 
+  {name : "smith", age : 28, sal : 1000000 },
+  {name : "Rohn", age : 35, sal : 80000}
  ]
+ dataStatus = "name";
+ status = false;
+ isClick = true;
+
   constructor() { }
 
   ngOnInit() {
