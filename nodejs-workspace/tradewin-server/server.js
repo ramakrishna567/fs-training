@@ -17,6 +17,7 @@ const productRoutes = require('./app/routes/product.routes');
 const custRoutes = require('./app/routes/customers.route');
 const bodyParser = require('body-parser');
 const log4js = require('log4js');
+var cors = require('cors')
 const app = express();
 // process.setMaxListeners(200);
 log4js.configure('./app/config/log4js.json');
@@ -24,7 +25,7 @@ let startupLogger = log4js.getLogger('startup');
 let accessLogger = log4js.getLogger('http');
 
 
-
+app.use(cors());
 
 // allows urlencoded data for parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -52,7 +53,7 @@ app.use(function (req, res, next) {
 });
 
 try {
-    fs.mkdirSync('./logs');
+    fs.mkdirSync('./logs');email
 } catch (error) {
     if (error.code != 'EEXIST') {
         console.log("Could not setup log Directory", error);

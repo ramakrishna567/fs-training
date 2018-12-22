@@ -9,6 +9,8 @@
     display: block;
     margin-top: 20px;
     margin-left: 50px;
+}
 
-
+.users tr td i{
+cursor: pointer;
 }

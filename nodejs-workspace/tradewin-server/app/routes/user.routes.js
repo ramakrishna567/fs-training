@@ -22,4 +22,12 @@ router
     .route('/role')
     .post(authCtrl.roleValidator);
 
+router
+    .route('/update/:id')
+    .put(userCtrl.updateUser)
+
+    router
+    .route('/delete/:id')
+    .delete(userCtrl.deleteUser)
+
 module.exports = router;

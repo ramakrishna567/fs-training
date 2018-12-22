@@ -15,6 +15,8 @@ export class AuthService {
     role : ""
   }
   
+  updateData;
+
   constructor(private http: HttpClient) { }
 
   public getAllUsers(){
@@ -27,6 +29,14 @@ export class AuthService {
 
   public userLogin(userdata){
     return this.http.post<any>(this.usersUrl+"login", userdata);
+  }
+  
+  public updateUser(id,updateData){
+    return this.http.put(this.usersUrl+"update/"+id, updateData);
+  }
+
+  public deleteUser(id){
+    return this.http.delete(this.usersUrl+"delete/"+id);
   }
 
   // public userLogin(userdata):Observable<boolean>{ 

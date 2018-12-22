@@ -18,7 +18,16 @@ export class AdminComponent implements OnInit {
   isClick = true;
   products;
   users;
-  constructor(private _products: ProductsService, private _auth : AuthService) {
+  userData = {
+    name: '',
+    email: '',
+    phoneNumber: Number
+  }
+  is_edit = true;
+  value_email;
+  id: string = '';
+  _color = false;
+  constructor(private _products: ProductsService, private _auth: AuthService) {
 
     this._products.getAllProducts().subscribe(
       res => {
@@ -33,13 +42,51 @@ export class AdminComponent implements OnInit {
     )
 
     this._auth.getAllUsers().subscribe(
-      (result)=>{
+      (result) => {
         console.log(result);
         this.users = result;
+        console.log(result[0].email);
+        this.value_email = result[0].email;
       },
-      (errr)=>{
+      (errr) => {
         console.log(errr);
-        
+
+      }
+    )
+  }
+
+  // Edit each user
+  sendData(id) {
+    this.id = id;
+    this._color = false;
+  }
+
+  // UPDATE USER
+  updateUser(id, name, email, phn) {
+    this.userData.name = name;
+    this.userData.email = email;
+    this.userData.phoneNumber = phn;
+    console.log(id, this.userData);
+
+    this._auth.updateUser(id, this.userData).subscribe(res => {
+      console.log(res);
+      this.id = '';
+      this._color = true;
+
+    }, err => {
+      console.log(err);
+
+    })
+  }
+
+  // user delete
+  deleteUser(id) {
+    this._auth.deleteUser(id).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
       }
     )
   }

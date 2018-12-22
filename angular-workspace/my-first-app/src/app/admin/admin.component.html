@@ -1,47 +1,51 @@
 <div class="container">
   <div class="row">
     <div class="xl-3">
-        <button class="btn btn-primary" (click) = "dataStatus = 'name'"> Dash Board</button>
-        <button class="btn btn-primary" (click) = "dataStatus = 'age'"> Products</button>
-        <button class="btn btn-primary" (click) = "dataStatus = 'sal'" > Users</button>
+      <button class="btn btn-primary" (click)="dataStatus = 'name'"> Dash Board</button>
+      <button class="btn btn-primary" (click)="dataStatus = 'age'"> Products</button>
+      <button class="btn btn-primary" (click)="dataStatus = 'sal'"> Users</button>
     </div>
     <div class="xl-9">
-        <div class="body-case" [ngSwitch] = "dataStatus">
-            <div *ngSwitchCase = "'name'" >
-              Here all Names
-              <ul>
-                <li *ngFor = "let emp of employees"> {{emp.name}} </li>
-              </ul>
-            </div>
-        
-            <div *ngSwitchCase = "'age'" >
-                Here all Products
-                <ul>
-                  <li *ngFor = "let prod of products"> {{prod.name}} </li>
-                </ul>
-              </div>
-        
-              <div *ngSwitchCase = "'sal'" >
-                  <h1>Here all Users</h1>
-                  <table>
-                    <tr>
-                      <th>User Name</th>
-                      <th>email Id</th>
-                      <th>Phone Number</th>
-                      <th>Gender</th>
-                    </tr>
-                    <tr *ngFor = "let user of users">
-                      <td> {{user.name}} </td>
-                      <td> {{user.email}} </td>
-                      <td> {{user.phoneNumber}} </td>
-                      <td> {{user.gender}} </td>
-                    </tr>
-                  </table>
-                </div>
-                <router-outlet></router-outlet>
-          </div>
+      <div class="body-case" [ngSwitch]="dataStatus">
+        <div *ngSwitchCase="'name'">
+          Here all Names
+          <ul>
+            <li *ngFor="let emp of employees"> {{emp.name}} </li>
+          </ul>
+        </div>
+
+        <div *ngSwitchCase="'age'">
+          Here all Products
+          <ul>
+            <li *ngFor="let prod of products"> {{prod.name}} </li>
+          </ul>
+        </div>
+
+        <div class="users" *ngSwitchCase="'sal'">
+          <h1>Here all Users</h1>
+          <table>
+            <tr>
+              <th>User Name</th>
+              <th>email Id</th>
+              <th>Phone Number</th>
+            </tr>
+            <tr *ngFor="let user of users" >
+
+              <td> <input type="text" [disabled]="user._id!=id"  value="{{user.name}}" [(ngModel)]="user.name"></td>
+              <td> <input type="text" [disabled]="user._id!=id" value="{{user.email}}" [(ngModel)]="user.email"> </td>
+              <td> <input type="text" [disabled]="user._id!=id" value="{{user.phoneNumber}}" 
+                [(ngModel)]="user.phoneNumber"> </td>
+              <td> <i class="material-icons" (click)="sendData(user._id)" >edit</i>
+                <i class="material-icons" (click) = "deleteUser(user._id)">remove</i>
+                <i class="material-icons" [style.color] = "_color ? 'green' : 'red'"
+                (click) = "updateUser(user._id,user.name,user.email,user.phoneNumber)">check</i></td>
+            </tr>
+          </table>
+          <button routerLink = "/register" class="btn btn-info">add User</button>
+        </div>
+        <router-outlet></router-outlet>
       </div>
+    </div>
   </div>
 
 </div>
-

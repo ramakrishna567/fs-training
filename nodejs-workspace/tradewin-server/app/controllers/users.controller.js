@@ -122,6 +122,7 @@ module.exports.loginUser = function (req, res, next) {
     }
 }
 
+// Get all users
 module.exports.getUsers = (req, res, next) => {
     Users
         .find()
@@ -139,4 +140,59 @@ module.exports.getUsers = (req, res, next) => {
                     .json(users);
             }
         })
+}
+
+// Update user
+module.exports.updateUser = (req, res, next) =>{
+    let id = req.params.id;
+console.log(req.body);
+
+    Users
+    .findOneAndUpdate({_id : id}, req.body,  { new: true }).
+    exec((err, isUsrUpdt)=>{
+        if(err){
+            res
+            .status(404)
+            .json({
+                isupdate : true,
+                err : err,
+                msg : "user not updated"
+            })
+        }else{
+            
+            res
+            .status(200)
+            .json({
+                isupdate : true,
+                msg : "user updated",
+                user : isUsrUpdt
+            })
+        }
+    })  
+}
+
+// Delete user
+module.exports.deleteUser = (req, res, next)=>{
+    let id = req.params.id;
+    Users
+    .findOneAndDelete({_id : id})
+    .exec((err, result)=>{
+        if(err){
+            res
+            .status(404)
+            .json({
+                isDelete : false,
+                err : err,
+                msg : "user not Deleted"
+            })
+        }else{
+            res
+            .status(200)
+            .json({
+                isDelete : true,
+                msg : "user Deleted",
+                user : result
+            })
+        }
+    })
 }

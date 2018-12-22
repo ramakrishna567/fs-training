@@ -136,7 +136,10 @@ module.exports.updateOneProduct = function (req, res, next) {
                     res
                         .status(200)
                         .set('Content-Type', 'application/json')
-                        .json(isUpdate);
+                        .json({
+                            isUpdate : isUpdate,
+                            message : "product is updated"
+                        });
                         // prodLogger.info("Product updated Successfully")
                 }
             })
