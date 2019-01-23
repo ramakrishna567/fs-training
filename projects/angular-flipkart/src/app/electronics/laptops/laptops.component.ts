@@ -11,6 +11,10 @@ export class LaptopsComponent implements OnInit {
 
   constructor() {  }
   
+  changeRange($event){
+    console.log($event);
+  }
+  
   ngOnInit() {
   }
 }

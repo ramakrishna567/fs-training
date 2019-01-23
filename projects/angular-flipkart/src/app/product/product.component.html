@@ -5,19 +5,25 @@
       <div class="col-1">
         <div class="aside-images">
           <div class="image1">
-            <img src="../../assets/images/laptops/img-1.jpeg" alt="hp laptop" class="img-fluid" id="img-1">
-            <img src="../../assets/images/laptops/img-2.jpeg" alt="hp laptop" class="img-fluid" id="img-2">
-            <img src="../../assets/images/laptops/img-3.jpeg" alt="hp laptop" class="img-fluid" id="img-3">
-            <img src="../../assets/images/laptops/img-4.jpeg" alt="hp laptop" class="img-fluid" id="img-4">
-            <img src="../../assets/images/laptops/img-5.jpeg" alt="hp laptop" class="img-fluid" id="img-5">
-            <img src="../../assets/images/laptops/img-6.jpeg" alt="hp laptop" class="img-fluid" id="img-6">
+            <img src="../../assets/images/laptops/img-1.jpeg" alt="hp laptop" 
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-1">
+            <img src="../../assets/images/laptops/img-2.jpeg" alt="hp laptop"
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-2">
+            <img src="../../assets/images/laptops/img-3.jpeg" alt="hp laptop" 
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-3">
+            <img src="../../assets/images/laptops/img-4.jpeg" alt="hp laptop" 
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-4">
+            <img src="../../assets/images/laptops/img-5.jpeg" alt="hp laptop" 
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-5">
+            <img src="../../assets/images/laptops/img-6.jpeg" alt="hp laptop" 
+            (mouseenter)="changeImage($event)" class="img-fluid" id="img-6">
           </div>
         </div>
       </div>
 
       <div class="col-4">
           <div class="show-images">
-            <img src="../../assets/images/laptops/img-1.jpeg" alt="" class="img-fluid" id="img-hovering">
+            <img [src]="changePath" alt="" class="img-fluid" id="img-hovering">
           </div>
           <div class="row">
             <div class="col-xl-6">

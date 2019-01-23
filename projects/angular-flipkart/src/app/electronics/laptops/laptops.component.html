@@ -12,12 +12,13 @@
             <form id="range-form">
               <label for="customRange1">PRICE</label>
               <label for="customRange1" id="clear-range">Clear</label>
-              <input type="range" class="custom-range" min="100" max="100000" value="100000" step="1" id="customRange1">
+              <input type="range" class="custom-range" min="100" 
+              (click)="changeRange($event)" max="100000" value="100000" step="1" id="customRange1">
               <input type="text" value="100" class="rangeOutput" id="show-min-range">
               <input type="text" value="100000" class="rangeOutput" id="show-max-range">
             </form>
           </li>
-          <li class="list-group-item justify-content-between align-items-center">
+          <li class="list-group-item justify-content-between align-items-center" (click)="changeBrand($events)">
             BRAND
             <span class="oi oi-chevron-bottom" id="span-brand"></span>
             <div class="inner-check-list" id="div-brand">
