@@ -101,9 +101,9 @@ export class AdminComponent implements OnInit {
   //   this.cartSrv.sendCartData(this.id);
   // }
 
-  sendMessage(): void {
+  sendMsg() {
     // send message to subscribers via observable subject
-    this.messageService.sendMessage('Message from Home Component to App Component!');
+    this.messageService.sendMessage('Ramakrishna');
   }
 
   // clearMessage(): void {

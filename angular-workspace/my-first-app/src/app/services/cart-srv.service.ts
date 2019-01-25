@@ -2,21 +2,15 @@ import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CartSrvService {
-  private subject = new Subject<any>();
- 
-  sendMessage(message: string) {
-      this.subject.next({ text: message });
-  }
+    private srcmsg = new Subject<any>();
+    msg$ = this.srcmsg.asObservable();
 
-  clearMessage() {
-      this.subject.next();
-  }
+    constructor() { }
 
-  getMessage(): Observable<any> {
-      return this.subject.asObservable();
-  }
-  constructor() { }
+    sendMessage(message: string) {
+        this.srcmsg.next(message);
+    }
 }

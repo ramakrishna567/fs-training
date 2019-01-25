@@ -1,32 +1,34 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CartSrvService } from '../services/cart-srv.service';
-import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnDestroy {
-  
-  message: any;
-  subscription: Subscription;
+export class CartComponent implements OnInit {
+  message : any
 
-  constructor(private messageService: CartSrvService) {
-      // subscribe to home component messages
-      this.subscription = this.messageService.getMessage()
-      .subscribe(
-        message => { 
-          this.message = message;
-          alert("hi");
-          
-        });
+  constructor(private messageService: CartSrvService, private _router: Router) {
+  
   }
 
-  ngOnDestroy() {
-      // unsubscribe to ensure no memory leaks
-      this.subscription.unsubscribe();
-  } 
+ngOnInit(){
+  this.messageService.msg$
+  .subscribe(
+    res=>{
+      console.log("Hi"+res);
+      this.message = res;
+      this._router.navigate(["/cart"]);
 
 
+    },
+    err=>{
+      console.log(err);
+      
+    }
+  )
+}
 }
