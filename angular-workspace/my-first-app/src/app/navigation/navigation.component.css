@@ -13,3 +13,10 @@
 .navbar-light .navbar-nav .nav-link{
     color: white;
 }
+
+.mat-icon{
+    color: white;
+    margin-top: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}

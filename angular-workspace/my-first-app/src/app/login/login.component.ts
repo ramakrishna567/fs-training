@@ -14,14 +14,19 @@ export class LoginComponent implements OnInit {
   spinner = false;
   spiner_body = true;
   _error = " ";
+  loginbtn;
+
   constructor(private _auth_srv: AuthService, private _router: Router) { }
 
   ngOnInit() {
   }
-
+  changebtn(){
+    document.getElementById('login').innerText = "LOGINBTN";
+  }
   userlogin(userdata) {
     this.spinner = true;
     this.spiner_body = false;
+
 
     this._auth_srv.userLogin(this.user)
       .subscribe(
@@ -55,6 +60,7 @@ export class LoginComponent implements OnInit {
 
         }
       )
+      
   }
 
 }

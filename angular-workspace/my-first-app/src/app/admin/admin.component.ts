@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { AuthService } from '../services/auth.service';
+import { CartSrvService } from '../services/cart-srv.service';
 
 @Component({
   selector: 'app-admin',
@@ -25,9 +26,12 @@ export class AdminComponent implements OnInit {
   }
   is_edit = true;
   value_email;
-  id: string = '';
+  id: any;
   _color = false;
-  constructor(private _products: ProductsService, private _auth: AuthService) {
+  cartService: any;
+
+  constructor(private _products: ProductsService, private _auth: AuthService,
+    private messageService: CartSrvService) {
 
     this._products.getAllProducts().subscribe(
       res => {
@@ -90,6 +94,23 @@ export class AdminComponent implements OnInit {
       }
     )
   }
+
+  // addCart(id) {
+  //   this.id = id;
+  //   console.log(id);
+  //   this.cartSrv.sendCartData(this.id);
+  // }
+
+  sendMessage(): void {
+    // send message to subscribers via observable subject
+    this.messageService.sendMessage('Message from Home Component to App Component!');
+  }
+
+  // clearMessage(): void {
+  //   // clear message
+  //   this.messageService.clearMessage();
+  // }
+
 
   ngOnInit() {
   }

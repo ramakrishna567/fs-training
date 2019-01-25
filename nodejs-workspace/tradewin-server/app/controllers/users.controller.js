@@ -34,7 +34,7 @@ module.exports.userRegistration = function (req, res, next) {
             phoneNumber: req.body.phoneNumber,
             activeStatus: req.body.activeStatus,
             gender: req.body.gender,
-            role: "user"
+            role: "admin"
         });
 
         newuser

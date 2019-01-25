@@ -36,6 +36,8 @@ import { AdminModule } from './admin/admin.module';
 import { AdminGuard } from './guards/admin.guard';
 import { DirectivesComponent } from './directives/directives.component';
 import { InteractionComponent } from './interaction/interaction.component';
+import {MatBadgeModule} from '@angular/material';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { InteractionComponent } from './interaction/interaction.component';
     BooksComponent,
     FurnitureComponent,
     DirectivesComponent,
-    InteractionComponent
+    InteractionComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { InteractionComponent } from './interaction/interaction.component';
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule,
-    MatProgressSpinnerModule, AdminModule
+    MatProgressSpinnerModule, AdminModule,
+    MatBadgeModule
   ],
   providers: [AuthService, ProductsService, AuthGuard, AdminGuard,
     {

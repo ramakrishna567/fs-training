@@ -17,6 +17,7 @@ import { AuthGuard } from '../guards/auth.guard';
 import { AdminGuard } from '../guards/admin.guard';
 import { DirectivesComponent } from '../directives/directives.component';
 import { InteractionComponent } from '../interaction/interaction.component';
+import { CartComponent } from '../cart/cart.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path : "directives", component : DirectivesComponent},
     { path: "error", component: ErrorComponent },
     { path: "interaction", component: InteractionComponent },
+    {path : "cart", component : CartComponent},
     {
         path: "categories", component: CategoriesComponent, canActivate: [AuthGuard],
         children: [
@@ -39,6 +41,7 @@ const routes: Routes = [
     {
         path: "admin", component: AdminComponent, canActivate : [AdminGuard],
         children: [
+            {path : ":productId", component: ProductsComponent },
             { path: "products", component: ProductsComponent },
             { path: "users", component: UsersComponent }
         ]
