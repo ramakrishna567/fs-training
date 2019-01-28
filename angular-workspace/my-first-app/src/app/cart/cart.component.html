@@ -1,5 +1,18 @@
 <p>
   cart works!
 </p>
-<p>{{res}}</p>
-<p>{{message}}</p>
+  <table>
+    <thead>
+      <th>Product </th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </thead>
+    <tr *ngFor = "let cartProducts of cartProd">
+      <td>
+    <img src="{{cartProducts.image}}" alt="first" width="200px" height="125px"> 
+      </td>
+      <td> {{cartProducts.name}}</td>
+      <td>Rs.{{cartProducts.price}}</td>
+    </tr>
+  </table>
+  <h2>Total : {{finalTotal}}</h2>

@@ -17,9 +17,15 @@
         <div *ngSwitchCase="'age'">
           Here all Products
           <ul>
-            <li *ngFor="let prod of products" > {{prod.name}}
-      <button class="btn btn-success" (click) = "sendMsg()" > Add Cart</button>
-    </li>
+            <li *ngFor="let prod of products"> 
+              <h3>{{prod.name}}</h3>
+              <h4>Rs.{{prod.price}}</h4>
+              <img src="{{prod.image}}" alt="first" width="200px" height="150px">
+
+              <button class="btn btn-success" (click)="sendMsg(prod)"> Add Cart</button>
+
+            </li>
+
 
           </ul>
         </div>
@@ -32,19 +38,18 @@
               <th>email Id</th>
               <th>Phone Number</th>
             </tr>
-            <tr *ngFor="let user of users" >
+            <tr *ngFor="let user of users">
 
-              <td> <input type="text" [disabled]="user._id!=id"  value="{{user.name}}" [(ngModel)]="user.name"></td>
+              <td> <input type="text" [disabled]="user._id!=id" value="{{user.name}}" [(ngModel)]="user.name"></td>
               <td> <input type="text" [disabled]="user._id!=id" value="{{user.email}}" [(ngModel)]="user.email"> </td>
-              <td> <input type="text" [disabled]="user._id!=id" value="{{user.phoneNumber}}" 
-                [(ngModel)]="user.phoneNumber"> </td>
-              <td> <i class="material-icons" (click)="sendData(user._id)" >edit</i>
-                <i class="material-icons" (click) = "deleteUser(user._id)">remove</i>
-                <i class="material-icons" [style.color] = "_color ? 'green' : 'red'"
-                (click) = "updateUser(user._id,user.name,user.email,user.phoneNumber)">check</i></td>
+              <td> <input type="text" [disabled]="user._id!=id" value="{{user.phoneNumber}}" [(ngModel)]="user.phoneNumber">
+              </td>
+              <td> <i class="material-icons" (click)="sendData(user._id)">edit</i>
+                <i class="material-icons" (click)="deleteUser(user._id)">remove</i>
+                <i class="material-icons" [style.color]="_color ? 'green' : 'red'" (click)="updateUser(user._id,user.name,user.email,user.phoneNumber)">check</i></td>
             </tr>
           </table>
-          <button routerLink = "/register" class="btn btn-info">add User</button>
+          <button routerLink="/register" class="btn btn-info">add User</button>
         </div>
         <router-outlet></router-outlet>
       </div>

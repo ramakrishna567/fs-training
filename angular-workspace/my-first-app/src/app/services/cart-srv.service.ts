@@ -5,12 +5,17 @@ import { Subject, Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class CartSrvService {
-    private srcmsg = new Subject<any>();
-    msg$ = this.srcmsg.asObservable();
+    // private srcmsg = new Subject<any>();
+    // msg$ = this.srcmsg.asObservable();
 
-    constructor() { }
+    // constructor() { }
 
-    sendMessage(message: string) {
-        this.srcmsg.next(message);
+    // sendMessage(message: string) {
+    //     this.srcmsg.next(message);
+    // }
+    public cartProducts: any = []
+
+    public sendCartProducts(){
+        return this.cartProducts;
     }
 }

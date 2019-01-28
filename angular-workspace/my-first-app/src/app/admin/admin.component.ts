@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { AuthService } from '../services/auth.service';
 import { CartSrvService } from '../services/cart-srv.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -26,17 +27,17 @@ export class AdminComponent implements OnInit {
   }
   is_edit = true;
   value_email;
-  id: any;
+  id: string;
   _color = false;
-  cartService: any;
-
+  carData: any = [];
   constructor(private _products: ProductsService, private _auth: AuthService,
-    private messageService: CartSrvService) {
+    private messageService: CartSrvService, private _router : Router) {
 
     this._products.getAllProducts().subscribe(
       res => {
-        console.log(res);
         this.products = res;
+        console.log( "first image"+this.products[0].image);
+
 
       },
       err => {
@@ -95,24 +96,20 @@ export class AdminComponent implements OnInit {
     )
   }
 
-  // addCart(id) {
-  //   this.id = id;
-  //   console.log(id);
-  //   this.cartSrv.sendCartData(this.id);
-  // }
-
-  sendMsg() {
+  sendMsg(_name) {
     // send message to subscribers via observable subject
-    this.messageService.sendMessage('Ramakrishna');
-  }
+    this.id = _name;
+    // this.carData.push(this.id);
+    this.messageService.cartProducts.push(this.id)
+    // console.log(this.carData);
+    this._router.navigate(['/cart']);
 
-  // clearMessage(): void {
-  //   // clear message
-  //   this.messageService.clearMessage();
-  // }
+  }
 
 
   ngOnInit() {
+
   }
+
 
 }
