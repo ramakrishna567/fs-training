@@ -18,6 +18,7 @@ import { AdminGuard } from '../guards/admin.guard';
 import { DirectivesComponent } from '../directives/directives.component';
 import { InteractionComponent } from '../interaction/interaction.component';
 import { CartComponent } from '../cart/cart.component';
+import { FormsComponent } from '../forms/forms.component';
 
 const routes: Routes = [
 
@@ -46,7 +47,7 @@ const routes: Routes = [
             { path: "users", component: UsersComponent }
         ]
     },
-
+    {path : "forms", component : FormsComponent},
     //not Found Url for any url
     { path: "**", component: NotFoundComponent }
 ]

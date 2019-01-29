@@ -22,4 +22,7 @@ data.pop(); //remove element from last
 console.log();
 
 // splice
+data.splice(1, 1);
+console.log("after splice "+ data);
+
 // spice

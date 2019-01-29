@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -18,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
   MatFormFieldModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTabsModule
 } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -38,6 +39,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import {MatBadgeModule} from '@angular/material';
 import { CartComponent } from './cart/cart.component';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,8 @@ import { CartComponent } from './cart/cart.component';
     FurnitureComponent,
     DirectivesComponent,
     InteractionComponent,
-    CartComponent
+    CartComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +75,7 @@ import { CartComponent } from './cart/cart.component';
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule,
     MatProgressSpinnerModule, AdminModule,
-    MatBadgeModule
+    MatBadgeModule, MatTabsModule, FormsModule, ReactiveFormsModule
   ],
   providers: [AuthService, ProductsService, AuthGuard, AdminGuard,
     {

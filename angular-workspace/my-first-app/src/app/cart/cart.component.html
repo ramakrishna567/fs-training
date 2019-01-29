@@ -1,18 +1,35 @@
 <p>
   cart works!
 </p>
-  <table>
-    <thead>
-      <th>Product </th>
-      <th>Product Name</th>
-      <th>Product Price</th>
-    </thead>
-    <tr *ngFor = "let cartProducts of cartProd">
-      <td>
-    <img src="{{cartProducts.image}}" alt="first" width="200px" height="125px"> 
-      </td>
-      <td> {{cartProducts.name}}</td>
-      <td>Rs.{{cartProducts.price}}</td>
-    </tr>
-  </table>
-  <h2>Total : {{finalTotal}}</h2>
+<div *ngIf="cartProd.length > 0; then cart else emptyCart">
+</div>
+
+  <ng-template #cart>
+    <div>
+      <table>
+        <thead>
+          <th>Product </th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+        </thead>
+        <tr *ngFor="let cartProducts of cartProd">
+          <td>
+            <img src="{{cartProducts.image}}" alt="first" width="200px" height="125px">
+          </td>
+          <td> {{cartProducts.name}}</td>
+          <td>Rs.{{cartProducts.price}}</td>
+          <td>
+            <button class="btn btn-warn" (click)="removeCart(cartProducts._id)"> Remove from Cart</button>
+          </td>
+        </tr>
+        <h2>Total : {{finalTotal}}</h2>
+
+      </table>
+    </div>
+  </ng-template>
+
+  <ng-template #emptyCart>
+    <div>
+      Cart is Empty
+    </div>
+  </ng-template>

@@ -30,17 +30,22 @@ export class AdminComponent implements OnInit {
   id: string;
   _color = false;
   carData: any = [];
+  spinner: boolean = true;
+
+
+
   constructor(private _products: ProductsService, private _auth: AuthService,
-    private messageService: CartSrvService, private _router : Router) {
+    private messageService: CartSrvService, private _router: Router) {
 
     this._products.getAllProducts().subscribe(
       res => {
         this.products = res;
-        console.log( "first image"+this.products[0].image);
-
+        this.spinner = false;
+        console.log("first image" + this.products[0].image);
 
       },
       err => {
+        this.spinner = true;
         console.log(err);
 
       }
@@ -106,6 +111,14 @@ export class AdminComponent implements OnInit {
 
   }
 
+  addProduct() {
+    this._router.navigate(['admin/products']);
+  }
+
+  sendImg($event){
+    console.log($event);
+    
+  }
 
   ngOnInit() {
 

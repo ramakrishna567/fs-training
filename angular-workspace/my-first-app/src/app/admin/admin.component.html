@@ -15,19 +15,35 @@
         </div>
 
         <div *ngSwitchCase="'age'">
-          Here all Products
-          <ul>
-            <li *ngFor="let prod of products"> 
-              <h3>{{prod.name}}</h3>
-              <h4>Rs.{{prod.price}}</h4>
-              <img src="{{prod.image}}" alt="first" width="200px" height="150px">
+          <mat-tab-group>
+            <mat-tab label="View Products">
+              <ul>
+                <li *ngFor="let prod of products">
+                  <h3>{{prod.name}}</h3>
+                  <h4>Rs.{{prod.price}}</h4>
+                  <img src="{{prod.image}}" alt="first" width="200px" height="150px">
 
-              <button class="btn btn-success" (click)="sendMsg(prod)"> Add Cart</button>
+                  <button class="btn btn-success" (click)="sendMsg(prod)"> Add Cart</button>
 
-            </li>
+                </li>
+              </ul>
+            </mat-tab>
+            <mat-tab label="Add Products">
+              <div class="example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Input">
+                </mat-form-field>
+              </div>
+              <img src="" alt="">
+              
+
+            </mat-tab>
+            <mat-tab label="Edit Products"> Content 3 </mat-tab>
+          </mat-tab-group>
+
+          <mat-spinner *ngIf="spinner"></mat-spinner>
 
 
-          </ul>
         </div>
 
         <div class="users" *ngSwitchCase="'sal'">
@@ -51,7 +67,6 @@
           </table>
           <button routerLink="/register" class="btn btn-info">add User</button>
         </div>
-        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
