@@ -3,6 +3,10 @@ const router = express.Router();
 
 const userCtrl = require('../controllers/users.controller');
 const authCtrl = require('../middleware/auth.ctrl');
+const passport = require('passport');
+
+const passportGoogle = passport.authenticate("googleToken", {session : false})
+
 router
     .route('/')
     .get(userCtrl.getUsers);
@@ -26,8 +30,9 @@ router
     .route('/update/:id')
     .put(userCtrl.updateUser)
 
-    router
+router
     .route('/delete/:id')
-    .delete(userCtrl.deleteUser)
+    .delete(userCtrl.deleteUser);
+
 
 module.exports = router;

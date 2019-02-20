@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -19,7 +18,9 @@ import {
   MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
   MatFormFieldModule,
   MatProgressSpinnerModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS
 } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -41,6 +42,7 @@ import {MatBadgeModule} from '@angular/material';
 import { CartComponent } from './cart/cart.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent, DialogOverviewExampleDialog } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -64,25 +66,29 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DirectivesComponent,
     InteractionComponent,
     CartComponent,
-    FormsComponent
+    FormsComponent,
+    ProfileComponent, DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule,
     AppRoutingModule2,
-    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
     MatInputModule, MatFormFieldModule, MatAutocompleteModule,
     MatProgressSpinnerModule, AdminModule,
-    MatBadgeModule, MatTabsModule, FormsModule, ReactiveFormsModule
+    MatBadgeModule, MatTabsModule, FormsModule, ReactiveFormsModule, MatDialogModule
+  ],
+  entryComponents: [
+    DialogOverviewExampleDialog
   ],
   providers: [AuthService, ProductsService, AuthGuard, AdminGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokeninterceptorService,
       multi: true
-    }],
+    },
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

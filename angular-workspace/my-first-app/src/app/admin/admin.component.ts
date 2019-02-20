@@ -35,8 +35,19 @@ export class AdminComponent implements OnInit {
 
 
   constructor(private _products: ProductsService, private _auth: AuthService,
-    private messageService: CartSrvService, private _router: Router) {
+    private messageService: CartSrvService, private _router: Router) { }
 
+  ngOnInit() {
+    this._auth.currentSource.subscribe(message => {
+      console.log(message);
+      if (message) {
+        console.log("hiii");
+      }
+    })
+    this.getAllusers();
+  }
+  
+  getAllProducts() {
     this._products.getAllProducts().subscribe(
       res => {
         this.products = res;
@@ -50,7 +61,10 @@ export class AdminComponent implements OnInit {
 
       }
     )
+  }
 
+
+  getAllusers() {
     this._auth.getAllUsers().subscribe(
       (result) => {
         console.log(result);
@@ -80,6 +94,7 @@ export class AdminComponent implements OnInit {
 
     this._auth.updateUser(id, this.userData).subscribe(res => {
       console.log(res);
+      this.getAllusers();
       this.id = '';
       this._color = true;
 
@@ -115,14 +130,8 @@ export class AdminComponent implements OnInit {
     this._router.navigate(['admin/products']);
   }
 
-  sendImg($event){
+  sendImg($event) {
     console.log($event);
-    
-  }
-
-  ngOnInit() {
 
   }
-
-
 }

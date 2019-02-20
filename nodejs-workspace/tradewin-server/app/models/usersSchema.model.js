@@ -5,13 +5,34 @@ const mongoose = require('mongoose');
 // const Schema = require('mongoose').Schema // this is same as above recommended this
 
 const usersSchema = mongoose.Schema({
+    method : {
+        type : String,
+        enum : ["google", "facebook"],
+        required : true
+    },
+    google : {
+        id : {
+            type : String
+        },
+        email : {
+            type : String,
+            lowercase : true
+        }
+    },
+    facebook : {
+        id : {
+            type : String
+        },
+        email : {
+            type : String,
+            lowercase : true
+        }
+    },
     name: {
         type: String,
-        required: true
     },
     email: {
         type: String,
-        unique: true
     },
     password: String,
     role : String,

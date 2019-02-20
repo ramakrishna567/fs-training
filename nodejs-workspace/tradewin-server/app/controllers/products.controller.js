@@ -176,8 +176,3 @@ module.exports.deleteOne = (req, res, next)=>{
             }
         });
 }
-
-//MYSQL OPERATIONS
-exports.getPersons =(res, req, next)=>{
-    
-}

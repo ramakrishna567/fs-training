@@ -1,13 +1,15 @@
+const passport = require('passport');
 const mongoose = require('mongoose');
 const Users = mongoose.model('Users');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const CONFIG = require('../config');
 const log4js = require('log4js');
-
 log4js.configure('./app/config/log4js.json');
 let userLogger = log4js.getLogger('user');
 let errorLogger = log4js.getLogger('logLevelFilter');
+
+
 
 module.exports.tokenValidator = (req, res, next) => {
     var token = req.headers['x-access-token'];
@@ -146,7 +148,8 @@ module.exports.roleValidator = (req, res, next) => {
                         err: err,
                         msg: "user not found"
                     });
-                    errorLogger.error("user not found")
+                errorLogger.error("user not found")
             })
     }
 }
+

@@ -2,41 +2,46 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EventEmitter } from 'events';
+import { BehaviorSubject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  messageSource = new BehaviorSubject('hii');
+  currentSource = this.messageSource.asObservable();
 
   private usersUrl = "http://localhost:2020/users/";
-  
+
   userdata;
   user = {
-    role : ""
+    role: ""
   }
-  
+
   updateData;
 
   constructor(private http: HttpClient) { }
 
-  public getAllUsers(){
+  public getAllUsers() {
     return this.http.get<any>(this.usersUrl);
   }
 
   public userRegistration(user) {
-    return this.http.post<any>(this.usersUrl+"new", user);
+    return this.http.post<any>(this.usersUrl + "new", user);
   }
 
-  public userLogin(userdata){
-    return this.http.post<any>(this.usersUrl+"login", userdata);
-  }
-  
-  public updateUser(id,updateData){
-    return this.http.put(this.usersUrl+"update/"+id, updateData);
+  public userLogin(userdata) {
+    return this.http.post<any>(this.usersUrl + "login", userdata);
   }
 
-  public deleteUser(id){
-    return this.http.delete(this.usersUrl+"delete/"+id);
+  public updateUser(id, updateData) {
+    console.log("username is:", updateData);
+
+    return this.http.put(this.usersUrl + "update/" + id, updateData);
+  }
+
+  public deleteUser(id) {
+    return this.http.delete(this.usersUrl + "delete/" + id);
   }
 
   // public userLogin(userdata):Observable<boolean>{ 
@@ -55,12 +60,20 @@ export class AuthService {
     return localStorage.clear();
   }
 
-  userRole(){
+  userRole() {
     return localStorage.getItem("role");
   }
 
-  userName(){
+  getUser() {
+    return localStorage.getItem("user");
+  }
+
+  userName() {
     return localStorage.getItem("name");
+  }
+
+  changeData(message) {
+    this.messageSource.next(message)
   }
 
 }

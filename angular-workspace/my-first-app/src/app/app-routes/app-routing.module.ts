@@ -19,6 +19,7 @@ import { DirectivesComponent } from '../directives/directives.component';
 import { InteractionComponent } from '../interaction/interaction.component';
 import { CartComponent } from '../cart/cart.component';
 import { FormsComponent } from '../forms/forms.component';
+import { ProfileComponent } from '../profile/profile.component';
 
 const routes: Routes = [
 
@@ -48,6 +49,7 @@ const routes: Routes = [
         ]
     },
     {path : "forms", component : FormsComponent},
+    {path : "profile", component : ProfileComponent},
     //not Found Url for any url
     { path: "**", component: NotFoundComponent }
 ]
